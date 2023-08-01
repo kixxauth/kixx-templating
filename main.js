@@ -178,6 +178,10 @@ function buildSyntaxTree(tokens) {
     let expectingExpression = false;
     let expectingMustacheClose = false;
 
+    // Check to see if the current token represents a new line of source code.
+    // If so, then update the current line number and return true.
+    // This is useful for catching syntax errors (ex: no closing mustache before reaching
+    // the end of a line) and reporting on syntax errors with the line number for reference.
     function resetLineNumber(newLineNumber) {
         if (currentLine !== newLineNumber) {
             currentLine = newLineNumber;
@@ -187,6 +191,7 @@ function buildSyntaxTree(tokens) {
         return false;
     }
 
+    // Make some reasonable guesses about the node type, then push it onto the AST.
     function pushNode(node) {
         if (node.type === 'EXPRESSION' && node.exp.length > 1) {
             // If a node has more than one sub expression, we can assume it
@@ -203,6 +208,7 @@ function buildSyntaxTree(tokens) {
             }
         }
 
+        // If we are in a sub block then push the node onto the current branch of the AST.
         if (blocks.length > 0) {
             blocks[blocks.length - 1].children.push(node);
         } else {
@@ -210,6 +216,7 @@ function buildSyntaxTree(tokens) {
         }
     }
 
+    // Special handler for nested block openers.
     function pushBlockOpen(node) {
         if (blocks.length > 0) {
             blocks[blocks.length - 1].children.push(node);
@@ -220,14 +227,17 @@ function buildSyntaxTree(tokens) {
         blocks.push(node);
     }
 
+    // Special handler for nested block closers.
     function pushBlockClose() {
         blocks.pop();
     }
 
+    // Called with an expression token (the token between {{ }} mustaches).
     function addExpression(token) {
         const tokenString = token.tokenString.trim();
         const encodeMarkup = mustacheOpenToken.tokenString === '{{';
 
+        // Some expressions are explicitly typed using the first character.
         switch (tokenString[0]) {
             case '#': // Open Block Helper
                 pushBlockOpen({
@@ -252,6 +262,7 @@ function buildSyntaxTree(tokens) {
                 });
                 break;
             default:
+                // Handle expressions which do not have an explicit type using the first character.
                 if (tokenString === 'else') {
                     pushNode({ type: 'ELSE', token });
                 } else {
@@ -265,6 +276,7 @@ function buildSyntaxTree(tokens) {
         }
     }
 
+    // Push a simple content node onto the current branch of the AST.
     function addContent(token) {
         pushNode({
             type: 'CONTENT',
@@ -273,6 +285,7 @@ function buildSyntaxTree(tokens) {
         });
     }
 
+    // Parse an expression token (the token between {{ }} mustaches).
     function parseExpression(token, str) {
         const expTokens = [];
         let subToken = null;
@@ -280,6 +293,8 @@ function buildSyntaxTree(tokens) {
         let inStringLiteral = false;
         let inBlockParams = false;
 
+        // Parse a sub-token of the expression token, looking for JavaScript literals.
+        // Otherwise, return the value as a JavaScript path reference.
         function parseJavaScriptType() {
             const rv = { type: 'LITERAL', value: expTokenString };
             let n;
@@ -319,6 +334,7 @@ function buildSyntaxTree(tokens) {
             }
         }
 
+        // Close the current sub token and move onto the next.
         function closeSubToken() {
             const value = parseJavaScriptType();
 
