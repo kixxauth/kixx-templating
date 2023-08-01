@@ -1,0 +1,13 @@
+{
+  "name": "kixx-templating",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "test": "eslint ./"
+  },
+  "author": "Kris Walker (www.kriswalker.me)",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint": "~8.46.0"
+  }
+}

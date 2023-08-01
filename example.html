@@ -1,0 +1,18 @@
+<body class="{{ page.class }}" data="{ foo: bar }">
+    {{ title page.title id="title"}}
+    {{ subtitle "mysubtitle" class="subtitle" }}
+
+    <p>See {{link "website" websites[0].url }}.</p>
+
+    <p>See {{advanedLink "another website" href=websites[1].url class="foo"}}.</p>
+
+    {{#each websites as |website index| }}
+        <p>{{sum index 1 }} {{advancedLink "website" href=website.url class=page.class}}.</p>
+    {{ else }}
+    <p>No websites listed for {{page.title}}</p>
+    {{/each}}
+
+    {{{ some_markup }}}
+
+    {{> footer}}
+</body>

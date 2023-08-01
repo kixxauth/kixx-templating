@@ -1,0 +1,646 @@
+[
+  {
+    "type": "CONTENT",
+    "str": "<body class=\"",
+    "token": {
+      "line": "<body class=\"{{ page.class }}\" data=\"{ foo: bar }\">\n",
+      "lineNumber": 1,
+      "startPosition": 0,
+      "endPosition": 12,
+      "tokenString": "<body class=\""
+    }
+  },
+  {
+    "type": "PATH_EXPRESSION",
+    "exp": [
+      {
+        "type": "PATH",
+        "path": "page.class"
+      }
+    ],
+    "encodeMarkup": true,
+    "token": {
+      "line": "<body class=\"{{ page.class }}\" data=\"{ foo: bar }\">\n",
+      "lineNumber": 1,
+      "startPosition": 15,
+      "endPosition": 26,
+      "tokenString": " page.class "
+    }
+  },
+  {
+    "type": "CONTENT",
+    "str": "\" data=\"{ foo: bar }\">\n",
+    "token": {
+      "line": "<body class=\"{{ page.class }}\" data=\"{ foo: bar }\">\n",
+      "lineNumber": 1,
+      "startPosition": 29,
+      "endPosition": 51,
+      "tokenString": "\" data=\"{ foo: bar }\">\n"
+    }
+  },
+  {
+    "type": "CONTENT",
+    "str": "    ",
+    "token": {
+      "line": "    {{ title page.title id=\"title\"}}\n",
+      "lineNumber": 2,
+      "startPosition": 0,
+      "endPosition": 3,
+      "tokenString": "    "
+    }
+  },
+  {
+    "type": "HELPER_EXPRESSION",
+    "exp": [
+      {
+        "type": "PATH",
+        "path": "title"
+      },
+      {
+        "type": "PATH",
+        "path": "page.title"
+      },
+      {
+        "type": "KEY_VALUE",
+        "key": "id",
+        "value": {
+          "type": "LITERAL",
+          "value": "title"
+        }
+      }
+    ],
+    "encodeMarkup": true,
+    "token": {
+      "line": "    {{ title page.title id=\"title\"}}\n",
+      "lineNumber": 2,
+      "startPosition": 6,
+      "endPosition": 33,
+      "tokenString": " title page.title id=\"title\""
+    }
+  },
+  {
+    "type": "CONTENT",
+    "str": "\n",
+    "token": {
+      "line": "    {{ title page.title id=\"title\"}}\n",
+      "lineNumber": 2,
+      "startPosition": 36,
+      "endPosition": 36,
+      "tokenString": "\n"
+    }
+  },
+  {
+    "type": "CONTENT",
+    "str": "    ",
+    "token": {
+      "line": "    {{ subtitle \"mysubtitle\" class=\"subtitle\" }}\n",
+      "lineNumber": 3,
+      "startPosition": 0,
+      "endPosition": 3,
+      "tokenString": "    "
+    }
+  },
+  {
+    "type": "HELPER_EXPRESSION",
+    "exp": [
+      {
+        "type": "PATH",
+        "path": "subtitle"
+      },
+      {
+        "type": "LITERAL",
+        "value": "mysubtitle"
+      },
+      {
+        "type": "KEY_VALUE",
+        "key": "class",
+        "value": {
+          "type": "LITERAL",
+          "value": "subtitle"
+        }
+      }
+    ],
+    "encodeMarkup": true,
+    "token": {
+      "line": "    {{ subtitle \"mysubtitle\" class=\"subtitle\" }}\n",
+      "lineNumber": 3,
+      "startPosition": 6,
+      "endPosition": 45,
+      "tokenString": " subtitle \"mysubtitle\" class=\"subtitle\" "
+    }
+  },
+  {
+    "type": "CONTENT",
+    "str": "\n",
+    "token": {
+      "line": "    {{ subtitle \"mysubtitle\" class=\"subtitle\" }}\n",
+      "lineNumber": 3,
+      "startPosition": 48,
+      "endPosition": 48,
+      "tokenString": "\n"
+    }
+  },
+  {
+    "type": "CONTENT",
+    "str": "\n",
+    "token": {
+      "line": "\n",
+      "lineNumber": 4,
+      "startPosition": 0,
+      "endPosition": 0,
+      "tokenString": "\n"
+    }
+  },
+  {
+    "type": "CONTENT",
+    "str": "    <p>See ",
+    "token": {
+      "line": "    <p>See {{link \"website\" websites[0].url }}.</p>\n",
+      "lineNumber": 5,
+      "startPosition": 0,
+      "endPosition": 10,
+      "tokenString": "    <p>See "
+    }
+  },
+  {
+    "type": "HELPER_EXPRESSION",
+    "exp": [
+      {
+        "type": "PATH",
+        "path": "link"
+      },
+      {
+        "type": "LITERAL",
+        "value": "website"
+      },
+      {
+        "type": "PATH",
+        "path": "websites[0].url"
+      }
+    ],
+    "encodeMarkup": true,
+    "token": {
+      "line": "    <p>See {{link \"website\" websites[0].url }}.</p>\n",
+      "lineNumber": 5,
+      "startPosition": 13,
+      "endPosition": 43,
+      "tokenString": "link \"website\" websites[0].url "
+    }
+  },
+  {
+    "type": "CONTENT",
+    "str": ".</p>\n",
+    "token": {
+      "line": "    <p>See {{link \"website\" websites[0].url }}.</p>\n",
+      "lineNumber": 5,
+      "startPosition": 46,
+      "endPosition": 51,
+      "tokenString": ".</p>\n"
+    }
+  },
+  {
+    "type": "CONTENT",
+    "str": "\n",
+    "token": {
+      "line": "\n",
+      "lineNumber": 6,
+      "startPosition": 0,
+      "endPosition": 0,
+      "tokenString": "\n"
+    }
+  },
+  {
+    "type": "CONTENT",
+    "str": "    <p>See ",
+    "token": {
+      "line": "    <p>See {{advanedLink \"another website\" href=websites[1].url class=\"foo\"}}.</p>\n",
+      "lineNumber": 7,
+      "startPosition": 0,
+      "endPosition": 10,
+      "tokenString": "    <p>See "
+    }
+  },
+  {
+    "type": "HELPER_EXPRESSION",
+    "exp": [
+      {
+        "type": "PATH",
+        "path": "advanedLink"
+      },
+      {
+        "type": "LITERAL",
+        "value": "another website"
+      },
+      {
+        "type": "KEY_VALUE",
+        "key": "href",
+        "value": {
+          "type": "PATH",
+          "value": "websites[1].url",
+          "path": "websites[1].url"
+        }
+      },
+      {
+        "type": "KEY_VALUE",
+        "key": "class",
+        "value": {
+          "type": "LITERAL",
+          "value": "foo"
+        }
+      }
+    ],
+    "encodeMarkup": true,
+    "token": {
+      "line": "    <p>See {{advanedLink \"another website\" href=websites[1].url class=\"foo\"}}.</p>\n",
+      "lineNumber": 7,
+      "startPosition": 13,
+      "endPosition": 74,
+      "tokenString": "advanedLink \"another website\" href=websites[1].url class=\"foo\""
+    }
+  },
+  {
+    "type": "CONTENT",
+    "str": ".</p>\n",
+    "token": {
+      "line": "    <p>See {{advanedLink \"another website\" href=websites[1].url class=\"foo\"}}.</p>\n",
+      "lineNumber": 7,
+      "startPosition": 77,
+      "endPosition": 82,
+      "tokenString": ".</p>\n"
+    }
+  },
+  {
+    "type": "CONTENT",
+    "str": "\n",
+    "token": {
+      "line": "\n",
+      "lineNumber": 8,
+      "startPosition": 0,
+      "endPosition": 0,
+      "tokenString": "\n"
+    }
+  },
+  {
+    "type": "CONTENT",
+    "str": "    ",
+    "token": {
+      "line": "    {{#each websites as |website index| }}\n",
+      "lineNumber": 9,
+      "startPosition": 0,
+      "endPosition": 3,
+      "tokenString": "    "
+    }
+  },
+  {
+    "type": "BLOCK_OPEN",
+    "exp": [
+      {
+        "type": "PATH",
+        "path": "each"
+      },
+      {
+        "type": "PATH",
+        "path": "websites"
+      },
+      {
+        "type": "BLOCK_PARAMS",
+        "params": [
+          {
+            "type": "PATH",
+            "path": "website"
+          },
+          {
+            "type": "PATH",
+            "path": "index"
+          }
+        ]
+      }
+    ],
+    "children": [
+      {
+        "type": "CONTENT",
+        "str": "\n",
+        "token": {
+          "line": "    {{#each websites as |website index| }}\n",
+          "lineNumber": 9,
+          "startPosition": 42,
+          "endPosition": 42,
+          "tokenString": "\n"
+        }
+      },
+      {
+        "type": "CONTENT",
+        "str": "        <p>",
+        "token": {
+          "line": "        <p>{{sum index 1 }} {{advancedLink \"website\" href=website.url class=page.class}}.</p>\n",
+          "lineNumber": 10,
+          "startPosition": 0,
+          "endPosition": 10,
+          "tokenString": "        <p>"
+        }
+      },
+      {
+        "type": "HELPER_EXPRESSION",
+        "exp": [
+          {
+            "type": "PATH",
+            "path": "sum"
+          },
+          {
+            "type": "PATH",
+            "path": "index"
+          },
+          {
+            "type": "LITERAL",
+            "value": 1
+          }
+        ],
+        "encodeMarkup": true,
+        "token": {
+          "line": "        <p>{{sum index 1 }} {{advancedLink \"website\" href=website.url class=page.class}}.</p>\n",
+          "lineNumber": 10,
+          "startPosition": 13,
+          "endPosition": 24,
+          "tokenString": "sum index 1 "
+        }
+      },
+      {
+        "type": "CONTENT",
+        "str": " ",
+        "token": {
+          "line": "        <p>{{sum index 1 }} {{advancedLink \"website\" href=website.url class=page.class}}.</p>\n",
+          "lineNumber": 10,
+          "startPosition": 27,
+          "endPosition": 27,
+          "tokenString": " "
+        }
+      },
+      {
+        "type": "HELPER_EXPRESSION",
+        "exp": [
+          {
+            "type": "PATH",
+            "path": "advancedLink"
+          },
+          {
+            "type": "LITERAL",
+            "value": "website"
+          },
+          {
+            "type": "KEY_VALUE",
+            "key": "href",
+            "value": {
+              "type": "PATH",
+              "value": "website.url",
+              "path": "website.url"
+            }
+          },
+          {
+            "type": "KEY_VALUE",
+            "key": "class",
+            "value": {
+              "type": "PATH",
+              "value": "page.class",
+              "path": "page.class"
+            }
+          }
+        ],
+        "encodeMarkup": true,
+        "token": {
+          "line": "        <p>{{sum index 1 }} {{advancedLink \"website\" href=website.url class=page.class}}.</p>\n",
+          "lineNumber": 10,
+          "startPosition": 30,
+          "endPosition": 85,
+          "tokenString": "advancedLink \"website\" href=website.url class=page.class"
+        }
+      },
+      {
+        "type": "CONTENT",
+        "str": ".</p>\n",
+        "token": {
+          "line": "        <p>{{sum index 1 }} {{advancedLink \"website\" href=website.url class=page.class}}.</p>\n",
+          "lineNumber": 10,
+          "startPosition": 88,
+          "endPosition": 93,
+          "tokenString": ".</p>\n"
+        }
+      },
+      {
+        "type": "CONTENT",
+        "str": "    ",
+        "token": {
+          "line": "    {{ else }}\n",
+          "lineNumber": 11,
+          "startPosition": 0,
+          "endPosition": 3,
+          "tokenString": "    "
+        }
+      },
+      {
+        "type": "ELSE",
+        "token": {
+          "line": "    {{ else }}\n",
+          "lineNumber": 11,
+          "startPosition": 6,
+          "endPosition": 11,
+          "tokenString": " else "
+        }
+      },
+      {
+        "type": "CONTENT",
+        "str": "\n",
+        "token": {
+          "line": "    {{ else }}\n",
+          "lineNumber": 11,
+          "startPosition": 14,
+          "endPosition": 14,
+          "tokenString": "\n"
+        }
+      },
+      {
+        "type": "CONTENT",
+        "str": "    <p>No websites listed for ",
+        "token": {
+          "line": "    <p>No websites listed for {{page.title}}</p>\n",
+          "lineNumber": 12,
+          "startPosition": 0,
+          "endPosition": 29,
+          "tokenString": "    <p>No websites listed for "
+        }
+      },
+      {
+        "type": "PATH_EXPRESSION",
+        "exp": [
+          {
+            "type": "PATH",
+            "path": "page.title"
+          }
+        ],
+        "encodeMarkup": true,
+        "token": {
+          "line": "    <p>No websites listed for {{page.title}}</p>\n",
+          "lineNumber": 12,
+          "startPosition": 32,
+          "endPosition": 41,
+          "tokenString": "page.title"
+        }
+      },
+      {
+        "type": "CONTENT",
+        "str": "</p>\n",
+        "token": {
+          "line": "    <p>No websites listed for {{page.title}}</p>\n",
+          "lineNumber": 12,
+          "startPosition": 44,
+          "endPosition": 48,
+          "tokenString": "</p>\n"
+        }
+      },
+      {
+        "type": "CONTENT",
+        "str": "    ",
+        "token": {
+          "line": "    {{/each}}\n",
+          "lineNumber": 13,
+          "startPosition": 0,
+          "endPosition": 3,
+          "tokenString": "    "
+        }
+      }
+    ],
+    "token": {
+      "line": "    {{#each websites as |website index| }}\n",
+      "lineNumber": 9,
+      "startPosition": 6,
+      "endPosition": 39,
+      "tokenString": "#each websites as |website index| "
+    }
+  },
+  {
+    "type": "CONTENT",
+    "str": "\n",
+    "token": {
+      "line": "    {{/each}}\n",
+      "lineNumber": 13,
+      "startPosition": 13,
+      "endPosition": 13,
+      "tokenString": "\n"
+    }
+  },
+  {
+    "type": "CONTENT",
+    "str": "\n",
+    "token": {
+      "line": "\n",
+      "lineNumber": 14,
+      "startPosition": 0,
+      "endPosition": 0,
+      "tokenString": "\n"
+    }
+  },
+  {
+    "type": "CONTENT",
+    "str": "    ",
+    "token": {
+      "line": "    {{{ some_markup }}}\n",
+      "lineNumber": 15,
+      "startPosition": 0,
+      "endPosition": 3,
+      "tokenString": "    "
+    }
+  },
+  {
+    "type": "EXPRESSION",
+    "exp": [
+      {
+        "type": "PATH",
+        "path": "some_markup"
+      }
+    ],
+    "encodeMarkup": false,
+    "token": {
+      "line": "    {{{ some_markup }}}\n",
+      "lineNumber": 15,
+      "startPosition": 7,
+      "endPosition": 19,
+      "tokenString": " some_markup "
+    }
+  },
+  {
+    "type": "CONTENT",
+    "str": "\n",
+    "token": {
+      "line": "    {{{ some_markup }}}\n",
+      "lineNumber": 15,
+      "startPosition": 23,
+      "endPosition": 23,
+      "tokenString": "\n"
+    }
+  },
+  {
+    "type": "CONTENT",
+    "str": "\n",
+    "token": {
+      "line": "\n",
+      "lineNumber": 16,
+      "startPosition": 0,
+      "endPosition": 0,
+      "tokenString": "\n"
+    }
+  },
+  {
+    "type": "CONTENT",
+    "str": "    ",
+    "token": {
+      "line": "    {{> footer}}\n",
+      "lineNumber": 17,
+      "startPosition": 0,
+      "endPosition": 3,
+      "tokenString": "    "
+    }
+  },
+  {
+    "type": "PARTIAL",
+    "exp": "footer",
+    "token": {
+      "line": "    {{> footer}}\n",
+      "lineNumber": 17,
+      "startPosition": 6,
+      "endPosition": 13,
+      "tokenString": "> footer"
+    }
+  },
+  {
+    "type": "CONTENT",
+    "str": "\n",
+    "token": {
+      "line": "    {{> footer}}\n",
+      "lineNumber": 17,
+      "startPosition": 16,
+      "endPosition": 16,
+      "tokenString": "\n"
+    }
+  },
+  {
+    "type": "CONTENT",
+    "str": "</body>\n",
+    "token": {
+      "line": "</body>\n",
+      "lineNumber": 18,
+      "startPosition": 0,
+      "endPosition": 7,
+      "tokenString": "</body>\n"
+    }
+  },
+  {
+    "type": "CONTENT",
+    "str": "\n",
+    "token": {
+      "line": "\n",
+      "lineNumber": 19,
+      "startPosition": 0,
+      "endPosition": 0,
+      "tokenString": "\n"
+    }
+  }
+]
