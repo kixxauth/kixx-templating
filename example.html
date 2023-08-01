@@ -4,7 +4,7 @@
 
     <p>See {{link "website" websites[0].url }}.</p>
 
-    <p>See {{advanedLink "another website" href=websites[1].url class="foo"}}.</p>
+    <p>See {{advancedLink "another website" href=websites[1].url class="foo"}}.</p>
 
     {{#each websites as |website index| }}
         <p>{{sum index 1 }} {{advancedLink "website" href=website.url class=page.class}}.</p>

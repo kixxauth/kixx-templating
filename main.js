@@ -34,21 +34,31 @@ class LineSyntaxError extends Error {
     }
 
     toString() {
-        let linePointer = '';
-        const linePointerLength = this.lineNumber.toString().length + 2 + this.startPosition;
+        let lines;
 
-        for (let i = 0; i < linePointerLength; i += 1) {
-            linePointer += ' ';
+        if (Number.isInteger(this.startPosition)) {
+            let linePointer = '';
+            const linePointerLength = this.lineNumber.toString().length + 2 + this.startPosition;
+
+            for (let i = 0; i < linePointerLength; i += 1) {
+                linePointer += ' ';
+            }
+
+            linePointer += '^';
+
+            lines = [
+                `${ this.name }: ${ this.message }`,
+                `${ this.lineNumber }: ${ this.line.trimEnd() }`,
+                linePointer,
+                '',
+            ];
+        } else {
+            lines = [
+                `${ this.name }: ${ this.message }`,
+                `${ this.lineNumber }: ${ this.line.trimEnd() }`,
+                '',
+            ];
         }
-
-        linePointer += '^';
-
-        const lines = [
-            `${ this.name }: ${ this.message }`,
-            `${ this.lineNumber }: ${ this.line.trimEnd() }`,
-            linePointer,
-            '',
-        ];
 
         return lines.join('\n');
     }
@@ -285,6 +295,73 @@ function buildSyntaxTree(tokens) {
         });
     }
 
+    function parseReferencePath(token, str) {
+        const parts = [];
+        let currentToken = '';
+        let inBracket = false;
+
+        for (const c of str) {
+            if (c === '.') {
+                if (inBracket) {
+                    errors.push(new LineSyntaxError(`Invalid "." after "[" in path expression on line ${ token.lineNumber }`, {
+                        line: token.line,
+                        lineNumber: token.lineNumber,
+                    }));
+                } else if (currentToken) {
+                    parts.push(currentToken);
+                    currentToken = '';
+                }
+            } else if (c === '[') {
+                if (inBracket) {
+                    errors.push(new LineSyntaxError(`Invalid "[" after "[" in path expression on line ${ token.lineNumber }`, {
+                        line: token.line,
+                        lineNumber: token.lineNumber,
+                    }));
+                } else {
+                    inBracket = true;
+                    if (currentToken) {
+                        parts.push(currentToken);
+                        currentToken = '';
+                    }
+                }
+            } else if (c === ']') {
+                if (inBracket) {
+                    inBracket = false;
+
+                    const n = Number.parseInt(currentToken, 10);
+
+                    if (Number.isNaN(n)) {
+                        parts.push(currentToken);
+                    } else {
+                        parts.push(n);
+                    }
+                    currentToken = '';
+                } else {
+                    errors.push(new LineSyntaxError(`Invalid closing "]" in path expression on line ${ token.lineNumber }`, {
+                        line: token.line,
+                        lineNumber: token.lineNumber,
+                    }));
+                }
+
+            } else if (inBracket) {
+                // Almost any character is allowed in a bracket, except "." and "[]".
+                currentToken += c;
+            } else if (/\w/.test(c)) {
+                // Only word characters are allowed outside of a bracket.
+                currentToken += c;
+            } else {
+                errors.push(new LineSyntaxError(`Invalid JavaScript symbol character "${ c }" in path expression on line ${ token.lineNumber }`, {
+                    line: token.line,
+                    lineNumber: token.lineNumber,
+                }));
+            }
+        }
+
+        parts.push(currentToken);
+
+        return parts;
+    }
+
     // Parse an expression token (the token between {{ }} mustaches).
     function parseExpression(token, str) {
         const expTokens = [];
@@ -325,7 +402,7 @@ function buildSyntaxTree(tokens) {
 
                     if (Number.isNaN(n)) {
                         rv.type = 'PATH';
-                        rv.path = expTokenString;
+                        rv.path = parseReferencePath(token, expTokenString);
                     } else {
                         rv.value = n;
                     }
@@ -362,7 +439,8 @@ function buildSyntaxTree(tokens) {
                 if (c === '|') {
                     expTokens.push({
                         type: 'BLOCK_PARAMS',
-                        params: parseExpression(token, expTokenString.trim()),
+                        // Split the params on a space " " after removing extra whitespace.
+                        params: expTokenString.trim().replace(/[\s]+/g, ' ').split(' '),
                     });
 
                     expTokenString = '';
@@ -393,7 +471,7 @@ function buildSyntaxTree(tokens) {
             } else if (c === '|') {
                 subToken = expTokens[expTokens.length - 1];
 
-                if (subToken && subToken.type === 'PATH' && subToken.path === 'as') {
+                if (subToken && subToken.type === 'PATH' && subToken.path[0] === 'as') {
                     inBlockParams = true;
                     expTokens.pop();
                     subToken = null;

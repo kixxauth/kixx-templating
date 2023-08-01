@@ -11,11 +11,14 @@
     }
   },
   {
-    "type": "PATH_EXPRESSION",
+    "type": "EXPRESSION",
     "exp": [
       {
         "type": "PATH",
-        "path": "page.class"
+        "path": [
+          "page",
+          "class"
+        ]
       }
     ],
     "encodeMarkup": true,
@@ -54,11 +57,16 @@
     "exp": [
       {
         "type": "PATH",
-        "path": "title"
+        "path": [
+          "title"
+        ]
       },
       {
         "type": "PATH",
-        "path": "page.title"
+        "path": [
+          "page",
+          "title"
+        ]
       },
       {
         "type": "KEY_VALUE",
@@ -105,7 +113,9 @@
     "exp": [
       {
         "type": "PATH",
-        "path": "subtitle"
+        "path": [
+          "subtitle"
+        ]
       },
       {
         "type": "LITERAL",
@@ -167,7 +177,9 @@
     "exp": [
       {
         "type": "PATH",
-        "path": "link"
+        "path": [
+          "link"
+        ]
       },
       {
         "type": "LITERAL",
@@ -175,7 +187,11 @@
       },
       {
         "type": "PATH",
-        "path": "websites[0].url"
+        "path": [
+          "websites",
+          0,
+          "url"
+        ]
       }
     ],
     "encodeMarkup": true,
@@ -213,7 +229,7 @@
     "type": "CONTENT",
     "str": "    <p>See ",
     "token": {
-      "line": "    <p>See {{advanedLink \"another website\" href=websites[1].url class=\"foo\"}}.</p>\n",
+      "line": "    <p>See {{advancedLink \"another website\" href=websites[1].url class=\"foo\"}}.</p>\n",
       "lineNumber": 7,
       "startPosition": 0,
       "endPosition": 10,
@@ -225,7 +241,9 @@
     "exp": [
       {
         "type": "PATH",
-        "path": "advanedLink"
+        "path": [
+          "advancedLink"
+        ]
       },
       {
         "type": "LITERAL",
@@ -237,7 +255,11 @@
         "value": {
           "type": "PATH",
           "value": "websites[1].url",
-          "path": "websites[1].url"
+          "path": [
+            "websites",
+            1,
+            "url"
+          ]
         }
       },
       {
@@ -251,21 +273,21 @@
     ],
     "encodeMarkup": true,
     "token": {
-      "line": "    <p>See {{advanedLink \"another website\" href=websites[1].url class=\"foo\"}}.</p>\n",
+      "line": "    <p>See {{advancedLink \"another website\" href=websites[1].url class=\"foo\"}}.</p>\n",
       "lineNumber": 7,
       "startPosition": 13,
-      "endPosition": 74,
-      "tokenString": "advanedLink \"another website\" href=websites[1].url class=\"foo\""
+      "endPosition": 75,
+      "tokenString": "advancedLink \"another website\" href=websites[1].url class=\"foo\""
     }
   },
   {
     "type": "CONTENT",
     "str": ".</p>\n",
     "token": {
-      "line": "    <p>See {{advanedLink \"another website\" href=websites[1].url class=\"foo\"}}.</p>\n",
+      "line": "    <p>See {{advancedLink \"another website\" href=websites[1].url class=\"foo\"}}.</p>\n",
       "lineNumber": 7,
-      "startPosition": 77,
-      "endPosition": 82,
+      "startPosition": 78,
+      "endPosition": 83,
       "tokenString": ".</p>\n"
     }
   },
@@ -296,23 +318,21 @@
     "exp": [
       {
         "type": "PATH",
-        "path": "each"
+        "path": [
+          "each"
+        ]
       },
       {
         "type": "PATH",
-        "path": "websites"
+        "path": [
+          "websites"
+        ]
       },
       {
         "type": "BLOCK_PARAMS",
         "params": [
-          {
-            "type": "PATH",
-            "path": "website"
-          },
-          {
-            "type": "PATH",
-            "path": "index"
-          }
+          "website",
+          "index"
         ]
       }
     ],
@@ -344,11 +364,15 @@
         "exp": [
           {
             "type": "PATH",
-            "path": "sum"
+            "path": [
+              "sum"
+            ]
           },
           {
             "type": "PATH",
-            "path": "index"
+            "path": [
+              "index"
+            ]
           },
           {
             "type": "LITERAL",
@@ -380,7 +404,9 @@
         "exp": [
           {
             "type": "PATH",
-            "path": "advancedLink"
+            "path": [
+              "advancedLink"
+            ]
           },
           {
             "type": "LITERAL",
@@ -392,7 +418,10 @@
             "value": {
               "type": "PATH",
               "value": "website.url",
-              "path": "website.url"
+              "path": [
+                "website",
+                "url"
+              ]
             }
           },
           {
@@ -401,7 +430,10 @@
             "value": {
               "type": "PATH",
               "value": "page.class",
-              "path": "page.class"
+              "path": [
+                "page",
+                "class"
+              ]
             }
           }
         ],
@@ -469,11 +501,14 @@
         }
       },
       {
-        "type": "PATH_EXPRESSION",
+        "type": "EXPRESSION",
         "exp": [
           {
             "type": "PATH",
-            "path": "page.title"
+            "path": [
+              "page",
+              "title"
+            ]
           }
         ],
         "encodeMarkup": true,
@@ -554,7 +589,9 @@
     "exp": [
       {
         "type": "PATH",
-        "path": "some_markup"
+        "path": [
+          "some_markup"
+        ]
       }
     ],
     "encodeMarkup": false,
