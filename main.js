@@ -2,6 +2,33 @@
 import tokenize from './lib/tokenize.js';
 import buildSyntaxTree from './lib/build-syntax-tree.js';
 
+// TODO: Will bring this back
+/*
+class TemplateEngine {
+    compileTemplate(utf8) {
+        const tokens = tokenize(utf8);
+
+        tokens.errors.forEach((err) => {
+            console.error(err.toString());
+        });
+
+        if (tokens.errors.length > 0) {
+            throw tokens.errors[0];
+        }
+
+        const ast = buildSyntaxTree(tokens.tokens);
+
+        ast.errors.forEach((err) => {
+            console.error(err.toString());
+        });
+
+        if (ast.errors.length > 0) {
+            throw ast.errors[0];
+        }
+    }
+}
+*/
+
 // Used for scope testing below
 const baz = 3; // eslint-disable-line no-unused-vars
 

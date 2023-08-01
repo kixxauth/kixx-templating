@@ -18,7 +18,8 @@
         "path": [
           "page",
           "class"
-        ]
+        ],
+        "pathString": "page.class"
       }
     ],
     "encodeMarkup": true,
@@ -59,21 +60,22 @@
         "type": "PATH",
         "path": [
           "title"
-        ]
+        ],
+        "pathString": "title"
       },
       {
         "type": "PATH",
         "path": [
           "page",
           "title"
-        ]
+        ],
+        "pathString": "page.title"
       },
       {
         "type": "KEY_VALUE",
         "key": "id",
         "value": {
-          "type": "LITERAL",
-          "value": "title"
+          "type": "LITERAL"
         }
       }
     ],
@@ -115,18 +117,17 @@
         "type": "PATH",
         "path": [
           "subtitle"
-        ]
+        ],
+        "pathString": "subtitle"
       },
       {
-        "type": "LITERAL",
-        "value": "mysubtitle"
+        "type": "LITERAL"
       },
       {
         "type": "KEY_VALUE",
         "key": "class",
         "value": {
-          "type": "LITERAL",
-          "value": "subtitle"
+          "type": "LITERAL"
         }
       }
     ],
@@ -179,11 +180,11 @@
         "type": "PATH",
         "path": [
           "link"
-        ]
+        ],
+        "pathString": "link"
       },
       {
-        "type": "LITERAL",
-        "value": "website"
+        "type": "LITERAL"
       },
       {
         "type": "PATH",
@@ -191,7 +192,8 @@
           "websites",
           0,
           "url"
-        ]
+        ],
+        "pathString": "websites[0].url"
       }
     ],
     "encodeMarkup": true,
@@ -243,31 +245,30 @@
         "type": "PATH",
         "path": [
           "advancedLink"
-        ]
+        ],
+        "pathString": "advancedLink"
       },
       {
-        "type": "LITERAL",
-        "value": "another website"
+        "type": "LITERAL"
       },
       {
         "type": "KEY_VALUE",
         "key": "href",
         "value": {
           "type": "PATH",
-          "value": "websites[1].url",
           "path": [
             "websites",
             1,
             "url"
-          ]
+          ],
+          "pathString": "websites[1].url"
         }
       },
       {
         "type": "KEY_VALUE",
         "key": "class",
         "value": {
-          "type": "LITERAL",
-          "value": "foo"
+          "type": "LITERAL"
         }
       }
     ],
@@ -320,13 +321,15 @@
         "type": "PATH",
         "path": [
           "each"
-        ]
+        ],
+        "pathString": "each"
       },
       {
         "type": "PATH",
         "path": [
           "websites"
-        ]
+        ],
+        "pathString": "websites"
       },
       {
         "type": "BLOCK_PARAMS",
@@ -366,13 +369,15 @@
             "type": "PATH",
             "path": [
               "sum"
-            ]
+            ],
+            "pathString": "sum"
           },
           {
             "type": "PATH",
             "path": [
               "index"
-            ]
+            ],
+            "pathString": "index"
           },
           {
             "type": "LITERAL",
@@ -406,22 +411,22 @@
             "type": "PATH",
             "path": [
               "advancedLink"
-            ]
+            ],
+            "pathString": "advancedLink"
           },
           {
-            "type": "LITERAL",
-            "value": "website"
+            "type": "LITERAL"
           },
           {
             "type": "KEY_VALUE",
             "key": "href",
             "value": {
               "type": "PATH",
-              "value": "website.url",
               "path": [
                 "website",
                 "url"
-              ]
+              ],
+              "pathString": "website.url"
             }
           },
           {
@@ -429,11 +434,11 @@
             "key": "class",
             "value": {
               "type": "PATH",
-              "value": "page.class",
               "path": [
                 "page",
                 "class"
-              ]
+              ],
+              "pathString": "page.class"
             }
           }
         ],
@@ -508,7 +513,8 @@
             "path": [
               "page",
               "title"
-            ]
+            ],
+            "pathString": "page.title"
           }
         ],
         "encodeMarkup": true,
@@ -591,7 +597,8 @@
         "type": "PATH",
         "path": [
           "some_markup"
-        ]
+        ],
+        "pathString": "some_markup"
       }
     ],
     "encodeMarkup": false,
