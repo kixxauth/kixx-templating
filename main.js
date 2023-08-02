@@ -1,6 +1,7 @@
 /* globals Deno */
 import tokenize from './lib/tokenize.js';
 import buildSyntaxTree from './lib/build-syntax-tree.js';
+import createRenderFunction from './lib/create-render-function.js';
 
 // TODO: Will bring this back
 /*
@@ -28,6 +29,12 @@ class TemplateEngine {
     }
 }
 */
+
+const emitter = {
+    emit(type, err) {
+        console.error(`emit ${ type }:`, err);
+    },
+};
 
 // Used for scope testing below
 const baz = 3; // eslint-disable-line no-unused-vars
@@ -94,6 +101,13 @@ async function main() {
     });
 
     await Deno.writeTextFile('./ast.json', JSON.stringify(tree, null, 2));
+
+    const options = {
+        useVerboseLogging: true,
+        includeErrorMessages: true,
+    };
+
+    createRenderFunction(options, emitter, new Map(), new Map(), tree);
 }
 
 main();

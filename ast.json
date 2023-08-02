@@ -75,7 +75,8 @@
         "type": "KEY_VALUE",
         "key": "id",
         "value": {
-          "type": "LITERAL"
+          "type": "LITERAL",
+          "value": "title"
         }
       }
     ],
@@ -121,13 +122,15 @@
         "pathString": "subtitle"
       },
       {
-        "type": "LITERAL"
+        "type": "LITERAL",
+        "value": "mysubtitle"
       },
       {
         "type": "KEY_VALUE",
         "key": "class",
         "value": {
-          "type": "LITERAL"
+          "type": "LITERAL",
+          "value": "subtitle"
         }
       }
     ],
@@ -184,7 +187,8 @@
         "pathString": "link"
       },
       {
-        "type": "LITERAL"
+        "type": "LITERAL",
+        "value": "website"
       },
       {
         "type": "PATH",
@@ -249,7 +253,8 @@
         "pathString": "advancedLink"
       },
       {
-        "type": "LITERAL"
+        "type": "LITERAL",
+        "value": "another website"
       },
       {
         "type": "KEY_VALUE",
@@ -268,7 +273,8 @@
         "type": "KEY_VALUE",
         "key": "class",
         "value": {
-          "type": "LITERAL"
+          "type": "LITERAL",
+          "value": "foo"
         }
       }
     ],
@@ -415,7 +421,8 @@
             "pathString": "advancedLink"
           },
           {
-            "type": "LITERAL"
+            "type": "LITERAL",
+            "value": "website"
           },
           {
             "type": "KEY_VALUE",
