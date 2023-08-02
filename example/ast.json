@@ -471,10 +471,53 @@
       },
       {
         "type": "CONTENT",
+        "str": "        <p>This page title: ",
+        "token": {
+          "line": "        <p>This page title: {{page.title}}</p>\n",
+          "lineNumber": 11,
+          "startPosition": 0,
+          "endPosition": 27,
+          "tokenString": "        <p>This page title: "
+        }
+      },
+      {
+        "type": "EXPRESSION",
+        "exp": [
+          {
+            "type": "PATH",
+            "path": [
+              "page",
+              "title"
+            ],
+            "pathString": "page.title"
+          }
+        ],
+        "encodeMarkup": true,
+        "token": {
+          "line": "        <p>This page title: {{page.title}}</p>\n",
+          "lineNumber": 11,
+          "startPosition": 30,
+          "endPosition": 39,
+          "tokenString": "page.title"
+        }
+      },
+      {
+        "type": "CONTENT",
+        "str": "</p>\n",
+        "token": {
+          "line": "        <p>This page title: {{page.title}}</p>\n",
+          "lineNumber": 11,
+          "startPosition": 42,
+          "endPosition": 46,
+          "tokenString": "</p>\n"
+        }
+      },
+      {
+        "type": "CONTENT",
         "str": "    ",
         "token": {
           "line": "    {{ else }}\n",
-          "lineNumber": 11,
+          "lineNumber": 12,
           "startPosition": 0,
           "endPosition": 3,
           "tokenString": "    "
@@ -484,7 +527,7 @@
         "type": "ELSE",
         "token": {
           "line": "    {{ else }}\n",
-          "lineNumber": 11,
+          "lineNumber": 12,
           "startPosition": 6,
           "endPosition": 11,
           "tokenString": " else "
@@ -495,7 +538,7 @@
         "str": "\n",
         "token": {
           "line": "    {{ else }}\n",
-          "lineNumber": 11,
+          "lineNumber": 12,
           "startPosition": 14,
           "endPosition": 14,
           "tokenString": "\n"
@@ -506,7 +549,7 @@
         "str": "    <p>No websites listed for ",
         "token": {
           "line": "    <p>No websites listed for {{page.title}}</p>\n",
-          "lineNumber": 12,
+          "lineNumber": 13,
           "startPosition": 0,
           "endPosition": 29,
           "tokenString": "    <p>No websites listed for "
@@ -527,7 +570,7 @@
         "encodeMarkup": true,
         "token": {
           "line": "    <p>No websites listed for {{page.title}}</p>\n",
-          "lineNumber": 12,
+          "lineNumber": 13,
           "startPosition": 32,
           "endPosition": 41,
           "tokenString": "page.title"
@@ -538,7 +581,7 @@
         "str": "</p>\n",
         "token": {
           "line": "    <p>No websites listed for {{page.title}}</p>\n",
-          "lineNumber": 12,
+          "lineNumber": 13,
           "startPosition": 44,
           "endPosition": 48,
           "tokenString": "</p>\n"
@@ -549,7 +592,7 @@
         "str": "    ",
         "token": {
           "line": "    {{/each}}\n",
-          "lineNumber": 13,
+          "lineNumber": 14,
           "startPosition": 0,
           "endPosition": 3,
           "tokenString": "    "
@@ -569,7 +612,7 @@
     "str": "\n",
     "token": {
       "line": "    {{/each}}\n",
-      "lineNumber": 13,
+      "lineNumber": 14,
       "startPosition": 13,
       "endPosition": 13,
       "tokenString": "\n"
@@ -580,7 +623,7 @@
     "str": "\n",
     "token": {
       "line": "\n",
-      "lineNumber": 14,
+      "lineNumber": 15,
       "startPosition": 0,
       "endPosition": 0,
       "tokenString": "\n"
@@ -591,7 +634,7 @@
     "str": "    ",
     "token": {
       "line": "    {{{ some_markup }}}\n",
-      "lineNumber": 15,
+      "lineNumber": 16,
       "startPosition": 0,
       "endPosition": 3,
       "tokenString": "    "
@@ -611,7 +654,7 @@
     "encodeMarkup": false,
     "token": {
       "line": "    {{{ some_markup }}}\n",
-      "lineNumber": 15,
+      "lineNumber": 16,
       "startPosition": 7,
       "endPosition": 19,
       "tokenString": " some_markup "
@@ -622,7 +665,7 @@
     "str": "\n",
     "token": {
       "line": "    {{{ some_markup }}}\n",
-      "lineNumber": 15,
+      "lineNumber": 16,
       "startPosition": 23,
       "endPosition": 23,
       "tokenString": "\n"
@@ -633,7 +676,7 @@
     "str": "\n",
     "token": {
       "line": "\n",
-      "lineNumber": 16,
+      "lineNumber": 17,
       "startPosition": 0,
       "endPosition": 0,
       "tokenString": "\n"
@@ -644,7 +687,7 @@
     "str": "    ",
     "token": {
       "line": "    {{> footer}}\n",
-      "lineNumber": 17,
+      "lineNumber": 18,
       "startPosition": 0,
       "endPosition": 3,
       "tokenString": "    "
@@ -655,7 +698,7 @@
     "exp": "footer",
     "token": {
       "line": "    {{> footer}}\n",
-      "lineNumber": 17,
+      "lineNumber": 18,
       "startPosition": 6,
       "endPosition": 13,
       "tokenString": "> footer"
@@ -666,7 +709,7 @@
     "str": "\n",
     "token": {
       "line": "    {{> footer}}\n",
-      "lineNumber": 17,
+      "lineNumber": 18,
       "startPosition": 16,
       "endPosition": 16,
       "tokenString": "\n"
@@ -677,7 +720,7 @@
     "str": "</body>\n",
     "token": {
       "line": "</body>\n",
-      "lineNumber": 18,
+      "lineNumber": 19,
       "startPosition": 0,
       "endPosition": 7,
       "tokenString": "</body>\n"
@@ -688,7 +731,7 @@
     "str": "\n",
     "token": {
       "line": "\n",
-      "lineNumber": 19,
+      "lineNumber": 20,
       "startPosition": 0,
       "endPosition": 0,
       "tokenString": "\n"
