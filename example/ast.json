@@ -3,6 +3,7 @@
     "type": "CONTENT",
     "str": "<body class=\"",
     "token": {
+      "filename": "example.html",
       "line": "<body class=\"{{ page.class }}\" data=\"{ foo: bar }\">\n",
       "lineNumber": 1,
       "startPosition": 0,
@@ -24,6 +25,7 @@
     ],
     "encodeMarkup": true,
     "token": {
+      "filename": "example.html",
       "line": "<body class=\"{{ page.class }}\" data=\"{ foo: bar }\">\n",
       "lineNumber": 1,
       "startPosition": 15,
@@ -35,6 +37,7 @@
     "type": "CONTENT",
     "str": "\" data=\"{ foo: bar }\">\n",
     "token": {
+      "filename": "example.html",
       "line": "<body class=\"{{ page.class }}\" data=\"{ foo: bar }\">\n",
       "lineNumber": 1,
       "startPosition": 29,
@@ -46,6 +49,7 @@
     "type": "CONTENT",
     "str": "    ",
     "token": {
+      "filename": "example.html",
       "line": "    {{ title page.title id=\"title\"}}\n",
       "lineNumber": 2,
       "startPosition": 0,
@@ -82,6 +86,7 @@
     ],
     "encodeMarkup": true,
     "token": {
+      "filename": "example.html",
       "line": "    {{ title page.title id=\"title\"}}\n",
       "lineNumber": 2,
       "startPosition": 6,
@@ -93,6 +98,7 @@
     "type": "CONTENT",
     "str": "\n",
     "token": {
+      "filename": "example.html",
       "line": "    {{ title page.title id=\"title\"}}\n",
       "lineNumber": 2,
       "startPosition": 36,
@@ -104,6 +110,7 @@
     "type": "CONTENT",
     "str": "    ",
     "token": {
+      "filename": "example.html",
       "line": "    {{ subtitle \"mysubtitle\" class=\"subtitle\" }}\n",
       "lineNumber": 3,
       "startPosition": 0,
@@ -136,6 +143,7 @@
     ],
     "encodeMarkup": true,
     "token": {
+      "filename": "example.html",
       "line": "    {{ subtitle \"mysubtitle\" class=\"subtitle\" }}\n",
       "lineNumber": 3,
       "startPosition": 6,
@@ -147,6 +155,7 @@
     "type": "CONTENT",
     "str": "\n",
     "token": {
+      "filename": "example.html",
       "line": "    {{ subtitle \"mysubtitle\" class=\"subtitle\" }}\n",
       "lineNumber": 3,
       "startPosition": 48,
@@ -158,6 +167,7 @@
     "type": "CONTENT",
     "str": "\n",
     "token": {
+      "filename": "example.html",
       "line": "\n",
       "lineNumber": 4,
       "startPosition": 0,
@@ -169,6 +179,7 @@
     "type": "CONTENT",
     "str": "    <p>See ",
     "token": {
+      "filename": "example.html",
       "line": "    <p>See {{link \"website\" websites[0].url }}.</p>\n",
       "lineNumber": 5,
       "startPosition": 0,
@@ -202,6 +213,7 @@
     ],
     "encodeMarkup": true,
     "token": {
+      "filename": "example.html",
       "line": "    <p>See {{link \"website\" websites[0].url }}.</p>\n",
       "lineNumber": 5,
       "startPosition": 13,
@@ -213,6 +225,7 @@
     "type": "CONTENT",
     "str": ".</p>\n",
     "token": {
+      "filename": "example.html",
       "line": "    <p>See {{link \"website\" websites[0].url }}.</p>\n",
       "lineNumber": 5,
       "startPosition": 46,
@@ -224,6 +237,7 @@
     "type": "CONTENT",
     "str": "\n",
     "token": {
+      "filename": "example.html",
       "line": "\n",
       "lineNumber": 6,
       "startPosition": 0,
@@ -235,6 +249,7 @@
     "type": "CONTENT",
     "str": "    <p>See ",
     "token": {
+      "filename": "example.html",
       "line": "    <p>See {{advancedLink \"another website\" href=websites[1].url class=\"foo\"}}.</p>\n",
       "lineNumber": 7,
       "startPosition": 0,
@@ -280,6 +295,7 @@
     ],
     "encodeMarkup": true,
     "token": {
+      "filename": "example.html",
       "line": "    <p>See {{advancedLink \"another website\" href=websites[1].url class=\"foo\"}}.</p>\n",
       "lineNumber": 7,
       "startPosition": 13,
@@ -291,6 +307,7 @@
     "type": "CONTENT",
     "str": ".</p>\n",
     "token": {
+      "filename": "example.html",
       "line": "    <p>See {{advancedLink \"another website\" href=websites[1].url class=\"foo\"}}.</p>\n",
       "lineNumber": 7,
       "startPosition": 78,
@@ -302,6 +319,7 @@
     "type": "CONTENT",
     "str": "\n",
     "token": {
+      "filename": "example.html",
       "line": "\n",
       "lineNumber": 8,
       "startPosition": 0,
@@ -313,6 +331,7 @@
     "type": "CONTENT",
     "str": "    ",
     "token": {
+      "filename": "example.html",
       "line": "    {{#each websites as |website index| }}\n",
       "lineNumber": 9,
       "startPosition": 0,
@@ -350,6 +369,7 @@
         "type": "CONTENT",
         "str": "\n",
         "token": {
+          "filename": "example.html",
           "line": "    {{#each websites as |website index| }}\n",
           "lineNumber": 9,
           "startPosition": 42,
@@ -361,6 +381,7 @@
         "type": "CONTENT",
         "str": "        <p>",
         "token": {
+          "filename": "example.html",
           "line": "        <p>{{sum index 1 }} {{advancedLink \"website\" href=website.url class=page.class}}.</p>\n",
           "lineNumber": 10,
           "startPosition": 0,
@@ -392,6 +413,7 @@
         ],
         "encodeMarkup": true,
         "token": {
+          "filename": "example.html",
           "line": "        <p>{{sum index 1 }} {{advancedLink \"website\" href=website.url class=page.class}}.</p>\n",
           "lineNumber": 10,
           "startPosition": 13,
@@ -403,6 +425,7 @@
         "type": "CONTENT",
         "str": " ",
         "token": {
+          "filename": "example.html",
           "line": "        <p>{{sum index 1 }} {{advancedLink \"website\" href=website.url class=page.class}}.</p>\n",
           "lineNumber": 10,
           "startPosition": 27,
@@ -451,6 +474,7 @@
         ],
         "encodeMarkup": true,
         "token": {
+          "filename": "example.html",
           "line": "        <p>{{sum index 1 }} {{advancedLink \"website\" href=website.url class=page.class}}.</p>\n",
           "lineNumber": 10,
           "startPosition": 30,
@@ -462,6 +486,7 @@
         "type": "CONTENT",
         "str": ".</p>\n",
         "token": {
+          "filename": "example.html",
           "line": "        <p>{{sum index 1 }} {{advancedLink \"website\" href=website.url class=page.class}}.</p>\n",
           "lineNumber": 10,
           "startPosition": 88,
@@ -473,6 +498,7 @@
         "type": "CONTENT",
         "str": "        <p>This page title: ",
         "token": {
+          "filename": "example.html",
           "line": "        <p>This page title: {{page.title}}</p>\n",
           "lineNumber": 11,
           "startPosition": 0,
@@ -494,6 +520,7 @@
         ],
         "encodeMarkup": true,
         "token": {
+          "filename": "example.html",
           "line": "        <p>This page title: {{page.title}}</p>\n",
           "lineNumber": 11,
           "startPosition": 30,
@@ -505,6 +532,7 @@
         "type": "CONTENT",
         "str": "</p>\n",
         "token": {
+          "filename": "example.html",
           "line": "        <p>This page title: {{page.title}}</p>\n",
           "lineNumber": 11,
           "startPosition": 42,
@@ -516,6 +544,7 @@
         "type": "CONTENT",
         "str": "    ",
         "token": {
+          "filename": "example.html",
           "line": "    {{ else }}\n",
           "lineNumber": 12,
           "startPosition": 0,
@@ -526,6 +555,7 @@
       {
         "type": "ELSE",
         "token": {
+          "filename": "example.html",
           "line": "    {{ else }}\n",
           "lineNumber": 12,
           "startPosition": 6,
@@ -537,6 +567,7 @@
         "type": "CONTENT",
         "str": "\n",
         "token": {
+          "filename": "example.html",
           "line": "    {{ else }}\n",
           "lineNumber": 12,
           "startPosition": 14,
@@ -548,6 +579,7 @@
         "type": "CONTENT",
         "str": "    <p>No websites listed for ",
         "token": {
+          "filename": "example.html",
           "line": "    <p>No websites listed for {{page.title}}</p>\n",
           "lineNumber": 13,
           "startPosition": 0,
@@ -569,6 +601,7 @@
         ],
         "encodeMarkup": true,
         "token": {
+          "filename": "example.html",
           "line": "    <p>No websites listed for {{page.title}}</p>\n",
           "lineNumber": 13,
           "startPosition": 32,
@@ -580,6 +613,7 @@
         "type": "CONTENT",
         "str": "</p>\n",
         "token": {
+          "filename": "example.html",
           "line": "    <p>No websites listed for {{page.title}}</p>\n",
           "lineNumber": 13,
           "startPosition": 44,
@@ -591,6 +625,7 @@
         "type": "CONTENT",
         "str": "    ",
         "token": {
+          "filename": "example.html",
           "line": "    {{/each}}\n",
           "lineNumber": 14,
           "startPosition": 0,
@@ -600,6 +635,7 @@
       }
     ],
     "token": {
+      "filename": "example.html",
       "line": "    {{#each websites as |website index| }}\n",
       "lineNumber": 9,
       "startPosition": 6,
@@ -611,6 +647,7 @@
     "type": "CONTENT",
     "str": "\n",
     "token": {
+      "filename": "example.html",
       "line": "    {{/each}}\n",
       "lineNumber": 14,
       "startPosition": 13,
@@ -622,6 +659,7 @@
     "type": "CONTENT",
     "str": "\n",
     "token": {
+      "filename": "example.html",
       "line": "\n",
       "lineNumber": 15,
       "startPosition": 0,
@@ -633,6 +671,7 @@
     "type": "CONTENT",
     "str": "    ",
     "token": {
+      "filename": "example.html",
       "line": "    {{{ some_markup }}}\n",
       "lineNumber": 16,
       "startPosition": 0,
@@ -653,6 +692,7 @@
     ],
     "encodeMarkup": false,
     "token": {
+      "filename": "example.html",
       "line": "    {{{ some_markup }}}\n",
       "lineNumber": 16,
       "startPosition": 7,
@@ -664,6 +704,7 @@
     "type": "CONTENT",
     "str": "\n",
     "token": {
+      "filename": "example.html",
       "line": "    {{{ some_markup }}}\n",
       "lineNumber": 16,
       "startPosition": 23,
@@ -675,6 +716,7 @@
     "type": "CONTENT",
     "str": "\n",
     "token": {
+      "filename": "example.html",
       "line": "\n",
       "lineNumber": 17,
       "startPosition": 0,
@@ -686,6 +728,7 @@
     "type": "CONTENT",
     "str": "    ",
     "token": {
+      "filename": "example.html",
       "line": "    {{> footer}}\n",
       "lineNumber": 18,
       "startPosition": 0,
@@ -697,6 +740,7 @@
     "type": "PARTIAL",
     "exp": "footer",
     "token": {
+      "filename": "example.html",
       "line": "    {{> footer}}\n",
       "lineNumber": 18,
       "startPosition": 6,
@@ -708,6 +752,7 @@
     "type": "CONTENT",
     "str": "\n",
     "token": {
+      "filename": "example.html",
       "line": "    {{> footer}}\n",
       "lineNumber": 18,
       "startPosition": 16,
@@ -719,6 +764,7 @@
     "type": "CONTENT",
     "str": "</body>\n",
     "token": {
+      "filename": "example.html",
       "line": "</body>\n",
       "lineNumber": 19,
       "startPosition": 0,
@@ -730,6 +776,7 @@
     "type": "CONTENT",
     "str": "\n",
     "token": {
+      "filename": "example.html",
       "line": "\n",
       "lineNumber": 20,
       "startPosition": 0,

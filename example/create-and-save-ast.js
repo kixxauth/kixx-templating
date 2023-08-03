@@ -6,7 +6,7 @@ async function main() {
     let res;
     const utf8String = await Deno.readTextFile('./example/example.html');
 
-    res = KixxTemplating.tokenize({}, utf8String);
+    res = KixxTemplating.tokenize({}, 'example.html', utf8String);
 
     if (res.errors && res.errors.length > 0) {
         throw res.errors[0];
