@@ -7,7 +7,7 @@
     <p>See {{advancedLink "another website" href=websites[1].url class="foo"}}.</p>
 
     {{#each websites as |website index| }}
-        <p>{{sum index 1 }} {{advancedLink "website" href=website.url class=page.class}}.</p>
+        {{> list_item }}
         <p>This page title: {{page.title}}</p>
     {{ else }}
     <p>No websites listed for {{page.title}}</p>
