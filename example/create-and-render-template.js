@@ -1,5 +1,5 @@
 /* global Deno */
-import KixxTemplating from '../main.js';
+import { TemplateEngine } from '../mod.js';
 
 const helpers = {
     title(helper, context, hash, title) {
@@ -43,7 +43,7 @@ const helpers = {
 };
 
 async function main() {
-    const engine = new KixxTemplating.TemplateEngine({
+    const engine = new TemplateEngine({
         useVerboseLogging: true,
         includeErrorMessages: true,
     });
