@@ -1,6 +1,7 @@
 {
   "name": "kixx-templating",
-  "version": "1.0.0",
+  "version": "2.0.0",
+  "description": "A simple and robust text template engine for JavaScript environments.",
   "type": "module",
   "scripts": {
     "test": "eslint ./"
