@@ -90,6 +90,22 @@ main().catch(function catchError(err) {
 });
 ```
 
+Creating a Template Engine
+--------------------------
+
+```js
+import { TemplateEngine } from '../mod.js';
+
+const engine = new TemplateEngine({
+    useVerboseLogging: true,
+    includeErrorMessages: true,
+});
+```
+
+### Options
+- useVerboseLogging - Boolean - If true, in addition to throwing errors, print them out to stderr.
+- includeErrorMessages - Boolean - If true, include error messages in the template output.
+
 Expressions
 -----------
 ```html
