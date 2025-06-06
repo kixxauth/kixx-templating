@@ -1,0 +1,54 @@
+<header id="site-header" class="no-link-decoration">
+    <div id="site-header__section-1">
+        <div class="site-width-container site-header__row">
+            <div>
+                <a href="/" id="site-header__logo">
+                    <img src="https://kixx.imgix.net/nydynamo/objects/3f88b9b2b8327cd3fa7950349e8e5149c2ed35ceace7e193037046237e2db481" alt="Capital Arena" />
+                </a>
+                <span id="site-header__subtitle">Indoor Ice Rink</span>
+            </div>
+            <div class="site-header__quick-links">
+                <a class="site-header__quick-link" href="tel:{{ contactInfo.phone.raw }}"><span class="material-symbols-rounded">call</span> {{ contactInfo.phone.formatted }}</a>
+                <a class="site-header__quick-link" href="/schedule"><span class="material-symbols-rounded">calendar_month</span> Schedule</a>
+            </div>
+        </div>
+    </div>
+    <div id="site-header__section-2" class="inverted-background">
+        <div class="site-width-container site-header__row">
+            <a id="site-header__address" href="https://maps.app.goo.gl/QXLd8mHxTR8yGiJTA">
+                <span class="material-symbols-rounded">pin_drop</span>
+                <address>
+                    16 Clifton Common Blvd<br />
+                    Clifton Park, NY 12065
+                </address>
+            </a>
+            <button id="site-header__menu-toggle" class="button" data-js-behave="menu-toggle" data-js-props='{"target":"#site-header__menu"}'>
+                <span class="button__label">menu</span>
+                <span class="material-symbols-rounded button__icon">menu</span>
+            </button>
+        </div>
+    </div>
+    <nav id="site-header__menu">
+        <ul class="nav-menu site-width-container">
+            <li class="nav-menu__top-level-link">
+                <a href="/schedule"><span class="material-symbols-rounded">calendar_month</span> Schedule</a>
+            </li>
+            {{#each nav_menu_sections as |menu_item|}}
+            <li class="nav-menu__group">
+                <a href="#" class="nav-menu__group-label" data-js-behave="sub-menu-toggle">
+                    <span>{{ menu_item.label }}</span>
+                    <span class="material-symbols-rounded nav-menu__group-label-icon--closed">keyboard_arrow_down</span>
+                    <span class="material-symbols-rounded nav-menu__group-label-icon--active">keyboard_arrow_up</span>
+                </a>
+                <ul>
+                    {{#each menu_item.pages as |page|}}
+                    <li>
+                        <a href="{{ page.url }}">{{ page.label }}</a>
+                    </li>
+                    {{/each}}
+                </ul>
+            </li>
+            {{/each}}
+        </ul>
+    </nav>
+</header>
