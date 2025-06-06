@@ -1,14 +1,37 @@
 {
   "name": "kixx-templating",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "A simple and robust text template engine for JavaScript environments.",
   "type": "module",
-  "scripts": {
-    "test": "eslint ./"
+  "main": "mod.js",
+  "engines": {
+    "node": ">=16.13.2"
   },
+  "scripts": {
+    "test": "eslint ./ && node ./test/run-tests.js",
+    "lint": "eslint ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kixxauth/kixx-templating.git"
+  },
+  "files": [
+    "lib/",
+    "mod.js"
+  ],
+  "devDependencies": {
+    "@eslint/js": "9.27.0",
+    "eslint": "9.27.0"
+  },
+  "keywords": [
+    "kixx",
+    "templating",
+    "templates"
+  ],
   "author": "Kris Walker (www.kriswalker.me)",
   "license": "MIT",
-  "devDependencies": {
-    "eslint": "~8.46.0"
-  }
+  "bugs": {
+    "url": "https://github.com/kixxauth/kixx-templating/issues"
+  },
+  "homepage": "https://github.com/kixxauth/kixx-templating"
 }
