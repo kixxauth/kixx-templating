@@ -1,76 +1,35 @@
-    <div class="events-schedule-container">
-        <nav class="events-calendar">
-            <div class="cell events-calendar__header-cell">
-                <span>Mon</span>
-            </div>
-            <div class="cell events-calendar__header-cell">
-                <span>Tue</span>
-            </div>
-            <div class="cell events-calendar__header-cell">
-                <span>Wed</span>
-            </div>
-            <div class="cell events-calendar__header-cell">
-                <span>Thu</span>
-            </div>
-            <div class="cell events-calendar__header-cell">
-                <span>Fri</span>
-            </div>
-            <div class="cell events-calendar__header-cell">
-                <span>Sat</span>
-            </div>
-            <div class="cell events-calendar__header-cell">
-                <span>Sun</span>
-            </div>
-            {{#each events_calendar.weeks as |week|}}
-            {{#each week as |day|}}
-            <a
-                class="cell events-calendar__day-cell{{#if day.isToday }} is-today active{{/if}}"
-                href="#schdule-day-{{ day.isoDate }}"
-                data-js-behave="toggle-schedule-day"
-                data-js-props='{"target":"#schdule-day-{{ day.isoDate }}"}'>
-                <div class="events-calendar__day-cell-header">
-                    <span>{{format_date day.isoDate zone=day.timezone format="DATE_MONTH_DATE" }}</span>
-                </div>
-                <div class="events-calendar__day-cell-body">
-                    {{#if day.events }}
-                        <span>&#9679; {{ day.events.length }}</span>
-                    {{/if}}
-                </div>
-            </a>
-            {{/each}}
-            {{/each}}
-        </nav>
+<article>
+    <h1>{{ article.title }}</h1>
+    {{!-- The article.date object does not exist --}}
+    <p>{{ article.date.localized }}</p>
+    <figure>
+        {{image
+            article.img.srcset.0
+            article.img.srcset.1
+            article.img.srcset.2
+            article.img.srcset.3
+            }}
 
-        <div>
-            {{#each events_calendar.weeks as |week|}}
-            {{#each week as |day|}}
-            <section
-                class="events-list-day{{#if day.isToday }} is-today active{{/if}}"
-                id="schdule-day-{{ day.isoDate }}">
-                <h3 class="mt-0">{{format_date day.isoDate zone=day.timezone format="DATE_MED_WITH_WEEKDAY" }}</h3>
-                {{#each day.events as |event|}}
-                <div class="events-list-day__event-card card mb-2">
-                    <article class="events-list-day__event-card-header">
-                        <div>
-                            <time class="font-sm-1" datetime="{{ event.startDateTime }}">{{format_date event.startDateTime zone=event.timezone format="TIME_SIMPLE" }}</time>
-                            {{#each event.spaces as |space|}}
-                            <span class="font-muted font-sm-1">{{ space.spaceName }}</span>
-                            {{/each}}
-                        </div>
-                        <span class="display-block font-lg-1 font-strong-1">{{ event.programName }}</span>
-                        <span class="display-block font-muted font-sm-1">{{ event.sessionName }}</span>
-                    </article>
-                    <div class="events-list-day__event-card-actions">
-                        <a href="{{ event.bondSportsLink }}" class="button button--filled">Register</a>
-                    </div>
-                </div>
-                {{else}}
-                <div class="events-list-day__event-card card">
-                    <p>No events scheduled</p>
-                </div>
-                {{/each}}
-            </section>
-            {{/each}}
-            {{/each}}
-        </div>
-    </div>
+        {{!-- A helper to provide a default value for a value which does not exist --}}
+        <caption>{{resolve article.img.meta.caption 'An image of unknown origin' }}</caption>
+    </figure>
+
+    {{!-- An ifEqual custom helper --}}
+    {{#ifEqual article.type 'webpage'}}
+    <main class="webpage">
+        <h2>This is a web page</h2>
+    {{else}}{{#ifEqual article.type 'article'}}
+        <h2>This is an article</h2>
+    {{else}}
+        <h2>This is not a web page or an article</h2>
+    {{/ifEqual}}
+    {{/ifEqual}}
+    </main>
+
+    {{!-- An empty list --}}
+    {{#each article.tableOfContents as |item|}}
+    <a href="#{{ item.id }}">{{ item.label }}</a>
+    {{else}}
+    <p>There are no contents items to list</p>
+    {{/each}}
+</article>

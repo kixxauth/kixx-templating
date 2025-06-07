@@ -5,6 +5,7 @@ export default [
     {
         ignores: [
             'node_modules/',
+            'test/partials/',
         ],
     },
     js.configs.recommended,
