@@ -99,6 +99,29 @@ import buildSyntaxTree from '../lib/build-syntax-tree.js';
     });
 }
 
+{
+    const source = [
+        '<html>',
+        '<head></head>',
+        '  <body>',
+        '  <article>',
+        '    {{#if article }}', // We forgot to close this block
+        '    <p>{{ article.subtitle }}</p>',
+        '  </article>',
+        '  </body>',
+        '</html>',
+    ].join('\n');
+
+    assertThrows(() => {
+        createAndRenderTemplate('test-5', source, {});
+    }, (error) => {
+        assertEqual('Failed to close block from line 5', error.message);
+        assertEqual('test-5', error.filename);
+        assertEqual(5, error.lineNumber);
+        assertEqual(6, error.startPosition);
+    });
+}
+
 
 function createAndRenderTemplate(name, source) {
     const tokens = tokenize(null, name, source);
