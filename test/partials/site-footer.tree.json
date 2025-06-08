@@ -1,0 +1,58 @@
+[
+  {
+    "type": "CONTENT",
+    "str": "<footer>\n",
+    "tokens": [
+      {
+        "filename": "site-footer.html",
+        "lineNumber": 1,
+        "startPosition": 0,
+        "endPosition": 8,
+        "tokenString": "<footer>\n",
+        "line": "<footer>\n"
+      }
+    ]
+  },
+  {
+    "type": "CONTENT",
+    "str": "    <p>This is the footer</p>\n",
+    "tokens": [
+      {
+        "filename": "site-footer.html",
+        "lineNumber": 2,
+        "startPosition": 0,
+        "endPosition": 29,
+        "tokenString": "    <p>This is the footer</p>\n",
+        "line": "    <p>This is the footer</p>\n"
+      }
+    ]
+  },
+  {
+    "type": "CONTENT",
+    "str": "</footer>\n",
+    "tokens": [
+      {
+        "filename": "site-footer.html",
+        "lineNumber": 3,
+        "startPosition": 0,
+        "endPosition": 9,
+        "tokenString": "</footer>\n",
+        "line": "</footer>\n"
+      }
+    ]
+  },
+  {
+    "type": "CONTENT",
+    "str": "\n",
+    "tokens": [
+      {
+        "filename": "site-footer.html",
+        "lineNumber": 4,
+        "startPosition": 0,
+        "endPosition": 0,
+        "tokenString": "\n",
+        "line": "\n"
+      }
+    ]
+  }
+]

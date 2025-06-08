@@ -1,0 +1,1120 @@
+[
+  {
+    "type": "CONTENT",
+    "str": "<article>\n",
+    "tokens": [
+      {
+        "filename": "home.html",
+        "lineNumber": 1,
+        "startPosition": 0,
+        "endPosition": 9,
+        "tokenString": "<article>\n",
+        "line": "<article>\n"
+      }
+    ]
+  },
+  {
+    "type": "CONTENT",
+    "str": "    <h1>",
+    "tokens": [
+      {
+        "filename": "home.html",
+        "lineNumber": 2,
+        "startPosition": 0,
+        "endPosition": 7,
+        "tokenString": "    <h1>",
+        "line": "    <h1>{{ article.title }}</h1>\n"
+      }
+    ]
+  },
+  {
+    "type": "PATH_EXPRESSION",
+    "exp": [
+      {
+        "type": "PATH",
+        "path": [
+          "article",
+          "title"
+        ],
+        "pathString": "article.title"
+      }
+    ],
+    "tokens": [
+      {
+        "filename": "home.html",
+        "lineNumber": 2,
+        "startPosition": 10,
+        "endPosition": 24,
+        "tokenString": " article.title ",
+        "line": "    <h1>{{ article.title }}</h1>\n"
+      }
+    ]
+  },
+  {
+    "type": "CONTENT",
+    "str": "</h1>\n",
+    "tokens": [
+      {
+        "filename": "home.html",
+        "lineNumber": 2,
+        "startPosition": 27,
+        "endPosition": 32,
+        "tokenString": "</h1>\n",
+        "line": "    <h1>{{ article.title }}</h1>\n"
+      }
+    ]
+  },
+  {
+    "type": "CONTENT",
+    "str": "    ",
+    "tokens": [
+      {
+        "filename": "home.html",
+        "lineNumber": 3,
+        "startPosition": 0,
+        "endPosition": 3,
+        "tokenString": "    ",
+        "line": "    {{!-- The article.date object does not exist --}}\n"
+      }
+    ]
+  },
+  {
+    "type": "COMMENT",
+    "tokens": [
+      {
+        "filename": "home.html",
+        "lineNumber": 3,
+        "startPosition": 6,
+        "endPosition": 50,
+        "tokenString": "!-- The article.date object does not exist --",
+        "line": "    {{!-- The article.date object does not exist --}}\n"
+      }
+    ]
+  },
+  {
+    "type": "CONTENT",
+    "str": "\n",
+    "tokens": [
+      {
+        "filename": "home.html",
+        "lineNumber": 3,
+        "startPosition": 53,
+        "endPosition": 53,
+        "tokenString": "\n",
+        "line": "    {{!-- The article.date object does not exist --}}\n"
+      }
+    ]
+  },
+  {
+    "type": "CONTENT",
+    "str": "    <p>",
+    "tokens": [
+      {
+        "filename": "home.html",
+        "lineNumber": 4,
+        "startPosition": 0,
+        "endPosition": 6,
+        "tokenString": "    <p>",
+        "line": "    <p>{{ article.date.localized }}</p>\n"
+      }
+    ]
+  },
+  {
+    "type": "PATH_EXPRESSION",
+    "exp": [
+      {
+        "type": "PATH",
+        "path": [
+          "article",
+          "date",
+          "localized"
+        ],
+        "pathString": "article.date.localized"
+      }
+    ],
+    "tokens": [
+      {
+        "filename": "home.html",
+        "lineNumber": 4,
+        "startPosition": 9,
+        "endPosition": 32,
+        "tokenString": " article.date.localized ",
+        "line": "    <p>{{ article.date.localized }}</p>\n"
+      }
+    ]
+  },
+  {
+    "type": "CONTENT",
+    "str": "</p>\n",
+    "tokens": [
+      {
+        "filename": "home.html",
+        "lineNumber": 4,
+        "startPosition": 35,
+        "endPosition": 39,
+        "tokenString": "</p>\n",
+        "line": "    <p>{{ article.date.localized }}</p>\n"
+      }
+    ]
+  },
+  {
+    "type": "CONTENT",
+    "str": "    <figure>\n",
+    "tokens": [
+      {
+        "filename": "home.html",
+        "lineNumber": 5,
+        "startPosition": 0,
+        "endPosition": 12,
+        "tokenString": "    <figure>\n",
+        "line": "    <figure>\n"
+      }
+    ]
+  },
+  {
+    "type": "CONTENT",
+    "str": "        ",
+    "tokens": [
+      {
+        "filename": "home.html",
+        "lineNumber": 6,
+        "startPosition": 0,
+        "endPosition": 7,
+        "tokenString": "        ",
+        "line": "        {{image\n"
+      }
+    ]
+  },
+  {
+    "type": "HELPER_EXPRESSION",
+    "exp": [
+      {
+        "type": "PATH",
+        "path": [
+          "image"
+        ],
+        "pathString": "image"
+      },
+      {
+        "type": "PATH",
+        "path": [
+          "article",
+          "img",
+          "srcset",
+          "0"
+        ],
+        "pathString": "article.img.srcset.0"
+      },
+      {
+        "type": "PATH",
+        "path": [
+          "article",
+          "img",
+          "srcset",
+          "1"
+        ],
+        "pathString": "article.img.srcset.1"
+      },
+      {
+        "type": "PATH",
+        "path": [
+          "article",
+          "img",
+          "srcset",
+          "2"
+        ],
+        "pathString": "article.img.srcset.2"
+      },
+      {
+        "type": "PATH",
+        "path": [
+          "article",
+          "img",
+          "srcset",
+          "3"
+        ],
+        "pathString": "article.img.srcset.3"
+      }
+    ],
+    "tokens": [
+      {
+        "filename": "home.html",
+        "lineNumber": 6,
+        "startPosition": 10,
+        "endPosition": 15,
+        "tokenString": "image\n",
+        "line": "        {{image\n"
+      },
+      {
+        "filename": "home.html",
+        "lineNumber": 7,
+        "startPosition": 0,
+        "endPosition": 32,
+        "tokenString": "            article.img.srcset.0\n",
+        "line": "            article.img.srcset.0\n"
+      },
+      {
+        "filename": "home.html",
+        "lineNumber": 8,
+        "startPosition": 0,
+        "endPosition": 32,
+        "tokenString": "            article.img.srcset.1\n",
+        "line": "            article.img.srcset.1\n"
+      },
+      {
+        "filename": "home.html",
+        "lineNumber": 9,
+        "startPosition": 0,
+        "endPosition": 32,
+        "tokenString": "            article.img.srcset.2\n",
+        "line": "            article.img.srcset.2\n"
+      },
+      {
+        "filename": "home.html",
+        "lineNumber": 10,
+        "startPosition": 0,
+        "endPosition": 32,
+        "tokenString": "            article.img.srcset.3\n",
+        "line": "            article.img.srcset.3\n"
+      },
+      {
+        "filename": "home.html",
+        "lineNumber": 11,
+        "startPosition": 0,
+        "endPosition": 11,
+        "tokenString": "            ",
+        "line": "            }}\n"
+      }
+    ]
+  },
+  {
+    "type": "CONTENT",
+    "str": "\n",
+    "tokens": [
+      {
+        "filename": "home.html",
+        "lineNumber": 11,
+        "startPosition": 14,
+        "endPosition": 14,
+        "tokenString": "\n",
+        "line": "            }}\n"
+      }
+    ]
+  },
+  {
+    "type": "CONTENT",
+    "str": "\n",
+    "tokens": [
+      {
+        "filename": "home.html",
+        "lineNumber": 12,
+        "startPosition": 0,
+        "endPosition": 0,
+        "tokenString": "\n",
+        "line": "\n"
+      }
+    ]
+  },
+  {
+    "type": "CONTENT",
+    "str": "        ",
+    "tokens": [
+      {
+        "filename": "home.html",
+        "lineNumber": 13,
+        "startPosition": 0,
+        "endPosition": 7,
+        "tokenString": "        ",
+        "line": "        {{!-- A helper to provide a default value for a value which does not exist --}}\n"
+      }
+    ]
+  },
+  {
+    "type": "COMMENT",
+    "tokens": [
+      {
+        "filename": "home.html",
+        "lineNumber": 13,
+        "startPosition": 10,
+        "endPosition": 84,
+        "tokenString": "!-- A helper to provide a default value for a value which does not exist --",
+        "line": "        {{!-- A helper to provide a default value for a value which does not exist --}}\n"
+      }
+    ]
+  },
+  {
+    "type": "CONTENT",
+    "str": "\n",
+    "tokens": [
+      {
+        "filename": "home.html",
+        "lineNumber": 13,
+        "startPosition": 87,
+        "endPosition": 87,
+        "tokenString": "\n",
+        "line": "        {{!-- A helper to provide a default value for a value which does not exist --}}\n"
+      }
+    ]
+  },
+  {
+    "type": "CONTENT",
+    "str": "        <caption>",
+    "tokens": [
+      {
+        "filename": "home.html",
+        "lineNumber": 14,
+        "startPosition": 0,
+        "endPosition": 16,
+        "tokenString": "        <caption>",
+        "line": "        <caption>{{resolve article.img.meta.caption 'An image of unknown origin' }}</caption>\n"
+      }
+    ]
+  },
+  {
+    "type": "HELPER_EXPRESSION",
+    "exp": [
+      {
+        "type": "PATH",
+        "path": [
+          "resolve"
+        ],
+        "pathString": "resolve"
+      },
+      {
+        "type": "PATH",
+        "path": [
+          "article",
+          "img",
+          "meta",
+          "caption"
+        ],
+        "pathString": "article.img.meta.caption"
+      },
+      {
+        "type": "LITERAL",
+        "value": "An image of unknown origin"
+      }
+    ],
+    "tokens": [
+      {
+        "filename": "home.html",
+        "lineNumber": 14,
+        "startPosition": 19,
+        "endPosition": 80,
+        "tokenString": "resolve article.img.meta.caption 'An image of unknown origin' ",
+        "line": "        <caption>{{resolve article.img.meta.caption 'An image of unknown origin' }}</caption>\n"
+      }
+    ]
+  },
+  {
+    "type": "CONTENT",
+    "str": "</caption>\n",
+    "tokens": [
+      {
+        "filename": "home.html",
+        "lineNumber": 14,
+        "startPosition": 83,
+        "endPosition": 93,
+        "tokenString": "</caption>\n",
+        "line": "        <caption>{{resolve article.img.meta.caption 'An image of unknown origin' }}</caption>\n"
+      }
+    ]
+  },
+  {
+    "type": "CONTENT",
+    "str": "    </figure>\n",
+    "tokens": [
+      {
+        "filename": "home.html",
+        "lineNumber": 15,
+        "startPosition": 0,
+        "endPosition": 13,
+        "tokenString": "    </figure>\n",
+        "line": "    </figure>\n"
+      }
+    ]
+  },
+  {
+    "type": "CONTENT",
+    "str": "\n",
+    "tokens": [
+      {
+        "filename": "home.html",
+        "lineNumber": 16,
+        "startPosition": 0,
+        "endPosition": 0,
+        "tokenString": "\n",
+        "line": "\n"
+      }
+    ]
+  },
+  {
+    "type": "CONTENT",
+    "str": "    ",
+    "tokens": [
+      {
+        "filename": "home.html",
+        "lineNumber": 17,
+        "startPosition": 0,
+        "endPosition": 3,
+        "tokenString": "    ",
+        "line": "    {{!-- An ifEqual custom helper --}}\n"
+      }
+    ]
+  },
+  {
+    "type": "COMMENT",
+    "tokens": [
+      {
+        "filename": "home.html",
+        "lineNumber": 17,
+        "startPosition": 6,
+        "endPosition": 36,
+        "tokenString": "!-- An ifEqual custom helper --",
+        "line": "    {{!-- An ifEqual custom helper --}}\n"
+      }
+    ]
+  },
+  {
+    "type": "CONTENT",
+    "str": "\n",
+    "tokens": [
+      {
+        "filename": "home.html",
+        "lineNumber": 17,
+        "startPosition": 39,
+        "endPosition": 39,
+        "tokenString": "\n",
+        "line": "    {{!-- An ifEqual custom helper --}}\n"
+      }
+    ]
+  },
+  {
+    "type": "CONTENT",
+    "str": "    ",
+    "tokens": [
+      {
+        "filename": "home.html",
+        "lineNumber": 18,
+        "startPosition": 0,
+        "endPosition": 3,
+        "tokenString": "    ",
+        "line": "    {{#ifEqual article.type 'webpage'}}\n"
+      }
+    ]
+  },
+  {
+    "type": "BLOCK_OPEN",
+    "exp": [
+      {
+        "type": "PATH",
+        "path": [
+          "ifEqual"
+        ],
+        "pathString": "ifEqual"
+      },
+      {
+        "type": "PATH",
+        "path": [
+          "article",
+          "type"
+        ],
+        "pathString": "article.type"
+      },
+      {
+        "type": "LITERAL",
+        "value": "webpage"
+      }
+    ],
+    "children": [
+      {
+        "type": "CONTENT",
+        "str": "\n",
+        "tokens": [
+          {
+            "filename": "home.html",
+            "lineNumber": 18,
+            "startPosition": 39,
+            "endPosition": 39,
+            "tokenString": "\n",
+            "line": "    {{#ifEqual article.type 'webpage'}}\n"
+          }
+        ]
+      },
+      {
+        "type": "CONTENT",
+        "str": "    <main class=\"webpage\">\n",
+        "tokens": [
+          {
+            "filename": "home.html",
+            "lineNumber": 19,
+            "startPosition": 0,
+            "endPosition": 26,
+            "tokenString": "    <main class=\"webpage\">\n",
+            "line": "    <main class=\"webpage\">\n"
+          }
+        ]
+      },
+      {
+        "type": "CONTENT",
+        "str": "        <h2>This is a web page</h2>\n",
+        "tokens": [
+          {
+            "filename": "home.html",
+            "lineNumber": 20,
+            "startPosition": 0,
+            "endPosition": 35,
+            "tokenString": "        <h2>This is a web page</h2>\n",
+            "line": "        <h2>This is a web page</h2>\n"
+          }
+        ]
+      },
+      {
+        "type": "CONTENT",
+        "str": "    ",
+        "tokens": [
+          {
+            "filename": "home.html",
+            "lineNumber": 21,
+            "startPosition": 0,
+            "endPosition": 3,
+            "tokenString": "    ",
+            "line": "    {{else}}{{#ifEqual article.type 'article'}}\n"
+          }
+        ]
+      },
+      {
+        "type": "ELSE",
+        "tokens": [
+          {
+            "filename": "home.html",
+            "lineNumber": 21,
+            "startPosition": 6,
+            "endPosition": 9,
+            "tokenString": "else",
+            "line": "    {{else}}{{#ifEqual article.type 'article'}}\n"
+          }
+        ]
+      },
+      {
+        "type": "BLOCK_OPEN",
+        "exp": [
+          {
+            "type": "PATH",
+            "path": [
+              "ifEqual"
+            ],
+            "pathString": "ifEqual"
+          },
+          {
+            "type": "PATH",
+            "path": [
+              "article",
+              "type"
+            ],
+            "pathString": "article.type"
+          },
+          {
+            "type": "LITERAL",
+            "value": "article"
+          }
+        ],
+        "children": [
+          {
+            "type": "CONTENT",
+            "str": "\n",
+            "tokens": [
+              {
+                "filename": "home.html",
+                "lineNumber": 21,
+                "startPosition": 47,
+                "endPosition": 47,
+                "tokenString": "\n",
+                "line": "    {{else}}{{#ifEqual article.type 'article'}}\n"
+              }
+            ]
+          },
+          {
+            "type": "CONTENT",
+            "str": "        <h2>This is an article</h2>\n",
+            "tokens": [
+              {
+                "filename": "home.html",
+                "lineNumber": 22,
+                "startPosition": 0,
+                "endPosition": 35,
+                "tokenString": "        <h2>This is an article</h2>\n",
+                "line": "        <h2>This is an article</h2>\n"
+              }
+            ]
+          },
+          {
+            "type": "CONTENT",
+            "str": "    ",
+            "tokens": [
+              {
+                "filename": "home.html",
+                "lineNumber": 23,
+                "startPosition": 0,
+                "endPosition": 3,
+                "tokenString": "    ",
+                "line": "    {{else}}\n"
+              }
+            ]
+          },
+          {
+            "type": "ELSE",
+            "tokens": [
+              {
+                "filename": "home.html",
+                "lineNumber": 23,
+                "startPosition": 6,
+                "endPosition": 9,
+                "tokenString": "else",
+                "line": "    {{else}}\n"
+              }
+            ]
+          },
+          {
+            "type": "CONTENT",
+            "str": "\n",
+            "tokens": [
+              {
+                "filename": "home.html",
+                "lineNumber": 23,
+                "startPosition": 12,
+                "endPosition": 12,
+                "tokenString": "\n",
+                "line": "    {{else}}\n"
+              }
+            ]
+          },
+          {
+            "type": "CONTENT",
+            "str": "        <h2>This is not a web page or an article</h2>\n",
+            "tokens": [
+              {
+                "filename": "home.html",
+                "lineNumber": 24,
+                "startPosition": 0,
+                "endPosition": 53,
+                "tokenString": "        <h2>This is not a web page or an article</h2>\n",
+                "line": "        <h2>This is not a web page or an article</h2>\n"
+              }
+            ]
+          },
+          {
+            "type": "CONTENT",
+            "str": "    ",
+            "tokens": [
+              {
+                "filename": "home.html",
+                "lineNumber": 25,
+                "startPosition": 0,
+                "endPosition": 3,
+                "tokenString": "    ",
+                "line": "    {{/ifEqual}}\n"
+              }
+            ]
+          }
+        ],
+        "tokens": [
+          {
+            "filename": "home.html",
+            "lineNumber": 21,
+            "startPosition": 14,
+            "endPosition": 44,
+            "tokenString": "#ifEqual article.type 'article'",
+            "line": "    {{else}}{{#ifEqual article.type 'article'}}\n"
+          }
+        ]
+      },
+      {
+        "type": "CONTENT",
+        "str": "\n",
+        "tokens": [
+          {
+            "filename": "home.html",
+            "lineNumber": 25,
+            "startPosition": 16,
+            "endPosition": 16,
+            "tokenString": "\n",
+            "line": "    {{/ifEqual}}\n"
+          }
+        ]
+      },
+      {
+        "type": "CONTENT",
+        "str": "    ",
+        "tokens": [
+          {
+            "filename": "home.html",
+            "lineNumber": 26,
+            "startPosition": 0,
+            "endPosition": 3,
+            "tokenString": "    ",
+            "line": "    {{/ifEqual}}\n"
+          }
+        ]
+      }
+    ],
+    "tokens": [
+      {
+        "filename": "home.html",
+        "lineNumber": 18,
+        "startPosition": 6,
+        "endPosition": 36,
+        "tokenString": "#ifEqual article.type 'webpage'",
+        "line": "    {{#ifEqual article.type 'webpage'}}\n"
+      }
+    ]
+  },
+  {
+    "type": "CONTENT",
+    "str": "\n",
+    "tokens": [
+      {
+        "filename": "home.html",
+        "lineNumber": 26,
+        "startPosition": 16,
+        "endPosition": 16,
+        "tokenString": "\n",
+        "line": "    {{/ifEqual}}\n"
+      }
+    ]
+  },
+  {
+    "type": "CONTENT",
+    "str": "    </main>\n",
+    "tokens": [
+      {
+        "filename": "home.html",
+        "lineNumber": 27,
+        "startPosition": 0,
+        "endPosition": 11,
+        "tokenString": "    </main>\n",
+        "line": "    </main>\n"
+      }
+    ]
+  },
+  {
+    "type": "CONTENT",
+    "str": "\n",
+    "tokens": [
+      {
+        "filename": "home.html",
+        "lineNumber": 28,
+        "startPosition": 0,
+        "endPosition": 0,
+        "tokenString": "\n",
+        "line": "\n"
+      }
+    ]
+  },
+  {
+    "type": "CONTENT",
+    "str": "    ",
+    "tokens": [
+      {
+        "filename": "home.html",
+        "lineNumber": 29,
+        "startPosition": 0,
+        "endPosition": 3,
+        "tokenString": "    ",
+        "line": "    {{!-- An empty list --}}\n"
+      }
+    ]
+  },
+  {
+    "type": "COMMENT",
+    "tokens": [
+      {
+        "filename": "home.html",
+        "lineNumber": 29,
+        "startPosition": 6,
+        "endPosition": 25,
+        "tokenString": "!-- An empty list --",
+        "line": "    {{!-- An empty list --}}\n"
+      }
+    ]
+  },
+  {
+    "type": "CONTENT",
+    "str": "\n",
+    "tokens": [
+      {
+        "filename": "home.html",
+        "lineNumber": 29,
+        "startPosition": 28,
+        "endPosition": 28,
+        "tokenString": "\n",
+        "line": "    {{!-- An empty list --}}\n"
+      }
+    ]
+  },
+  {
+    "type": "CONTENT",
+    "str": "    ",
+    "tokens": [
+      {
+        "filename": "home.html",
+        "lineNumber": 30,
+        "startPosition": 0,
+        "endPosition": 3,
+        "tokenString": "    ",
+        "line": "    {{#each article.tableOfContents as |item|}}\n"
+      }
+    ]
+  },
+  {
+    "type": "BLOCK_OPEN",
+    "exp": [
+      {
+        "type": "PATH",
+        "path": [
+          "each"
+        ],
+        "pathString": "each"
+      },
+      {
+        "type": "PATH",
+        "path": [
+          "article",
+          "tableOfContents"
+        ],
+        "pathString": "article.tableOfContents"
+      },
+      {
+        "type": "BLOCK_PARAMS",
+        "params": [
+          "item"
+        ]
+      }
+    ],
+    "children": [
+      {
+        "type": "CONTENT",
+        "str": "\n",
+        "tokens": [
+          {
+            "filename": "home.html",
+            "lineNumber": 30,
+            "startPosition": 47,
+            "endPosition": 47,
+            "tokenString": "\n",
+            "line": "    {{#each article.tableOfContents as |item|}}\n"
+          }
+        ]
+      },
+      {
+        "type": "CONTENT",
+        "str": "    <a href=\"#",
+        "tokens": [
+          {
+            "filename": "home.html",
+            "lineNumber": 31,
+            "startPosition": 0,
+            "endPosition": 13,
+            "tokenString": "    <a href=\"#",
+            "line": "    <a href=\"#{{ item.id }}\">{{ item.label }}</a>\n"
+          }
+        ]
+      },
+      {
+        "type": "PATH_EXPRESSION",
+        "exp": [
+          {
+            "type": "PATH",
+            "path": [
+              "item",
+              "id"
+            ],
+            "pathString": "item.id"
+          }
+        ],
+        "tokens": [
+          {
+            "filename": "home.html",
+            "lineNumber": 31,
+            "startPosition": 16,
+            "endPosition": 24,
+            "tokenString": " item.id ",
+            "line": "    <a href=\"#{{ item.id }}\">{{ item.label }}</a>\n"
+          }
+        ]
+      },
+      {
+        "type": "CONTENT",
+        "str": "\">",
+        "tokens": [
+          {
+            "filename": "home.html",
+            "lineNumber": 31,
+            "startPosition": 27,
+            "endPosition": 28,
+            "tokenString": "\">",
+            "line": "    <a href=\"#{{ item.id }}\">{{ item.label }}</a>\n"
+          }
+        ]
+      },
+      {
+        "type": "PATH_EXPRESSION",
+        "exp": [
+          {
+            "type": "PATH",
+            "path": [
+              "item",
+              "label"
+            ],
+            "pathString": "item.label"
+          }
+        ],
+        "tokens": [
+          {
+            "filename": "home.html",
+            "lineNumber": 31,
+            "startPosition": 31,
+            "endPosition": 42,
+            "tokenString": " item.label ",
+            "line": "    <a href=\"#{{ item.id }}\">{{ item.label }}</a>\n"
+          }
+        ]
+      },
+      {
+        "type": "CONTENT",
+        "str": "</a>\n",
+        "tokens": [
+          {
+            "filename": "home.html",
+            "lineNumber": 31,
+            "startPosition": 45,
+            "endPosition": 49,
+            "tokenString": "</a>\n",
+            "line": "    <a href=\"#{{ item.id }}\">{{ item.label }}</a>\n"
+          }
+        ]
+      },
+      {
+        "type": "CONTENT",
+        "str": "    ",
+        "tokens": [
+          {
+            "filename": "home.html",
+            "lineNumber": 32,
+            "startPosition": 0,
+            "endPosition": 3,
+            "tokenString": "    ",
+            "line": "    {{else}}\n"
+          }
+        ]
+      },
+      {
+        "type": "ELSE",
+        "tokens": [
+          {
+            "filename": "home.html",
+            "lineNumber": 32,
+            "startPosition": 6,
+            "endPosition": 9,
+            "tokenString": "else",
+            "line": "    {{else}}\n"
+          }
+        ]
+      },
+      {
+        "type": "CONTENT",
+        "str": "\n",
+        "tokens": [
+          {
+            "filename": "home.html",
+            "lineNumber": 32,
+            "startPosition": 12,
+            "endPosition": 12,
+            "tokenString": "\n",
+            "line": "    {{else}}\n"
+          }
+        ]
+      },
+      {
+        "type": "CONTENT",
+        "str": "    <p>There are no contents items to list</p>\n",
+        "tokens": [
+          {
+            "filename": "home.html",
+            "lineNumber": 33,
+            "startPosition": 0,
+            "endPosition": 46,
+            "tokenString": "    <p>There are no contents items to list</p>\n",
+            "line": "    <p>There are no contents items to list</p>\n"
+          }
+        ]
+      },
+      {
+        "type": "CONTENT",
+        "str": "    ",
+        "tokens": [
+          {
+            "filename": "home.html",
+            "lineNumber": 34,
+            "startPosition": 0,
+            "endPosition": 3,
+            "tokenString": "    ",
+            "line": "    {{/each}}\n"
+          }
+        ]
+      }
+    ],
+    "tokens": [
+      {
+        "filename": "home.html",
+        "lineNumber": 30,
+        "startPosition": 6,
+        "endPosition": 44,
+        "tokenString": "#each article.tableOfContents as |item|",
+        "line": "    {{#each article.tableOfContents as |item|}}\n"
+      }
+    ]
+  },
+  {
+    "type": "CONTENT",
+    "str": "\n",
+    "tokens": [
+      {
+        "filename": "home.html",
+        "lineNumber": 34,
+        "startPosition": 13,
+        "endPosition": 13,
+        "tokenString": "\n",
+        "line": "    {{/each}}\n"
+      }
+    ]
+  },
+  {
+    "type": "CONTENT",
+    "str": "</article>\n",
+    "tokens": [
+      {
+        "filename": "home.html",
+        "lineNumber": 35,
+        "startPosition": 0,
+        "endPosition": 10,
+        "tokenString": "</article>\n",
+        "line": "</article>\n"
+      }
+    ]
+  },
+  {
+    "type": "CONTENT",
+    "str": "\n",
+    "tokens": [
+      {
+        "filename": "home.html",
+        "lineNumber": 36,
+        "startPosition": 0,
+        "endPosition": 0,
+        "tokenString": "\n",
+        "line": "\n"
+      }
+    ]
+  }
+]

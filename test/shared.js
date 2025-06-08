@@ -16,10 +16,22 @@ export async function saveTokensFile(directory, sourceFilename, tokens) {
     await fsp.writeFile(filepath, `[${ EOL }${ json }${ EOL }]`, { encoding: 'utf8' });
 }
 
+export async function saveSyntaxTreeFile(directory, sourceFilename, tree) {
+    const name = templateNameFromFilename(sourceFilename);
+    const tokensFilename = treeFilenameFromTemplateName(name);
+    const filepath = path.join(directory, tokensFilename);
+    const json = JSON.stringify(tree, null, 2);
+    await fsp.writeFile(filepath, json, { encoding: 'utf8' });
+}
+
 export function templateNameFromFilename(filename) {
     return filename.replace(/.[a-z]+$/, '');
 }
 
 export function tokensFilenameFromTemplateName(name) {
     return `${ name }.tokens.json`;
+}
+
+export function treeFilenameFromTemplateName(name) {
+    return `${ name }.tree.json`;
 }

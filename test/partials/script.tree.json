@@ -1,0 +1,72 @@
+[
+  {
+    "type": "CONTENT",
+    "str": "(function () {\n",
+    "tokens": [
+      {
+        "filename": "script.js",
+        "lineNumber": 1,
+        "startPosition": 0,
+        "endPosition": 14,
+        "tokenString": "(function () {\n",
+        "line": "(function () {\n"
+      }
+    ]
+  },
+  {
+    "type": "CONTENT",
+    "str": "    'use strict';\n",
+    "tokens": [
+      {
+        "filename": "script.js",
+        "lineNumber": 2,
+        "startPosition": 0,
+        "endPosition": 17,
+        "tokenString": "    'use strict';\n",
+        "line": "    'use strict';\n"
+      }
+    ]
+  },
+  {
+    "type": "CONTENT",
+    "str": "    console.log('Hello world!');\n",
+    "tokens": [
+      {
+        "filename": "script.js",
+        "lineNumber": 3,
+        "startPosition": 0,
+        "endPosition": 32,
+        "tokenString": "    console.log('Hello world!');\n",
+        "line": "    console.log('Hello world!');\n"
+      }
+    ]
+  },
+  {
+    "type": "CONTENT",
+    "str": "}());\n",
+    "tokens": [
+      {
+        "filename": "script.js",
+        "lineNumber": 4,
+        "startPosition": 0,
+        "endPosition": 5,
+        "tokenString": "}());\n",
+        "line": "}());\n"
+      }
+    ]
+  },
+  {
+    "type": "CONTENT",
+    "str": "\n",
+    "tokens": [
+      {
+        "filename": "script.js",
+        "lineNumber": 5,
+        "startPosition": 0,
+        "endPosition": 0,
+        "tokenString": "\n",
+        "line": "\n"
+      }
+    ]
+  }
+]
