@@ -50,6 +50,55 @@ import buildSyntaxTree from '../lib/build-syntax-tree.js';
     });
 }
 
+{
+    const source = [
+        '<html>',
+        '<head></head>',
+        '  <body>',
+        '  <article>',
+        '    <h1>{{ article.title }}',
+        // We forgot the closing "--}}"
+        '    {{!-- Forgot to properly close this comment }}',
+        '  </article>',
+        '  </body>',
+        '</html>',
+    ].join('\n');
+
+    assertThrows(() => {
+        createAndRenderTemplate('test-3', source, {});
+    }, (error) => {
+        assertEqual('Failed to close comment from line 6', error.message);
+        assertEqual('test-3', error.filename);
+        assertEqual(6, error.lineNumber);
+        assertEqual(4, error.startPosition);
+    });
+}
+
+{
+    const source = [
+        '<html>',
+        '<head></head>',
+        '  <body>',
+        '  <article>',
+        '    <p>{{ article.subtitle }}</p>',
+        // We forgot the closing "--}}"
+        '    {{!-- Forgot to properly close this comment }}',
+        '  </article>',
+        '  </body>',
+        '  {{!-- End of body --}}',
+        '</html>',
+    ].join('\n');
+
+    assertThrows(() => {
+        createAndRenderTemplate('test-4', source, {});
+    }, (error) => {
+        assertEqual('Failed to close comment from line 6', error.message);
+        assertEqual('test-4', error.filename);
+        assertEqual(6, error.lineNumber);
+        assertEqual(4, error.startPosition);
+    });
+}
+
 
 function createAndRenderTemplate(name, source) {
     const tokens = tokenize(null, name, source);
