@@ -6,9 +6,9 @@
     <figure>
         {{image
             article.img.srcset.0
-            article.img.srcset.1
-            article.img.srcset.2
-            article.img.srcset.3
+            article.img.srcset[1]
+            article.img.srcset[2]
+            article.img.srcset[100w]
             }}
 
         {{!-- A helper to provide a default value for a value which does not exist --}}
@@ -25,7 +25,7 @@
         <h2>This is not a web page or an article</h2>
     {{/ifEqual}}
     {{/ifEqual}}
-        <p>{{format_date article.pubdate format="DATE_MED" }}</p>
+        <p>{{format_date article[Published Date] format="DATE_MED" }}</p>
     </main>
 
     {{!-- We forgot the opening mustache here, which means the whole thing will be printed:

@@ -238,9 +238,9 @@
           "article",
           "img",
           "srcset",
-          "1"
+          1
         ],
-        "pathString": "article.img.srcset.1"
+        "pathString": "article.img.srcset[1]"
       },
       {
         "type": "PATH",
@@ -248,9 +248,9 @@
           "article",
           "img",
           "srcset",
-          "2"
+          2
         ],
-        "pathString": "article.img.srcset.2"
+        "pathString": "article.img.srcset[2]"
       },
       {
         "type": "PATH",
@@ -258,9 +258,9 @@
           "article",
           "img",
           "srcset",
-          "3"
+          "100w"
         ],
-        "pathString": "article.img.srcset.3"
+        "pathString": "article.img.srcset[100w]"
       }
     ],
     "tokens": [
@@ -284,25 +284,25 @@
         "filename": "home.html",
         "lineNumber": 9,
         "startPosition": 0,
-        "endPosition": 33,
-        "tokenString": "            article.img.srcset.1\n",
-        "line": "            article.img.srcset.1\n"
+        "endPosition": 34,
+        "tokenString": "            article.img.srcset[1]\n",
+        "line": "            article.img.srcset[1]\n"
       },
       {
         "filename": "home.html",
         "lineNumber": 10,
         "startPosition": 0,
-        "endPosition": 33,
-        "tokenString": "            article.img.srcset.2\n",
-        "line": "            article.img.srcset.2\n"
+        "endPosition": 34,
+        "tokenString": "            article.img.srcset[2]\n",
+        "line": "            article.img.srcset[2]\n"
       },
       {
         "filename": "home.html",
         "lineNumber": 11,
         "startPosition": 0,
-        "endPosition": 33,
-        "tokenString": "            article.img.srcset.3\n",
-        "line": "            article.img.srcset.3\n"
+        "endPosition": 37,
+        "tokenString": "            article.img.srcset[100w]\n",
+        "line": "            article.img.srcset[100w]\n"
       },
       {
         "filename": "home.html",
@@ -833,7 +833,7 @@
         "startPosition": 0,
         "endPosition": 10,
         "tokenString": "        <p>",
-        "line": "        <p>{{format_date article.pubdate format=\"DATE_MED\" }}</p>\n"
+        "line": "        <p>{{format_date article[Published Date] format=\"DATE_MED\" }}</p>\n"
       }
     ]
   },
@@ -851,9 +851,16 @@
         "type": "PATH",
         "path": [
           "article",
-          "pubdate"
+          "Published"
         ],
-        "pathString": "article.pubdate"
+        "pathString": "article[Published"
+      },
+      {
+        "type": "PATH",
+        "path": [
+          "Date"
+        ],
+        "pathString": "Date]"
       },
       {
         "type": "KEY_VALUE",
@@ -869,9 +876,9 @@
         "filename": "home.html",
         "lineNumber": 28,
         "startPosition": 13,
-        "endPosition": 58,
-        "tokenString": "format_date article.pubdate format=\"DATE_MED\" ",
-        "line": "        <p>{{format_date article.pubdate format=\"DATE_MED\" }}</p>\n"
+        "endPosition": 66,
+        "tokenString": "format_date article[Published Date] format=\"DATE_MED\" ",
+        "line": "        <p>{{format_date article[Published Date] format=\"DATE_MED\" }}</p>\n"
       }
     ]
   },
@@ -882,10 +889,10 @@
       {
         "filename": "home.html",
         "lineNumber": 28,
-        "startPosition": 61,
-        "endPosition": 66,
+        "startPosition": 69,
+        "endPosition": 74,
         "tokenString": "</p>\n",
-        "line": "        <p>{{format_date article.pubdate format=\"DATE_MED\" }}</p>\n"
+        "line": "        <p>{{format_date article[Published Date] format=\"DATE_MED\" }}</p>\n"
       }
     ]
   },
