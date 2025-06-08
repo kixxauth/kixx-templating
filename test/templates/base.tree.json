@@ -7,7 +7,7 @@
         "filename": "base.html",
         "lineNumber": 1,
         "startPosition": 0,
-        "endPosition": 15,
+        "endPosition": 16,
         "tokenString": "<!doctype html>\n",
         "line": "<!doctype html>\n"
       }
@@ -21,7 +21,7 @@
         "filename": "base.html",
         "lineNumber": 2,
         "startPosition": 0,
-        "endPosition": 19,
+        "endPosition": 20,
         "tokenString": "<html lang=\"en-US\">\n",
         "line": "<html lang=\"en-US\">\n"
       }
@@ -35,7 +35,7 @@
         "filename": "base.html",
         "lineNumber": 3,
         "startPosition": 0,
-        "endPosition": 10,
+        "endPosition": 11,
         "tokenString": "    <head>\n",
         "line": "    <head>\n"
       }
@@ -77,7 +77,7 @@
         "filename": "base.html",
         "lineNumber": 4,
         "startPosition": 31,
-        "endPosition": 31,
+        "endPosition": 32,
         "tokenString": "\n",
         "line": "        {{> html-header.html }}\n"
       }
@@ -91,7 +91,7 @@
         "filename": "base.html",
         "lineNumber": 5,
         "startPosition": 0,
-        "endPosition": 11,
+        "endPosition": 12,
         "tokenString": "    </head>\n",
         "line": "    </head>\n"
       }
@@ -105,7 +105,7 @@
         "filename": "base.html",
         "lineNumber": 6,
         "startPosition": 0,
-        "endPosition": 10,
+        "endPosition": 11,
         "tokenString": "    <body>\n",
         "line": "    <body>\n"
       }
@@ -147,7 +147,7 @@
         "filename": "base.html",
         "lineNumber": 7,
         "startPosition": 31,
-        "endPosition": 31,
+        "endPosition": 32,
         "tokenString": "\n",
         "line": "        {{> site-header.html }}\n"
       }
@@ -161,7 +161,7 @@
         "filename": "base.html",
         "lineNumber": 8,
         "startPosition": 0,
-        "endPosition": 45,
+        "endPosition": 46,
         "tokenString": "        <!-- START Main Content Container -->\n",
         "line": "        <!-- START Main Content Container -->\n"
       }
@@ -211,7 +211,7 @@
         "filename": "base.html",
         "lineNumber": 9,
         "startPosition": 41,
-        "endPosition": 47,
+        "endPosition": 48,
         "tokenString": "</div>\n",
         "line": "        <div class=\"page-body\">{{ body }}</div>\n"
       }
@@ -225,7 +225,7 @@
         "filename": "base.html",
         "lineNumber": 10,
         "startPosition": 0,
-        "endPosition": 43,
+        "endPosition": 44,
         "tokenString": "        <!-- END Main Content Container -->\n",
         "line": "        <!-- END Main Content Container -->\n"
       }
@@ -267,7 +267,7 @@
         "filename": "base.html",
         "lineNumber": 11,
         "startPosition": 31,
-        "endPosition": 31,
+        "endPosition": 32,
         "tokenString": "\n",
         "line": "        {{> site-footer.html }}\n"
       }
@@ -281,7 +281,7 @@
         "filename": "base.html",
         "lineNumber": 12,
         "startPosition": 0,
-        "endPosition": 11,
+        "endPosition": 12,
         "tokenString": "    </body>\n",
         "line": "    </body>\n"
       }
@@ -323,7 +323,7 @@
         "filename": "base.html",
         "lineNumber": 13,
         "startPosition": 28,
-        "endPosition": 37,
+        "endPosition": 38,
         "tokenString": "</script>\n",
         "line": "    <script>{{> script.js }}</script>\n"
       }
@@ -337,7 +337,7 @@
         "filename": "base.html",
         "lineNumber": 14,
         "startPosition": 0,
-        "endPosition": 7,
+        "endPosition": 8,
         "tokenString": "</html>\n",
         "line": "</html>\n"
       }
@@ -351,7 +351,7 @@
         "filename": "base.html",
         "lineNumber": 15,
         "startPosition": 0,
-        "endPosition": 0,
+        "endPosition": 1,
         "tokenString": "\n",
         "line": "\n"
       }

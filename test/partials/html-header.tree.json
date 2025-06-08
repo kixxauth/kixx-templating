@@ -7,7 +7,7 @@
         "filename": "html-header.html",
         "lineNumber": 1,
         "startPosition": 0,
-        "endPosition": 22,
+        "endPosition": 23,
         "tokenString": "<meta charset=\"utf-8\">\n",
         "line": "<meta charset=\"utf-8\">\n"
       }
@@ -21,7 +21,7 @@
         "filename": "html-header.html",
         "lineNumber": 2,
         "startPosition": 0,
-        "endPosition": 0,
+        "endPosition": 1,
         "tokenString": "\n",
         "line": "\n"
       }
@@ -42,7 +42,7 @@
     ]
   },
   {
-    "type": "EXPRESSION",
+    "type": "PATH_EXPRESSION",
     "exp": [
       {
         "type": "PATH",
@@ -53,7 +53,16 @@
         "pathString": "page.title"
       }
     ],
-    "tokens": []
+    "tokens": [
+      {
+        "filename": "html-header.html",
+        "lineNumber": 3,
+        "startPosition": 9,
+        "endPosition": 20,
+        "tokenString": " page.title ",
+        "line": "<title>{{ page.title }}</title>\n"
+      }
+    ]
   },
   {
     "type": "CONTENT",
@@ -63,7 +72,7 @@
         "filename": "html-header.html",
         "lineNumber": 3,
         "startPosition": 23,
-        "endPosition": 31,
+        "endPosition": 32,
         "tokenString": "</title>\n",
         "line": "<title>{{ page.title }}</title>\n"
       }
@@ -77,23 +86,9 @@
         "filename": "html-header.html",
         "lineNumber": 4,
         "startPosition": 0,
-        "endPosition": 0,
+        "endPosition": 1,
         "tokenString": "\n",
         "line": "\n"
-      }
-    ]
-  },
-  {
-    "type": "CONTENT",
-    "str": "",
-    "tokens": [
-      {
-        "filename": "html-header.html",
-        "lineNumber": 5,
-        "startPosition": 0,
-        "endPosition": -1,
-        "tokenString": "",
-        "line": "{{#if page.description }}\n"
       }
     ]
   },
@@ -125,7 +120,7 @@
             "filename": "html-header.html",
             "lineNumber": 5,
             "startPosition": 25,
-            "endPosition": 25,
+            "endPosition": 26,
             "tokenString": "\n",
             "line": "{{#if page.description }}\n"
           }
@@ -146,7 +141,7 @@
         ]
       },
       {
-        "type": "EXPRESSION",
+        "type": "PATH_EXPRESSION",
         "exp": [
           {
             "type": "PATH",
@@ -157,7 +152,16 @@
             "pathString": "page.description"
           }
         ],
-        "tokens": []
+        "tokens": [
+          {
+            "filename": "html-header.html",
+            "lineNumber": 6,
+            "startPosition": 40,
+            "endPosition": 57,
+            "tokenString": " page.description ",
+            "line": "    <meta name=\"description\" content=\"{{ page.description }}\">\n"
+          }
+        ]
       },
       {
         "type": "CONTENT",
@@ -167,28 +171,23 @@
             "filename": "html-header.html",
             "lineNumber": 6,
             "startPosition": 60,
-            "endPosition": 62,
+            "endPosition": 63,
             "tokenString": "\">\n",
             "line": "    <meta name=\"description\" content=\"{{ page.description }}\">\n"
           }
         ]
-      },
-      {
-        "type": "CONTENT",
-        "str": "",
-        "tokens": [
-          {
-            "filename": "html-header.html",
-            "lineNumber": 7,
-            "startPosition": 0,
-            "endPosition": -1,
-            "tokenString": "",
-            "line": "{{/if}}\n"
-          }
-        ]
       }
     ],
-    "tokens": []
+    "tokens": [
+      {
+        "filename": "html-header.html",
+        "lineNumber": 5,
+        "startPosition": 2,
+        "endPosition": 22,
+        "tokenString": "#if page.description ",
+        "line": "{{#if page.description }}\n"
+      }
+    ]
   },
   {
     "type": "CONTENT",
@@ -198,7 +197,7 @@
         "filename": "html-header.html",
         "lineNumber": 7,
         "startPosition": 7,
-        "endPosition": 7,
+        "endPosition": 8,
         "tokenString": "\n",
         "line": "{{/if}}\n"
       }
@@ -212,7 +211,7 @@
         "filename": "html-header.html",
         "lineNumber": 8,
         "startPosition": 0,
-        "endPosition": 0,
+        "endPosition": 1,
         "tokenString": "\n",
         "line": "\n"
       }
@@ -226,7 +225,7 @@
         "filename": "html-header.html",
         "lineNumber": 9,
         "startPosition": 0,
-        "endPosition": 68,
+        "endPosition": 69,
         "tokenString": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n",
         "line": "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n"
       }
@@ -240,23 +239,9 @@
         "filename": "html-header.html",
         "lineNumber": 10,
         "startPosition": 0,
-        "endPosition": 0,
+        "endPosition": 1,
         "tokenString": "\n",
         "line": "\n"
-      }
-    ]
-  },
-  {
-    "type": "CONTENT",
-    "str": "",
-    "tokens": [
-      {
-        "filename": "html-header.html",
-        "lineNumber": 11,
-        "startPosition": 0,
-        "endPosition": -1,
-        "tokenString": "",
-        "line": "{{#if page.openGraph.type }}\n"
       }
     ]
   },
@@ -289,7 +274,7 @@
             "filename": "html-header.html",
             "lineNumber": 11,
             "startPosition": 28,
-            "endPosition": 28,
+            "endPosition": 29,
             "tokenString": "\n",
             "line": "{{#if page.openGraph.type }}\n"
           }
@@ -310,7 +295,7 @@
         ]
       },
       {
-        "type": "EXPRESSION",
+        "type": "PATH_EXPRESSION",
         "exp": [
           {
             "type": "PATH",
@@ -322,7 +307,16 @@
             "pathString": "page.openGraph.type"
           }
         ],
-        "tokens": []
+        "tokens": [
+          {
+            "filename": "html-header.html",
+            "lineNumber": 12,
+            "startPosition": 36,
+            "endPosition": 56,
+            "tokenString": " page.openGraph.type ",
+            "line": "<meta property=\"og:type\" content=\"{{ page.openGraph.type }}\">\n"
+          }
+        ]
       },
       {
         "type": "CONTENT",
@@ -332,28 +326,23 @@
             "filename": "html-header.html",
             "lineNumber": 12,
             "startPosition": 59,
-            "endPosition": 61,
+            "endPosition": 62,
             "tokenString": "\">\n",
             "line": "<meta property=\"og:type\" content=\"{{ page.openGraph.type }}\">\n"
           }
         ]
-      },
-      {
-        "type": "CONTENT",
-        "str": "",
-        "tokens": [
-          {
-            "filename": "html-header.html",
-            "lineNumber": 13,
-            "startPosition": 0,
-            "endPosition": -1,
-            "tokenString": "",
-            "line": "{{/if}}\n"
-          }
-        ]
       }
     ],
-    "tokens": []
+    "tokens": [
+      {
+        "filename": "html-header.html",
+        "lineNumber": 11,
+        "startPosition": 2,
+        "endPosition": 25,
+        "tokenString": "#if page.openGraph.type ",
+        "line": "{{#if page.openGraph.type }}\n"
+      }
+    ]
   },
   {
     "type": "CONTENT",
@@ -363,23 +352,9 @@
         "filename": "html-header.html",
         "lineNumber": 13,
         "startPosition": 7,
-        "endPosition": 7,
+        "endPosition": 8,
         "tokenString": "\n",
         "line": "{{/if}}\n"
-      }
-    ]
-  },
-  {
-    "type": "CONTENT",
-    "str": "",
-    "tokens": [
-      {
-        "filename": "html-header.html",
-        "lineNumber": 14,
-        "startPosition": 0,
-        "endPosition": -1,
-        "tokenString": "",
-        "line": "{{#if page.openGraph.title }}\n"
       }
     ]
   },
@@ -412,7 +387,7 @@
             "filename": "html-header.html",
             "lineNumber": 14,
             "startPosition": 29,
-            "endPosition": 29,
+            "endPosition": 30,
             "tokenString": "\n",
             "line": "{{#if page.openGraph.title }}\n"
           }
@@ -433,7 +408,7 @@
         ]
       },
       {
-        "type": "EXPRESSION",
+        "type": "PATH_EXPRESSION",
         "exp": [
           {
             "type": "PATH",
@@ -445,7 +420,16 @@
             "pathString": "page.openGraph.title"
           }
         ],
-        "tokens": []
+        "tokens": [
+          {
+            "filename": "html-header.html",
+            "lineNumber": 15,
+            "startPosition": 37,
+            "endPosition": 58,
+            "tokenString": " page.openGraph.title ",
+            "line": "<meta property=\"og:title\" content=\"{{ page.openGraph.title }}\">\n"
+          }
+        ]
       },
       {
         "type": "CONTENT",
@@ -455,28 +439,23 @@
             "filename": "html-header.html",
             "lineNumber": 15,
             "startPosition": 61,
-            "endPosition": 63,
+            "endPosition": 64,
             "tokenString": "\">\n",
             "line": "<meta property=\"og:title\" content=\"{{ page.openGraph.title }}\">\n"
           }
         ]
-      },
-      {
-        "type": "CONTENT",
-        "str": "",
-        "tokens": [
-          {
-            "filename": "html-header.html",
-            "lineNumber": 16,
-            "startPosition": 0,
-            "endPosition": -1,
-            "tokenString": "",
-            "line": "{{/if}}\n"
-          }
-        ]
       }
     ],
-    "tokens": []
+    "tokens": [
+      {
+        "filename": "html-header.html",
+        "lineNumber": 14,
+        "startPosition": 2,
+        "endPosition": 26,
+        "tokenString": "#if page.openGraph.title ",
+        "line": "{{#if page.openGraph.title }}\n"
+      }
+    ]
   },
   {
     "type": "CONTENT",
@@ -486,7 +465,7 @@
         "filename": "html-header.html",
         "lineNumber": 16,
         "startPosition": 7,
-        "endPosition": 7,
+        "endPosition": 8,
         "tokenString": "\n",
         "line": "{{/if}}\n"
       }
@@ -500,7 +479,7 @@
         "filename": "html-header.html",
         "lineNumber": 17,
         "startPosition": 0,
-        "endPosition": 0,
+        "endPosition": 1,
         "tokenString": "\n",
         "line": "\n"
       }
@@ -514,7 +493,7 @@
         "filename": "html-header.html",
         "lineNumber": 18,
         "startPosition": 0,
-        "endPosition": 23,
+        "endPosition": 24,
         "tokenString": "<style type=\"text/css\">\n",
         "line": "<style type=\"text/css\">\n"
       }
@@ -537,7 +516,16 @@
   {
     "type": "PARTIAL",
     "exp": "styles.css",
-    "tokens": []
+    "tokens": [
+      {
+        "filename": "html-header.html",
+        "lineNumber": 19,
+        "startPosition": 6,
+        "endPosition": 18,
+        "tokenString": "> styles.css ",
+        "line": "    {{> styles.css }}\n"
+      }
+    ]
   },
   {
     "type": "CONTENT",
@@ -547,7 +535,7 @@
         "filename": "html-header.html",
         "lineNumber": 19,
         "startPosition": 21,
-        "endPosition": 21,
+        "endPosition": 22,
         "tokenString": "\n",
         "line": "    {{> styles.css }}\n"
       }
@@ -561,7 +549,7 @@
         "filename": "html-header.html",
         "lineNumber": 20,
         "startPosition": 0,
-        "endPosition": 8,
+        "endPosition": 9,
         "tokenString": "</style>\n",
         "line": "</style>\n"
       }
@@ -575,7 +563,7 @@
         "filename": "html-header.html",
         "lineNumber": 21,
         "startPosition": 0,
-        "endPosition": 0,
+        "endPosition": 1,
         "tokenString": "\n",
         "line": "\n"
       }

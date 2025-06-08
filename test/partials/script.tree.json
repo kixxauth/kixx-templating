@@ -7,7 +7,7 @@
         "filename": "script.js",
         "lineNumber": 1,
         "startPosition": 0,
-        "endPosition": 14,
+        "endPosition": 15,
         "tokenString": "(function () {\n",
         "line": "(function () {\n"
       }
@@ -21,7 +21,7 @@
         "filename": "script.js",
         "lineNumber": 2,
         "startPosition": 0,
-        "endPosition": 17,
+        "endPosition": 18,
         "tokenString": "    'use strict';\n",
         "line": "    'use strict';\n"
       }
@@ -35,7 +35,7 @@
         "filename": "script.js",
         "lineNumber": 3,
         "startPosition": 0,
-        "endPosition": 32,
+        "endPosition": 33,
         "tokenString": "    console.log('Hello world!');\n",
         "line": "    console.log('Hello world!');\n"
       }
@@ -49,7 +49,7 @@
         "filename": "script.js",
         "lineNumber": 4,
         "startPosition": 0,
-        "endPosition": 5,
+        "endPosition": 6,
         "tokenString": "}());\n",
         "line": "}());\n"
       }
@@ -63,7 +63,7 @@
         "filename": "script.js",
         "lineNumber": 5,
         "startPosition": 0,
-        "endPosition": 0,
+        "endPosition": 1,
         "tokenString": "\n",
         "line": "\n"
       }

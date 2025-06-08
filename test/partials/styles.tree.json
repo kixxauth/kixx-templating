@@ -7,7 +7,7 @@
         "filename": "styles.css",
         "lineNumber": 1,
         "startPosition": 0,
-        "endPosition": 6,
+        "endPosition": 7,
         "tokenString": "html {\n",
         "line": "html {\n"
       }
@@ -21,7 +21,7 @@
         "filename": "styles.css",
         "lineNumber": 2,
         "startPosition": 0,
-        "endPosition": 25,
+        "endPosition": 26,
         "tokenString": "    --site-width: 1080px;\n",
         "line": "    --site-width: 1080px;\n"
       }
@@ -35,7 +35,7 @@
         "filename": "styles.css",
         "lineNumber": 3,
         "startPosition": 0,
-        "endPosition": 36,
+        "endPosition": 37,
         "tokenString": "    --layout-right-left-margin: 4vw;\n",
         "line": "    --layout-right-left-margin: 4vw;\n"
       }
@@ -49,7 +49,7 @@
         "filename": "styles.css",
         "lineNumber": 4,
         "startPosition": 0,
-        "endPosition": 53,
+        "endPosition": 54,
         "tokenString": "    /* Sets the rm size for the rest of the styles */\n",
         "line": "    /* Sets the rm size for the rest of the styles */\n"
       }
@@ -63,7 +63,7 @@
         "filename": "styles.css",
         "lineNumber": 5,
         "startPosition": 0,
-        "endPosition": 20,
+        "endPosition": 21,
         "tokenString": "    font-size: 16px;\n",
         "line": "    font-size: 16px;\n"
       }
@@ -77,7 +77,7 @@
         "filename": "styles.css",
         "lineNumber": 6,
         "startPosition": 0,
-        "endPosition": 1,
+        "endPosition": 2,
         "tokenString": "}\n",
         "line": "}\n"
       }
@@ -91,7 +91,7 @@
         "filename": "styles.css",
         "lineNumber": 7,
         "startPosition": 0,
-        "endPosition": 0,
+        "endPosition": 1,
         "tokenString": "\n",
         "line": "\n"
       }
@@ -105,7 +105,7 @@
         "filename": "styles.css",
         "lineNumber": 8,
         "startPosition": 0,
-        "endPosition": 24,
+        "endPosition": 25,
         "tokenString": "*, *::before, *::after {\n",
         "line": "*, *::before, *::after {\n"
       }
@@ -119,7 +119,7 @@
         "filename": "styles.css",
         "lineNumber": 9,
         "startPosition": 0,
-        "endPosition": 27,
+        "endPosition": 28,
         "tokenString": "    box-sizing: border-box;\n",
         "line": "    box-sizing: border-box;\n"
       }
@@ -133,7 +133,7 @@
         "filename": "styles.css",
         "lineNumber": 10,
         "startPosition": 0,
-        "endPosition": 1,
+        "endPosition": 2,
         "tokenString": "}\n",
         "line": "}\n"
       }
@@ -147,7 +147,7 @@
         "filename": "styles.css",
         "lineNumber": 11,
         "startPosition": 0,
-        "endPosition": 0,
+        "endPosition": 1,
         "tokenString": "\n",
         "line": "\n"
       }
@@ -161,7 +161,7 @@
         "filename": "styles.css",
         "lineNumber": 12,
         "startPosition": 0,
-        "endPosition": 6,
+        "endPosition": 7,
         "tokenString": "body {\n",
         "line": "body {\n"
       }
@@ -175,7 +175,7 @@
         "filename": "styles.css",
         "lineNumber": 13,
         "startPosition": 0,
-        "endPosition": 14,
+        "endPosition": 15,
         "tokenString": "    margin: 0;\n",
         "line": "    margin: 0;\n"
       }
@@ -189,7 +189,7 @@
         "filename": "styles.css",
         "lineNumber": 14,
         "startPosition": 0,
-        "endPosition": 0,
+        "endPosition": 1,
         "tokenString": "\n",
         "line": "\n"
       }
@@ -203,7 +203,7 @@
         "filename": "styles.css",
         "lineNumber": 15,
         "startPosition": 0,
-        "endPosition": 6,
+        "endPosition": 7,
         "tokenString": "    /*\n",
         "line": "    /*\n"
       }
@@ -217,7 +217,7 @@
         "filename": "styles.css",
         "lineNumber": 16,
         "startPosition": 0,
-        "endPosition": 70,
+        "endPosition": 71,
         "tokenString": "    Set up a full height grid to stick the footer to the bottom of the\n",
         "line": "    Set up a full height grid to stick the footer to the bottom of the\n"
       }
@@ -231,7 +231,7 @@
         "filename": "styles.css",
         "lineNumber": 17,
         "startPosition": 0,
-        "endPosition": 69,
+        "endPosition": 70,
         "tokenString": "    viewport. This creates a top row for the header, a middle row for\n",
         "line": "    viewport. This creates a top row for the header, a middle row for\n"
       }
@@ -245,7 +245,7 @@
         "filename": "styles.css",
         "lineNumber": 18,
         "startPosition": 0,
-        "endPosition": 49,
+        "endPosition": 50,
         "tokenString": "    main content, and a bottom row for the footer\n",
         "line": "    main content, and a bottom row for the footer\n"
       }
@@ -259,7 +259,7 @@
         "filename": "styles.css",
         "lineNumber": 19,
         "startPosition": 0,
-        "endPosition": 7,
+        "endPosition": 8,
         "tokenString": "     */\n",
         "line": "     */\n"
       }
@@ -273,7 +273,7 @@
         "filename": "styles.css",
         "lineNumber": 20,
         "startPosition": 0,
-        "endPosition": 22,
+        "endPosition": 23,
         "tokenString": "    min-height: 100vh;\n",
         "line": "    min-height: 100vh;\n"
       }
@@ -287,7 +287,7 @@
         "filename": "styles.css",
         "lineNumber": 21,
         "startPosition": 0,
-        "endPosition": 18,
+        "endPosition": 19,
         "tokenString": "    display: grid;\n",
         "line": "    display: grid;\n"
       }
@@ -301,7 +301,7 @@
         "filename": "styles.css",
         "lineNumber": 22,
         "startPosition": 0,
-        "endPosition": 38,
+        "endPosition": 39,
         "tokenString": "    grid-template-rows: auto 1fr auto;\n",
         "line": "    grid-template-rows: auto 1fr auto;\n"
       }
@@ -315,7 +315,7 @@
         "filename": "styles.css",
         "lineNumber": 23,
         "startPosition": 0,
-        "endPosition": 0,
+        "endPosition": 1,
         "tokenString": "\n",
         "line": "\n"
       }
@@ -329,7 +329,7 @@
         "filename": "styles.css",
         "lineNumber": 24,
         "startPosition": 0,
-        "endPosition": 34,
+        "endPosition": 35,
         "tokenString": "    font-family: Monaco monospace;\n",
         "line": "    font-family: Monaco monospace;\n"
       }
@@ -343,7 +343,7 @@
         "filename": "styles.css",
         "lineNumber": 25,
         "startPosition": 0,
-        "endPosition": 27,
+        "endPosition": 28,
         "tokenString": "    background-color: #222;\n",
         "line": "    background-color: #222;\n"
       }
@@ -357,7 +357,7 @@
         "filename": "styles.css",
         "lineNumber": 26,
         "startPosition": 0,
-        "endPosition": 16,
+        "endPosition": 17,
         "tokenString": "    color: #ddd;\n",
         "line": "    color: #ddd;\n"
       }
@@ -371,7 +371,7 @@
         "filename": "styles.css",
         "lineNumber": 27,
         "startPosition": 0,
-        "endPosition": 39,
+        "endPosition": 40,
         "tokenString": "    -moz-osx-font-smoothing: grayscale;\n",
         "line": "    -moz-osx-font-smoothing: grayscale;\n"
       }
@@ -385,7 +385,7 @@
         "filename": "styles.css",
         "lineNumber": 28,
         "startPosition": 0,
-        "endPosition": 40,
+        "endPosition": 41,
         "tokenString": "    -webkit-font-smoothing: antialiased;\n",
         "line": "    -webkit-font-smoothing: antialiased;\n"
       }
@@ -399,7 +399,7 @@
         "filename": "styles.css",
         "lineNumber": 29,
         "startPosition": 0,
-        "endPosition": 21,
+        "endPosition": 22,
         "tokenString": "    font-weight: 400;\n",
         "line": "    font-weight: 400;\n"
       }
@@ -413,7 +413,7 @@
         "filename": "styles.css",
         "lineNumber": 30,
         "startPosition": 0,
-        "endPosition": 21,
+        "endPosition": 22,
         "tokenString": "    line-height: 1.6;\n",
         "line": "    line-height: 1.6;\n"
       }
@@ -427,7 +427,7 @@
         "filename": "styles.css",
         "lineNumber": 31,
         "startPosition": 0,
-        "endPosition": 26,
+        "endPosition": 27,
         "tokenString": "    /* Mobile font size */\n",
         "line": "    /* Mobile font size */\n"
       }
@@ -441,7 +441,7 @@
         "filename": "styles.css",
         "lineNumber": 32,
         "startPosition": 0,
-        "endPosition": 23,
+        "endPosition": 24,
         "tokenString": "    font-size: 1.125em;\n",
         "line": "    font-size: 1.125em;\n"
       }
@@ -455,7 +455,7 @@
         "filename": "styles.css",
         "lineNumber": 33,
         "startPosition": 0,
-        "endPosition": 29,
+        "endPosition": 30,
         "tokenString": "    letter-spacing: 0.0125em;\n",
         "line": "    letter-spacing: 0.0125em;\n"
       }
@@ -469,7 +469,7 @@
         "filename": "styles.css",
         "lineNumber": 34,
         "startPosition": 0,
-        "endPosition": 1,
+        "endPosition": 2,
         "tokenString": "}\n",
         "line": "}\n"
       }
@@ -483,7 +483,7 @@
         "filename": "styles.css",
         "lineNumber": 35,
         "startPosition": 0,
-        "endPosition": 0,
+        "endPosition": 1,
         "tokenString": "\n",
         "line": "\n"
       }
@@ -497,7 +497,7 @@
         "filename": "styles.css",
         "lineNumber": 36,
         "startPosition": 0,
-        "endPosition": 23,
+        "endPosition": 24,
         "tokenString": ".site-width-container {\n",
         "line": ".site-width-container {\n"
       }
@@ -511,7 +511,7 @@
         "filename": "styles.css",
         "lineNumber": 37,
         "startPosition": 0,
-        "endPosition": 49,
+        "endPosition": 50,
         "tokenString": "    margin-left: var(--layout-right-left-margin);\n",
         "line": "    margin-left: var(--layout-right-left-margin);\n"
       }
@@ -525,7 +525,7 @@
         "filename": "styles.css",
         "lineNumber": 38,
         "startPosition": 0,
-        "endPosition": 50,
+        "endPosition": 51,
         "tokenString": "    margin-right: var(--layout-right-left-margin);\n",
         "line": "    margin-right: var(--layout-right-left-margin);\n"
       }
@@ -539,7 +539,7 @@
         "filename": "styles.css",
         "lineNumber": 39,
         "startPosition": 0,
-        "endPosition": 1,
+        "endPosition": 2,
         "tokenString": "}\n",
         "line": "}\n"
       }
@@ -553,7 +553,7 @@
         "filename": "styles.css",
         "lineNumber": 40,
         "startPosition": 0,
-        "endPosition": 39,
+        "endPosition": 40,
         "tokenString": "@media screen and (min-width: 1080px) {\n",
         "line": "@media screen and (min-width: 1080px) {\n"
       }
@@ -567,7 +567,7 @@
         "filename": "styles.css",
         "lineNumber": 41,
         "startPosition": 0,
-        "endPosition": 27,
+        "endPosition": 28,
         "tokenString": "    .site-width-container {\n",
         "line": "    .site-width-container {\n"
       }
@@ -581,7 +581,7 @@
         "filename": "styles.css",
         "lineNumber": 42,
         "startPosition": 0,
-        "endPosition": 81,
+        "endPosition": 82,
         "tokenString": "        max-width: calc(var(--site-width) - var(--layout-right-left-margin) * 2);\n",
         "line": "        max-width: calc(var(--site-width) - var(--layout-right-left-margin) * 2);\n"
       }
@@ -595,7 +595,7 @@
         "filename": "styles.css",
         "lineNumber": 43,
         "startPosition": 0,
-        "endPosition": 26,
+        "endPosition": 27,
         "tokenString": "        margin-left: auto;\n",
         "line": "        margin-left: auto;\n"
       }
@@ -609,7 +609,7 @@
         "filename": "styles.css",
         "lineNumber": 44,
         "startPosition": 0,
-        "endPosition": 27,
+        "endPosition": 28,
         "tokenString": "        margin-right: auto;\n",
         "line": "        margin-right: auto;\n"
       }
@@ -623,7 +623,7 @@
         "filename": "styles.css",
         "lineNumber": 45,
         "startPosition": 0,
-        "endPosition": 5,
+        "endPosition": 6,
         "tokenString": "    }\n",
         "line": "    }\n"
       }
@@ -637,7 +637,7 @@
         "filename": "styles.css",
         "lineNumber": 46,
         "startPosition": 0,
-        "endPosition": 1,
+        "endPosition": 2,
         "tokenString": "}\n",
         "line": "}\n"
       }
@@ -651,7 +651,7 @@
         "filename": "styles.css",
         "lineNumber": 47,
         "startPosition": 0,
-        "endPosition": 0,
+        "endPosition": 1,
         "tokenString": "\n",
         "line": "\n"
       }

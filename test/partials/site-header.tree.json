@@ -7,7 +7,7 @@
         "filename": "site-header.html",
         "lineNumber": 1,
         "startPosition": 0,
-        "endPosition": 8,
+        "endPosition": 9,
         "tokenString": "<header>\n",
         "line": "<header>\n"
       }
@@ -21,7 +21,7 @@
         "filename": "site-header.html",
         "lineNumber": 2,
         "startPosition": 0,
-        "endPosition": 29,
+        "endPosition": 30,
         "tokenString": "    <p>This is the header</p>\n",
         "line": "    <p>This is the header</p>\n"
       }
@@ -35,7 +35,7 @@
         "filename": "site-header.html",
         "lineNumber": 3,
         "startPosition": 0,
-        "endPosition": 26,
+        "endPosition": 27,
         "tokenString": "    <nav class=\"site-nav\">\n",
         "line": "    <nav class=\"site-nav\">\n"
       }
@@ -49,7 +49,7 @@
         "filename": "site-header.html",
         "lineNumber": 4,
         "startPosition": 0,
-        "endPosition": 35,
+        "endPosition": 36,
         "tokenString": "        <ul class=\"site-nav__list\">\n",
         "line": "        <ul class=\"site-nav__list\">\n"
       }
@@ -102,7 +102,7 @@
             "filename": "site-header.html",
             "lineNumber": 5,
             "startPosition": 50,
-            "endPosition": 50,
+            "endPosition": 51,
             "tokenString": "\n",
             "line": "            {{#each nav_menu_sections as |group|}}\n"
           }
@@ -116,7 +116,7 @@
             "filename": "site-header.html",
             "lineNumber": 6,
             "startPosition": 0,
-            "endPosition": 40,
+            "endPosition": 41,
             "tokenString": "            <li class=\"site-nav__group\">\n",
             "line": "            <li class=\"site-nav__group\">\n"
           }
@@ -130,7 +130,7 @@
             "filename": "site-header.html",
             "lineNumber": 7,
             "startPosition": 0,
-            "endPosition": 29,
+            "endPosition": 30,
             "tokenString": "                <a href=\"#\" >\n",
             "line": "                <a href=\"#\" >\n"
           }
@@ -151,7 +151,7 @@
         ]
       },
       {
-        "type": "EXPRESSION",
+        "type": "PATH_EXPRESSION",
         "exp": [
           {
             "type": "PATH",
@@ -162,7 +162,16 @@
             "pathString": "group.label"
           }
         ],
-        "tokens": []
+        "tokens": [
+          {
+            "filename": "site-header.html",
+            "lineNumber": 8,
+            "startPosition": 28,
+            "endPosition": 40,
+            "tokenString": " group.label ",
+            "line": "                    <span>{{ group.label }}</span>\n"
+          }
+        ]
       },
       {
         "type": "CONTENT",
@@ -172,7 +181,7 @@
             "filename": "site-header.html",
             "lineNumber": 8,
             "startPosition": 43,
-            "endPosition": 50,
+            "endPosition": 51,
             "tokenString": "</span>\n",
             "line": "                    <span>{{ group.label }}</span>\n"
           }
@@ -186,7 +195,7 @@
             "filename": "site-header.html",
             "lineNumber": 9,
             "startPosition": 0,
-            "endPosition": 20,
+            "endPosition": 21,
             "tokenString": "                </a>\n",
             "line": "                </a>\n"
           }
@@ -200,7 +209,7 @@
             "filename": "site-header.html",
             "lineNumber": 10,
             "startPosition": 0,
-            "endPosition": 20,
+            "endPosition": 21,
             "tokenString": "                <ul>\n",
             "line": "                <ul>\n"
           }
@@ -254,7 +263,7 @@
                 "filename": "site-header.html",
                 "lineNumber": 11,
                 "startPosition": 51,
-                "endPosition": 51,
+                "endPosition": 52,
                 "tokenString": "\n",
                 "line": "                    {{#each group.pages as |page|}}\n"
               }
@@ -268,7 +277,7 @@
                 "filename": "site-header.html",
                 "lineNumber": 12,
                 "startPosition": 0,
-                "endPosition": 24,
+                "endPosition": 25,
                 "tokenString": "                    <li>\n",
                 "line": "                    <li>\n"
               }
@@ -289,7 +298,7 @@
             ]
           },
           {
-            "type": "EXPRESSION",
+            "type": "PATH_EXPRESSION",
             "exp": [
               {
                 "type": "PATH",
@@ -300,7 +309,16 @@
                 "pathString": "page.url"
               }
             ],
-            "tokens": []
+            "tokens": [
+              {
+                "filename": "site-header.html",
+                "lineNumber": 13,
+                "startPosition": 35,
+                "endPosition": 44,
+                "tokenString": " page.url ",
+                "line": "                        <a href=\"{{ page.url }}\">{{ group.label }} : {{ page.label }}</a>\n"
+              }
+            ]
           },
           {
             "type": "CONTENT",
@@ -317,7 +335,7 @@
             ]
           },
           {
-            "type": "EXPRESSION",
+            "type": "PATH_EXPRESSION",
             "exp": [
               {
                 "type": "PATH",
@@ -328,7 +346,16 @@
                 "pathString": "group.label"
               }
             ],
-            "tokens": []
+            "tokens": [
+              {
+                "filename": "site-header.html",
+                "lineNumber": 13,
+                "startPosition": 51,
+                "endPosition": 63,
+                "tokenString": " group.label ",
+                "line": "                        <a href=\"{{ page.url }}\">{{ group.label }} : {{ page.label }}</a>\n"
+              }
+            ]
           },
           {
             "type": "CONTENT",
@@ -345,7 +372,7 @@
             ]
           },
           {
-            "type": "EXPRESSION",
+            "type": "PATH_EXPRESSION",
             "exp": [
               {
                 "type": "PATH",
@@ -356,7 +383,16 @@
                 "pathString": "page.label"
               }
             ],
-            "tokens": []
+            "tokens": [
+              {
+                "filename": "site-header.html",
+                "lineNumber": 13,
+                "startPosition": 71,
+                "endPosition": 82,
+                "tokenString": " page.label ",
+                "line": "                        <a href=\"{{ page.url }}\">{{ group.label }} : {{ page.label }}</a>\n"
+              }
+            ]
           },
           {
             "type": "CONTENT",
@@ -366,7 +402,7 @@
                 "filename": "site-header.html",
                 "lineNumber": 13,
                 "startPosition": 85,
-                "endPosition": 89,
+                "endPosition": 90,
                 "tokenString": "</a>\n",
                 "line": "                        <a href=\"{{ page.url }}\">{{ group.label }} : {{ page.label }}</a>\n"
               }
@@ -380,7 +416,7 @@
                 "filename": "site-header.html",
                 "lineNumber": 14,
                 "startPosition": 0,
-                "endPosition": 25,
+                "endPosition": 26,
                 "tokenString": "                    </li>\n",
                 "line": "                    </li>\n"
               }
@@ -401,7 +437,16 @@
             ]
           }
         ],
-        "tokens": []
+        "tokens": [
+          {
+            "filename": "site-header.html",
+            "lineNumber": 11,
+            "startPosition": 22,
+            "endPosition": 48,
+            "tokenString": "#each group.pages as |page|",
+            "line": "                    {{#each group.pages as |page|}}\n"
+          }
+        ]
       },
       {
         "type": "CONTENT",
@@ -411,7 +456,7 @@
             "filename": "site-header.html",
             "lineNumber": 15,
             "startPosition": 29,
-            "endPosition": 29,
+            "endPosition": 30,
             "tokenString": "\n",
             "line": "                    {{/each}}\n"
           }
@@ -425,7 +470,7 @@
             "filename": "site-header.html",
             "lineNumber": 16,
             "startPosition": 0,
-            "endPosition": 21,
+            "endPosition": 22,
             "tokenString": "                </ul>\n",
             "line": "                </ul>\n"
           }
@@ -439,7 +484,7 @@
             "filename": "site-header.html",
             "lineNumber": 17,
             "startPosition": 0,
-            "endPosition": 17,
+            "endPosition": 18,
             "tokenString": "            </li>\n",
             "line": "            </li>\n"
           }
@@ -460,7 +505,16 @@
         ]
       }
     ],
-    "tokens": []
+    "tokens": [
+      {
+        "filename": "site-header.html",
+        "lineNumber": 5,
+        "startPosition": 14,
+        "endPosition": 47,
+        "tokenString": "#each nav_menu_sections as |group|",
+        "line": "            {{#each nav_menu_sections as |group|}}\n"
+      }
+    ]
   },
   {
     "type": "CONTENT",
@@ -470,7 +524,7 @@
         "filename": "site-header.html",
         "lineNumber": 18,
         "startPosition": 21,
-        "endPosition": 21,
+        "endPosition": 22,
         "tokenString": "\n",
         "line": "            {{/each}}\n"
       }
@@ -484,7 +538,7 @@
         "filename": "site-header.html",
         "lineNumber": 19,
         "startPosition": 0,
-        "endPosition": 13,
+        "endPosition": 14,
         "tokenString": "        </ul>\n",
         "line": "        </ul>\n"
       }
@@ -498,7 +552,7 @@
         "filename": "site-header.html",
         "lineNumber": 20,
         "startPosition": 0,
-        "endPosition": 10,
+        "endPosition": 11,
         "tokenString": "    </nav>\n",
         "line": "    </nav>\n"
       }
@@ -512,7 +566,7 @@
         "filename": "site-header.html",
         "lineNumber": 21,
         "startPosition": 0,
-        "endPosition": 9,
+        "endPosition": 10,
         "tokenString": "</header>\n",
         "line": "</header>\n"
       }
@@ -526,7 +580,7 @@
         "filename": "site-header.html",
         "lineNumber": 22,
         "startPosition": 0,
-        "endPosition": 0,
+        "endPosition": 1,
         "tokenString": "\n",
         "line": "\n"
       }
