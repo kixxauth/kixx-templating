@@ -122,6 +122,76 @@ import buildSyntaxTree from '../lib/build-syntax-tree.js';
     });
 }
 
+{
+    const source = [
+        '<html>',
+        '<head></head>',
+        '  <body>',
+        '  <ul>',
+        '    {{#each articles as |article }}', // We forgot to close the block params
+        '    <p>{{ article.subtitle }}</p>',
+        '    {{/each}}',
+        '  </ul>',
+        '  </body>',
+        '</html>',
+    ].join('\n');
+
+    assertThrows(() => {
+        createAndRenderTemplate('test-6', source, {});
+    }, (error) => {
+        assertEqual('Unclosed block params on line 5', error.message);
+        assertEqual('test-6', error.filename);
+        assertEqual(5, error.lineNumber);
+        assertEqual(6, error.startPosition);
+    });
+}
+
+{
+    const source = [
+        '<html>',
+        '<head></head>',
+        '  <body>',
+        '  <article>',
+        // We forgot to close the string literal:
+        '    <p>{{ format_date article.pubdate format="DATE_MED }}</p>',
+        '  </article>',
+        '  </body>',
+        '</html>',
+    ].join('\n');
+
+    assertThrows(() => {
+        createAndRenderTemplate('test-6', source, {});
+    }, (error) => {
+        assertEqual('Unclosed string literal on line 5', error.message);
+        assertEqual('test-6', error.filename);
+        assertEqual(5, error.lineNumber);
+        assertEqual(9, error.startPosition);
+    });
+}
+
+{
+    const source = [
+        '<html>',
+        '<head></head>',
+        '  <body>',
+        '  <article>',
+        // The "=" for key/value props cannot have spaces around it:
+        '    <p>{{ format_date article.pubdate format = "DATE_MED" }}</p>',
+        '  </article>',
+        '  </body>',
+        '</html>',
+    ].join('\n');
+
+    assertThrows(() => {
+        createAndRenderTemplate('test-7', source, {});
+    }, (error) => {
+        assertEqual('Missing helper key on line 5. Check for spaces around "=".', error.message);
+        assertEqual('test-7', error.filename);
+        assertEqual(5, error.lineNumber);
+        assertEqual(44, error.startPosition);
+    });
+}
+
 
 function createAndRenderTemplate(name, source) {
     const tokens = tokenize(null, name, source);
