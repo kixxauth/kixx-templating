@@ -152,16 +152,7 @@
       },
       {
         "type": "PATH_EXPRESSION",
-        "exp": [
-          {
-            "type": "PATH",
-            "path": [
-              "group",
-              "label"
-            ],
-            "pathString": "group.label"
-          }
-        ],
+        "exp": [],
         "tokens": [
           {
             "filename": "site-header.html",
@@ -299,16 +290,7 @@
           },
           {
             "type": "PATH_EXPRESSION",
-            "exp": [
-              {
-                "type": "PATH",
-                "path": [
-                  "page",
-                  "url"
-                ],
-                "pathString": "page.url"
-              }
-            ],
+            "exp": [],
             "tokens": [
               {
                 "filename": "site-header.html",
@@ -336,16 +318,7 @@
           },
           {
             "type": "PATH_EXPRESSION",
-            "exp": [
-              {
-                "type": "PATH",
-                "path": [
-                  "group",
-                  "label"
-                ],
-                "pathString": "group.label"
-              }
-            ],
+            "exp": [],
             "tokens": [
               {
                 "filename": "site-header.html",
@@ -373,16 +346,7 @@
           },
           {
             "type": "PATH_EXPRESSION",
-            "exp": [
-              {
-                "type": "PATH",
-                "path": [
-                  "page",
-                  "label"
-                ],
-                "pathString": "page.label"
-              }
-            ],
+            "exp": [],
             "tokens": [
               {
                 "filename": "site-header.html",
@@ -432,6 +396,20 @@
                 "startPosition": 0,
                 "endPosition": 19,
                 "tokenString": "                    ",
+                "line": "                    {{/each}}\n"
+              }
+            ]
+          },
+          {
+            "type": "BLOCK_CLOSE",
+            "exp": "each",
+            "tokens": [
+              {
+                "filename": "site-header.html",
+                "lineNumber": 15,
+                "startPosition": 22,
+                "endPosition": 26,
+                "tokenString": "/each",
                 "line": "                    {{/each}}\n"
               }
             ]
@@ -500,6 +478,20 @@
             "startPosition": 0,
             "endPosition": 11,
             "tokenString": "            ",
+            "line": "            {{/each}}\n"
+          }
+        ]
+      },
+      {
+        "type": "BLOCK_CLOSE",
+        "exp": "each",
+        "tokens": [
+          {
+            "filename": "site-header.html",
+            "lineNumber": 18,
+            "startPosition": 14,
+            "endPosition": 18,
+            "tokenString": "/each",
             "line": "            {{/each}}\n"
           }
         ]

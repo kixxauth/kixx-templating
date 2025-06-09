@@ -43,16 +43,7 @@
   },
   {
     "type": "PATH_EXPRESSION",
-    "exp": [
-      {
-        "type": "PATH",
-        "path": [
-          "page",
-          "title"
-        ],
-        "pathString": "page.title"
-      }
-    ],
+    "exp": [],
     "tokens": [
       {
         "filename": "html-header.html",
@@ -101,14 +92,6 @@
           "if"
         ],
         "pathString": "if"
-      },
-      {
-        "type": "PATH",
-        "path": [
-          "page",
-          "description"
-        ],
-        "pathString": "page.description"
       }
     ],
     "children": [
@@ -142,16 +125,7 @@
       },
       {
         "type": "PATH_EXPRESSION",
-        "exp": [
-          {
-            "type": "PATH",
-            "path": [
-              "page",
-              "description"
-            ],
-            "pathString": "page.description"
-          }
-        ],
+        "exp": [],
         "tokens": [
           {
             "filename": "html-header.html",
@@ -174,6 +148,20 @@
             "endPosition": 63,
             "tokenString": "\">\n",
             "line": "    <meta name=\"description\" content=\"{{ page.description }}\">\n"
+          }
+        ]
+      },
+      {
+        "type": "BLOCK_CLOSE",
+        "exp": "if",
+        "tokens": [
+          {
+            "filename": "html-header.html",
+            "lineNumber": 7,
+            "startPosition": 2,
+            "endPosition": 4,
+            "tokenString": "/if",
+            "line": "{{/if}}\n"
           }
         ]
       }
@@ -254,15 +242,6 @@
           "if"
         ],
         "pathString": "if"
-      },
-      {
-        "type": "PATH",
-        "path": [
-          "page",
-          "openGraph",
-          "type"
-        ],
-        "pathString": "page.openGraph.type"
       }
     ],
     "children": [
@@ -296,17 +275,7 @@
       },
       {
         "type": "PATH_EXPRESSION",
-        "exp": [
-          {
-            "type": "PATH",
-            "path": [
-              "page",
-              "openGraph",
-              "type"
-            ],
-            "pathString": "page.openGraph.type"
-          }
-        ],
+        "exp": [],
         "tokens": [
           {
             "filename": "html-header.html",
@@ -329,6 +298,20 @@
             "endPosition": 62,
             "tokenString": "\">\n",
             "line": "<meta property=\"og:type\" content=\"{{ page.openGraph.type }}\">\n"
+          }
+        ]
+      },
+      {
+        "type": "BLOCK_CLOSE",
+        "exp": "if",
+        "tokens": [
+          {
+            "filename": "html-header.html",
+            "lineNumber": 13,
+            "startPosition": 2,
+            "endPosition": 4,
+            "tokenString": "/if",
+            "line": "{{/if}}\n"
           }
         ]
       }
@@ -367,15 +350,6 @@
           "if"
         ],
         "pathString": "if"
-      },
-      {
-        "type": "PATH",
-        "path": [
-          "page",
-          "openGraph",
-          "title"
-        ],
-        "pathString": "page.openGraph.title"
       }
     ],
     "children": [
@@ -409,17 +383,7 @@
       },
       {
         "type": "PATH_EXPRESSION",
-        "exp": [
-          {
-            "type": "PATH",
-            "path": [
-              "page",
-              "openGraph",
-              "title"
-            ],
-            "pathString": "page.openGraph.title"
-          }
-        ],
+        "exp": [],
         "tokens": [
           {
             "filename": "html-header.html",
@@ -442,6 +406,20 @@
             "endPosition": 64,
             "tokenString": "\">\n",
             "line": "<meta property=\"og:title\" content=\"{{ page.openGraph.title }}\">\n"
+          }
+        ]
+      },
+      {
+        "type": "BLOCK_CLOSE",
+        "exp": "if",
+        "tokens": [
+          {
+            "filename": "html-header.html",
+            "lineNumber": 16,
+            "startPosition": 2,
+            "endPosition": 4,
+            "tokenString": "/if",
+            "line": "{{/if}}\n"
           }
         ]
       }

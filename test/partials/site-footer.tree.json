@@ -42,7 +42,7 @@
     ]
   },
   {
-    "type": "HELPER_EXPRESSION",
+    "type": "PATH_EXPRESSION",
     "exp": [
       {
         "type": "PATH",
@@ -50,13 +50,6 @@
           "escape_html"
         ],
         "pathString": "escape_html"
-      },
-      {
-        "type": "PATH",
-        "path": [
-          "someHTML"
-        ],
-        "pathString": "someHTML"
       }
     ],
     "tokens": [
