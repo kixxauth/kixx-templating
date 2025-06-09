@@ -56,7 +56,16 @@
   },
   {
     "type": "PATH_EXPRESSION",
-    "exp": [],
+    "exp": [
+      {
+        "type": "PATH",
+        "path": [
+          "article",
+          "title"
+        ],
+        "pathString": "article.title"
+      }
+    ],
     "tokens": [
       {
         "filename": "home.html",
@@ -139,7 +148,17 @@
   },
   {
     "type": "PATH_EXPRESSION",
-    "exp": [],
+    "exp": [
+      {
+        "type": "PATH",
+        "path": [
+          "article",
+          "date",
+          "localized"
+        ],
+        "pathString": "article.date.localized"
+      }
+    ],
     "tokens": [
       {
         "filename": "home.html",
@@ -232,6 +251,16 @@
           2
         ],
         "pathString": "article.img.srcset[2]"
+      },
+      {
+        "type": "PATH",
+        "path": [
+          "article",
+          "img",
+          "srcset",
+          "100w"
+        ],
+        "pathString": "article.img.srcset[100w]"
       }
     ],
     "tokens": [
@@ -1151,7 +1180,16 @@
       },
       {
         "type": "PATH_EXPRESSION",
-        "exp": [],
+        "exp": [
+          {
+            "type": "PATH",
+            "path": [
+              "item",
+              "id"
+            ],
+            "pathString": "item.id"
+          }
+        ],
         "tokens": [
           {
             "filename": "home.html",
@@ -1179,7 +1217,16 @@
       },
       {
         "type": "PATH_EXPRESSION",
-        "exp": [],
+        "exp": [
+          {
+            "type": "PATH",
+            "path": [
+              "item",
+              "label"
+            ],
+            "pathString": "item.label"
+          }
+        ],
         "tokens": [
           {
             "filename": "home.html",
