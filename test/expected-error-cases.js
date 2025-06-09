@@ -19,7 +19,7 @@ import buildSyntaxTree from '../lib/build-syntax-tree.js';
     assertThrows(() => {
         createAndRenderTemplate('test-1', source, {});
     }, (error) => {
-        assertEqual('Failed to close mustache opened on line 5', error.message);
+        assertEqual('Failed to close mustache opened in test-1 on line 5', error.message);
         assertEqual('test-1', error.filename);
         assertEqual(5, error.lineNumber);
         assertEqual(8, error.startPosition);
@@ -43,7 +43,7 @@ import buildSyntaxTree from '../lib/build-syntax-tree.js';
     assertThrows(() => {
         createAndRenderTemplate('test-2', source, {});
     }, (error) => {
-        assertEqual('Failed to close mustache opened on line 5', error.message);
+        assertEqual('Failed to close mustache opened in test-2 on line 5', error.message);
         assertEqual('test-2', error.filename);
         assertEqual(5, error.lineNumber);
         assertEqual(8, error.startPosition);
@@ -67,7 +67,7 @@ import buildSyntaxTree from '../lib/build-syntax-tree.js';
     assertThrows(() => {
         createAndRenderTemplate('test-3', source, {});
     }, (error) => {
-        assertEqual('Failed to close comment opened on line 6', error.message);
+        assertEqual('Failed to close comment opened in test-3 on line 6', error.message);
         assertEqual('test-3', error.filename);
         assertEqual(6, error.lineNumber);
         assertEqual(4, error.startPosition);
@@ -92,7 +92,7 @@ import buildSyntaxTree from '../lib/build-syntax-tree.js';
     assertThrows(() => {
         createAndRenderTemplate('test-4', source, {});
     }, (error) => {
-        assertEqual('Failed to close comment opened on line 6', error.message);
+        assertEqual('Failed to close comment opened in test-4 on line 6', error.message);
         assertEqual('test-4', error.filename);
         assertEqual(6, error.lineNumber);
         assertEqual(4, error.startPosition);
@@ -115,7 +115,7 @@ import buildSyntaxTree from '../lib/build-syntax-tree.js';
     assertThrows(() => {
         createAndRenderTemplate('test-5', source, {});
     }, (error) => {
-        assertEqual('Failed to close block opened on line 5', error.message);
+        assertEqual('Failed to close block opened in test-5 on line 5', error.message);
         assertEqual('test-5', error.filename);
         assertEqual(5, error.lineNumber);
         assertEqual(6, error.startPosition);
@@ -139,7 +139,7 @@ import buildSyntaxTree from '../lib/build-syntax-tree.js';
     assertThrows(() => {
         createAndRenderTemplate('test-6', source, {});
     }, (error) => {
-        assertEqual('Unclosed block params in expression starting on line 5', error.message);
+        assertEqual('Unclosed block params in expression in test-6 starting on line 5', error.message);
         assertEqual('test-6', error.filename);
         assertEqual(5, error.lineNumber);
         assertEqual(4, error.startPosition);
@@ -162,7 +162,7 @@ import buildSyntaxTree from '../lib/build-syntax-tree.js';
     assertThrows(() => {
         createAndRenderTemplate('test-7', source, {});
     }, (error) => {
-        assertEqual('Unclosed string literal in expression starting on line 5', error.message);
+        assertEqual('Unclosed string literal in expression in test-7 starting on line 5', error.message);
         assertEqual('test-7', error.filename);
         assertEqual(5, error.lineNumber);
         assertEqual(7, error.startPosition);
@@ -185,7 +185,7 @@ import buildSyntaxTree from '../lib/build-syntax-tree.js';
     assertThrows(() => {
         createAndRenderTemplate('test-8', source, {});
     }, (error) => {
-        assertEqual('Unclosed bracket "[...]" in expression starting on line 5', error.message);
+        assertEqual('Unclosed bracket "[...]" in expression in test-8 starting on line 5', error.message);
         assertEqual('test-8', error.filename);
         assertEqual(5, error.lineNumber);
         assertEqual(12, error.startPosition);
@@ -208,7 +208,7 @@ import buildSyntaxTree from '../lib/build-syntax-tree.js';
     assertThrows(() => {
         createAndRenderTemplate('test-9', source, {});
     }, (error) => {
-        assertEqual('No value defined for key/value after "=" in expression starting on line 5', error.message);
+        assertEqual('No value defined for key/value after "=" in expression in test-9 starting on line 5', error.message);
         assertEqual('test-9', error.filename);
         assertEqual(5, error.lineNumber);
         assertEqual(12, error.startPosition);
