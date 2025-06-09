@@ -19,7 +19,7 @@ import buildSyntaxTree from '../lib/build-syntax-tree.js';
     assertThrows(() => {
         createAndRenderTemplate('test-1', source, {});
     }, (error) => {
-        assertEqual('Failed to close mustache from line 5', error.message);
+        assertEqual('Failed to close mustache opened on line 5', error.message);
         assertEqual('test-1', error.filename);
         assertEqual(5, error.lineNumber);
         assertEqual(8, error.startPosition);
@@ -43,7 +43,7 @@ import buildSyntaxTree from '../lib/build-syntax-tree.js';
     assertThrows(() => {
         createAndRenderTemplate('test-2', source, {});
     }, (error) => {
-        assertEqual('Failed to close mustache from line 5', error.message);
+        assertEqual('Failed to close mustache opened on line 5', error.message);
         assertEqual('test-2', error.filename);
         assertEqual(5, error.lineNumber);
         assertEqual(8, error.startPosition);
@@ -67,7 +67,7 @@ import buildSyntaxTree from '../lib/build-syntax-tree.js';
     assertThrows(() => {
         createAndRenderTemplate('test-3', source, {});
     }, (error) => {
-        assertEqual('Failed to close comment from line 6', error.message);
+        assertEqual('Failed to close comment opened on line 6', error.message);
         assertEqual('test-3', error.filename);
         assertEqual(6, error.lineNumber);
         assertEqual(4, error.startPosition);
@@ -92,7 +92,7 @@ import buildSyntaxTree from '../lib/build-syntax-tree.js';
     assertThrows(() => {
         createAndRenderTemplate('test-4', source, {});
     }, (error) => {
-        assertEqual('Failed to close comment from line 6', error.message);
+        assertEqual('Failed to close comment opened on line 6', error.message);
         assertEqual('test-4', error.filename);
         assertEqual(6, error.lineNumber);
         assertEqual(4, error.startPosition);
@@ -115,7 +115,7 @@ import buildSyntaxTree from '../lib/build-syntax-tree.js';
     assertThrows(() => {
         createAndRenderTemplate('test-5', source, {});
     }, (error) => {
-        assertEqual('Failed to close block from line 5', error.message);
+        assertEqual('Failed to close block opened on line 5', error.message);
         assertEqual('test-5', error.filename);
         assertEqual(5, error.lineNumber);
         assertEqual(6, error.startPosition);
@@ -139,10 +139,10 @@ import buildSyntaxTree from '../lib/build-syntax-tree.js';
     assertThrows(() => {
         createAndRenderTemplate('test-6', source, {});
     }, (error) => {
-        assertEqual('Unclosed block params on line 5', error.message);
+        assertEqual('Unclosed block params in expression starting on line 5', error.message);
         assertEqual('test-6', error.filename);
         assertEqual(5, error.lineNumber);
-        assertEqual(6, error.startPosition);
+        assertEqual(4, error.startPosition);
     });
 }
 
@@ -160,12 +160,12 @@ import buildSyntaxTree from '../lib/build-syntax-tree.js';
     ].join('\n');
 
     assertThrows(() => {
-        createAndRenderTemplate('test-6', source, {});
+        createAndRenderTemplate('test-7', source, {});
     }, (error) => {
-        assertEqual('Unclosed string literal on line 5', error.message);
-        assertEqual('test-6', error.filename);
+        assertEqual('Unclosed string literal in expression starting on line 5', error.message);
+        assertEqual('test-7', error.filename);
         assertEqual(5, error.lineNumber);
-        assertEqual(9, error.startPosition);
+        assertEqual(7, error.startPosition);
     });
 }
 
@@ -175,20 +175,43 @@ import buildSyntaxTree from '../lib/build-syntax-tree.js';
         '<head></head>',
         '  <body>',
         '  <article>',
-        // The "=" for key/value props cannot have spaces around it:
-        '    <p>{{ format_date article.pubdate format = "DATE_MED" }}</p>',
+        // We forgot to close the bracket "[":
+        '    <figure>{{image images[2 format="large"}}</figure>',
         '  </article>',
         '  </body>',
         '</html>',
     ].join('\n');
 
     assertThrows(() => {
-        createAndRenderTemplate('test-7', source, {});
+        createAndRenderTemplate('test-8', source, {});
     }, (error) => {
-        assertEqual('Missing helper key on line 5. Check for spaces around "=".', error.message);
-        assertEqual('test-7', error.filename);
+        assertEqual('Unclosed bracket "[...]" in expression starting on line 5', error.message);
+        assertEqual('test-8', error.filename);
         assertEqual(5, error.lineNumber);
-        assertEqual(44, error.startPosition);
+        assertEqual(12, error.startPosition);
+    });
+}
+
+{
+    const source = [
+        '<html>',
+        '<head></head>',
+        '  <body>',
+        '  <article>',
+        // We forgot to close the bracket "[":
+        '    <figure>{{image images[2] format=}}</figure>',
+        '  </article>',
+        '  </body>',
+        '</html>',
+    ].join('\n');
+
+    assertThrows(() => {
+        createAndRenderTemplate('test-9', source, {});
+    }, (error) => {
+        assertEqual('No value defined for key/value after "=" in expression starting on line 5', error.message);
+        assertEqual('test-9', error.filename);
+        assertEqual(5, error.lineNumber);
+        assertEqual(12, error.startPosition);
     });
 }
 

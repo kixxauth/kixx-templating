@@ -832,7 +832,7 @@
         "startPosition": 0,
         "endPosition": 10,
         "tokenString": "        <p>",
-        "line": "        <p>{{format_date article[Published Date] format=\"DATE_MED\" }}</p>\n"
+        "line": "        <p>{{format_date article[Published Date] format = \"DATE_MED\" }}</p>\n"
       }
     ]
   },
@@ -847,8 +847,16 @@
         "pathString": "format_date"
       },
       {
+        "type": "PATH",
+        "path": [
+          "article",
+          "Published Date"
+        ],
+        "pathString": "article[Published Date]"
+      },
+      {
         "type": "KEY_VALUE",
-        "key": "article[Published Date]",
+        "key": "format",
         "value": {
           "type": "LITERAL",
           "value": "DATE_MED"
@@ -860,9 +868,9 @@
         "filename": "home.html",
         "lineNumber": 29,
         "startPosition": 13,
-        "endPosition": 66,
-        "tokenString": "format_date article[Published Date] format=\"DATE_MED\" ",
-        "line": "        <p>{{format_date article[Published Date] format=\"DATE_MED\" }}</p>\n"
+        "endPosition": 68,
+        "tokenString": "format_date article[Published Date] format = \"DATE_MED\" ",
+        "line": "        <p>{{format_date article[Published Date] format = \"DATE_MED\" }}</p>\n"
       }
     ]
   },
@@ -873,10 +881,10 @@
       {
         "filename": "home.html",
         "lineNumber": 29,
-        "startPosition": 69,
-        "endPosition": 74,
+        "startPosition": 71,
+        "endPosition": 76,
         "tokenString": "</p>\n",
-        "line": "        <p>{{format_date article[Published Date] format=\"DATE_MED\" }}</p>\n"
+        "line": "        <p>{{format_date article[Published Date] format = \"DATE_MED\" }}</p>\n"
       }
     ]
   },
