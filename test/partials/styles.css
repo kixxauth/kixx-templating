@@ -1,6 +1,6 @@
 html {
-    --site-width: 1080px;
-    --layout-right-left-margin: 4vw;
+    --site-width: {{ styles.siteWidth }};
+    --layout-right-left-margin: {{ styles.layoutRightLeftMargin }};
     /* Sets the rm size for the rest of the styles */
     font-size: 16px;
 }

@@ -183,7 +183,15 @@
   },
   {
     "type": "PATH_EXPRESSION",
-    "exp": [],
+    "exp": [
+      {
+        "type": "PATH",
+        "path": [
+          "body"
+        ],
+        "pathString": "body"
+      }
+    ],
     "tokens": [
       {
         "filename": "base.html",

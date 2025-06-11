@@ -2,7 +2,7 @@
     <p>This is the header</p>
     <nav class="site-nav">
         <ul class="site-nav__list">
-            {{#each nav_menu_sections as |group|}}
+            {{#each navMenuSections as |group|}}
             <li class="site-nav__group">
                 <a href="#" >
                     <span>{{ group.label }}</span>
@@ -10,7 +10,7 @@
                 <ul>
                     {{#each group.pages as |page|}}
                     <li>
-                        <a href="{{ page.url }}">{{ group.label }} : {{ page.label }}</a>
+                        <a href="{{ page.url }}">{{ site.name }} : {{ group.label }} : {{ page.label }}</a>
                     </li>
                     {{/each}}
                 </ul>

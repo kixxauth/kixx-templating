@@ -15,29 +15,103 @@
   },
   {
     "type": "CONTENT",
-    "str": "    --site-width: 1080px;\n",
+    "str": "    --site-width: ",
     "tokens": [
       {
         "filename": "styles.css",
         "lineNumber": 2,
         "startPosition": 0,
-        "endPosition": 26,
-        "tokenString": "    --site-width: 1080px;\n",
-        "line": "    --site-width: 1080px;\n"
+        "endPosition": 17,
+        "tokenString": "    --site-width: ",
+        "line": "    --site-width: {{ styles.siteWidth }};\n"
+      }
+    ]
+  },
+  {
+    "type": "PATH_EXPRESSION",
+    "exp": [
+      {
+        "type": "PATH",
+        "path": [
+          "styles",
+          "siteWidth"
+        ],
+        "pathString": "styles.siteWidth"
+      }
+    ],
+    "tokens": [
+      {
+        "filename": "styles.css",
+        "lineNumber": 2,
+        "startPosition": 20,
+        "endPosition": 37,
+        "tokenString": " styles.siteWidth ",
+        "line": "    --site-width: {{ styles.siteWidth }};\n"
       }
     ]
   },
   {
     "type": "CONTENT",
-    "str": "    --layout-right-left-margin: 4vw;\n",
+    "str": ";\n",
+    "tokens": [
+      {
+        "filename": "styles.css",
+        "lineNumber": 2,
+        "startPosition": 40,
+        "endPosition": 42,
+        "tokenString": ";\n",
+        "line": "    --site-width: {{ styles.siteWidth }};\n"
+      }
+    ]
+  },
+  {
+    "type": "CONTENT",
+    "str": "    --layout-right-left-margin: ",
     "tokens": [
       {
         "filename": "styles.css",
         "lineNumber": 3,
         "startPosition": 0,
-        "endPosition": 37,
-        "tokenString": "    --layout-right-left-margin: 4vw;\n",
-        "line": "    --layout-right-left-margin: 4vw;\n"
+        "endPosition": 31,
+        "tokenString": "    --layout-right-left-margin: ",
+        "line": "    --layout-right-left-margin: {{ styles.layoutRightLeftMargin }};\n"
+      }
+    ]
+  },
+  {
+    "type": "PATH_EXPRESSION",
+    "exp": [
+      {
+        "type": "PATH",
+        "path": [
+          "styles",
+          "layoutRightLeftMargin"
+        ],
+        "pathString": "styles.layoutRightLeftMargin"
+      }
+    ],
+    "tokens": [
+      {
+        "filename": "styles.css",
+        "lineNumber": 3,
+        "startPosition": 34,
+        "endPosition": 63,
+        "tokenString": " styles.layoutRightLeftMargin ",
+        "line": "    --layout-right-left-margin: {{ styles.layoutRightLeftMargin }};\n"
+      }
+    ]
+  },
+  {
+    "type": "CONTENT",
+    "str": ";\n",
+    "tokens": [
+      {
+        "filename": "styles.css",
+        "lineNumber": 3,
+        "startPosition": 66,
+        "endPosition": 68,
+        "tokenString": ";\n",
+        "line": "    --layout-right-left-margin: {{ styles.layoutRightLeftMargin }};\n"
       }
     ]
   },

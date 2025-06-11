@@ -40,41 +40,5 @@
         "line": "</footer>\n"
       }
     ]
-  },
-  {
-    "type": "PATH_EXPRESSION",
-    "exp": [
-      {
-        "type": "PATH",
-        "path": [
-          "escape_html"
-        ],
-        "pathString": "escape_html"
-      }
-    ],
-    "tokens": [
-      {
-        "filename": "site-footer.html",
-        "lineNumber": 4,
-        "startPosition": 2,
-        "endPosition": 22,
-        "tokenString": "escape_html someHTML ",
-        "line": "{{escape_html someHTML }}\n"
-      }
-    ]
-  },
-  {
-    "type": "CONTENT",
-    "str": "\n",
-    "tokens": [
-      {
-        "filename": "site-footer.html",
-        "lineNumber": 4,
-        "startPosition": 25,
-        "endPosition": 26,
-        "tokenString": "\n",
-        "line": "{{escape_html someHTML }}\n"
-      }
-    ]
   }
 ]

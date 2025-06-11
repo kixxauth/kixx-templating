@@ -1,0 +1,13 @@
+[
+{"filename":"book.html","lineNumber":1,"startPosition":0,"endPosition":25,"tokenString":"<span class=\"book__title\">","line":"<span class=\"book__title\">{{ book.title }}</span>\n"},
+{"filename":"book.html","lineNumber":1,"startPosition":26,"endPosition":27,"tokenString":"{{","line":"<span class=\"book__title\">{{ book.title }}</span>\n"},
+{"filename":"book.html","lineNumber":1,"startPosition":28,"endPosition":39,"tokenString":" book.title ","line":"<span class=\"book__title\">{{ book.title }}</span>\n"},
+{"filename":"book.html","lineNumber":1,"startPosition":40,"endPosition":41,"tokenString":"}}","line":"<span class=\"book__title\">{{ book.title }}</span>\n"},
+{"filename":"book.html","lineNumber":1,"startPosition":42,"endPosition":50,"tokenString":"</span>\n","line":"<span class=\"book__title\">{{ book.title }}</span>\n"},
+{"filename":"book.html","lineNumber":2,"startPosition":0,"endPosition":26,"tokenString":"<span class=\"book__author\">","line":"<span class=\"book__author\">{{ book.author }}</span>\n"},
+{"filename":"book.html","lineNumber":2,"startPosition":27,"endPosition":28,"tokenString":"{{","line":"<span class=\"book__author\">{{ book.author }}</span>\n"},
+{"filename":"book.html","lineNumber":2,"startPosition":29,"endPosition":41,"tokenString":" book.author ","line":"<span class=\"book__author\">{{ book.author }}</span>\n"},
+{"filename":"book.html","lineNumber":2,"startPosition":42,"endPosition":43,"tokenString":"}}","line":"<span class=\"book__author\">{{ book.author }}</span>\n"},
+{"filename":"book.html","lineNumber":2,"startPosition":44,"endPosition":52,"tokenString":"</span>\n","line":"<span class=\"book__author\">{{ book.author }}</span>\n"},
+{"filename":"book.html","lineNumber":3,"startPosition":0,"endPosition":1,"tokenString":"\n","line":"\n"}
+]

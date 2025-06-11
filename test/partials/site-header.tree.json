@@ -65,7 +65,7 @@
         "startPosition": 0,
         "endPosition": 11,
         "tokenString": "            ",
-        "line": "            {{#each nav_menu_sections as |group|}}\n"
+        "line": "            {{#each navMenuSections as |group|}}\n"
       }
     ]
   },
@@ -82,9 +82,9 @@
       {
         "type": "PATH",
         "path": [
-          "nav_menu_sections"
+          "navMenuSections"
         ],
-        "pathString": "nav_menu_sections"
+        "pathString": "navMenuSections"
       },
       {
         "type": "BLOCK_PARAMS",
@@ -101,10 +101,10 @@
           {
             "filename": "site-header.html",
             "lineNumber": 5,
-            "startPosition": 50,
-            "endPosition": 51,
+            "startPosition": 48,
+            "endPosition": 49,
             "tokenString": "\n",
-            "line": "            {{#each nav_menu_sections as |group|}}\n"
+            "line": "            {{#each navMenuSections as |group|}}\n"
           }
         ]
       },
@@ -152,7 +152,16 @@
       },
       {
         "type": "PATH_EXPRESSION",
-        "exp": [],
+        "exp": [
+          {
+            "type": "PATH",
+            "path": [
+              "group",
+              "label"
+            ],
+            "pathString": "group.label"
+          }
+        ],
         "tokens": [
           {
             "filename": "site-header.html",
@@ -284,13 +293,22 @@
                 "startPosition": 0,
                 "endPosition": 32,
                 "tokenString": "                        <a href=\"",
-                "line": "                        <a href=\"{{ page.url }}\">{{ group.label }} : {{ page.label }}</a>\n"
+                "line": "                        <a href=\"{{ page.url }}\">{{ site.name }} : {{ group.label }} : {{ page.label }}</a>\n"
               }
             ]
           },
           {
             "type": "PATH_EXPRESSION",
-            "exp": [],
+            "exp": [
+              {
+                "type": "PATH",
+                "path": [
+                  "page",
+                  "url"
+                ],
+                "pathString": "page.url"
+              }
+            ],
             "tokens": [
               {
                 "filename": "site-header.html",
@@ -298,7 +316,7 @@
                 "startPosition": 35,
                 "endPosition": 44,
                 "tokenString": " page.url ",
-                "line": "                        <a href=\"{{ page.url }}\">{{ group.label }} : {{ page.label }}</a>\n"
+                "line": "                        <a href=\"{{ page.url }}\">{{ site.name }} : {{ group.label }} : {{ page.label }}</a>\n"
               }
             ]
           },
@@ -312,21 +330,30 @@
                 "startPosition": 47,
                 "endPosition": 48,
                 "tokenString": "\">",
-                "line": "                        <a href=\"{{ page.url }}\">{{ group.label }} : {{ page.label }}</a>\n"
+                "line": "                        <a href=\"{{ page.url }}\">{{ site.name }} : {{ group.label }} : {{ page.label }}</a>\n"
               }
             ]
           },
           {
             "type": "PATH_EXPRESSION",
-            "exp": [],
+            "exp": [
+              {
+                "type": "PATH",
+                "path": [
+                  "site",
+                  "name"
+                ],
+                "pathString": "site.name"
+              }
+            ],
             "tokens": [
               {
                 "filename": "site-header.html",
                 "lineNumber": 13,
                 "startPosition": 51,
-                "endPosition": 63,
-                "tokenString": " group.label ",
-                "line": "                        <a href=\"{{ page.url }}\">{{ group.label }} : {{ page.label }}</a>\n"
+                "endPosition": 61,
+                "tokenString": " site.name ",
+                "line": "                        <a href=\"{{ page.url }}\">{{ site.name }} : {{ group.label }} : {{ page.label }}</a>\n"
               }
             ]
           },
@@ -337,24 +364,70 @@
               {
                 "filename": "site-header.html",
                 "lineNumber": 13,
-                "startPosition": 66,
-                "endPosition": 68,
+                "startPosition": 64,
+                "endPosition": 66,
                 "tokenString": " : ",
-                "line": "                        <a href=\"{{ page.url }}\">{{ group.label }} : {{ page.label }}</a>\n"
+                "line": "                        <a href=\"{{ page.url }}\">{{ site.name }} : {{ group.label }} : {{ page.label }}</a>\n"
               }
             ]
           },
           {
             "type": "PATH_EXPRESSION",
-            "exp": [],
+            "exp": [
+              {
+                "type": "PATH",
+                "path": [
+                  "group",
+                  "label"
+                ],
+                "pathString": "group.label"
+              }
+            ],
             "tokens": [
               {
                 "filename": "site-header.html",
                 "lineNumber": 13,
-                "startPosition": 71,
-                "endPosition": 82,
+                "startPosition": 69,
+                "endPosition": 81,
+                "tokenString": " group.label ",
+                "line": "                        <a href=\"{{ page.url }}\">{{ site.name }} : {{ group.label }} : {{ page.label }}</a>\n"
+              }
+            ]
+          },
+          {
+            "type": "CONTENT",
+            "str": " : ",
+            "tokens": [
+              {
+                "filename": "site-header.html",
+                "lineNumber": 13,
+                "startPosition": 84,
+                "endPosition": 86,
+                "tokenString": " : ",
+                "line": "                        <a href=\"{{ page.url }}\">{{ site.name }} : {{ group.label }} : {{ page.label }}</a>\n"
+              }
+            ]
+          },
+          {
+            "type": "PATH_EXPRESSION",
+            "exp": [
+              {
+                "type": "PATH",
+                "path": [
+                  "page",
+                  "label"
+                ],
+                "pathString": "page.label"
+              }
+            ],
+            "tokens": [
+              {
+                "filename": "site-header.html",
+                "lineNumber": 13,
+                "startPosition": 89,
+                "endPosition": 100,
                 "tokenString": " page.label ",
-                "line": "                        <a href=\"{{ page.url }}\">{{ group.label }} : {{ page.label }}</a>\n"
+                "line": "                        <a href=\"{{ page.url }}\">{{ site.name }} : {{ group.label }} : {{ page.label }}</a>\n"
               }
             ]
           },
@@ -365,10 +438,10 @@
               {
                 "filename": "site-header.html",
                 "lineNumber": 13,
-                "startPosition": 85,
-                "endPosition": 90,
+                "startPosition": 103,
+                "endPosition": 108,
                 "tokenString": "</a>\n",
-                "line": "                        <a href=\"{{ page.url }}\">{{ group.label }} : {{ page.label }}</a>\n"
+                "line": "                        <a href=\"{{ page.url }}\">{{ site.name }} : {{ group.label }} : {{ page.label }}</a>\n"
               }
             ]
           },
@@ -502,9 +575,9 @@
         "filename": "site-header.html",
         "lineNumber": 5,
         "startPosition": 14,
-        "endPosition": 47,
-        "tokenString": "#each nav_menu_sections as |group|",
-        "line": "            {{#each nav_menu_sections as |group|}}\n"
+        "endPosition": 45,
+        "tokenString": "#each navMenuSections as |group|",
+        "line": "            {{#each navMenuSections as |group|}}\n"
       }
     ]
   },

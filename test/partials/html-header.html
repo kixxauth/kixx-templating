@@ -2,18 +2,12 @@
 
 <title>{{ page.title }}</title>
 
-{{#if page.description }}
-    <meta name="description" content="{{ page.description }}">
-{{/if}}
+<meta name="description" content="{{ page.description }}">
 
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-{{#if page.openGraph.type }}
 <meta property="og:type" content="{{ page.openGraph.type }}">
-{{/if}}
-{{#if page.openGraph.title }}
 <meta property="og:title" content="{{ page.openGraph.title }}">
-{{/if}}
 
 <style type="text/css">
     {{> styles.css }}

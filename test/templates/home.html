@@ -1,9 +1,16 @@
-{{!-- You can use curly braces in your markup, so long as it is not a mustache ("{{" or "}}") --}}
+{{!-- You can use curly braces in your markup, so long
+    as it is not a mustache ("{{" or "}}") --}}
 <article data-json='{"foo":"bar"}'>
+
     <h1>{{ article.title }}</h1>
-    {{!-- The article.date object does not exist --}}
+
+    {{!-- The article.date object does not exist. This will
+        yield an empty string instead of throwing an error --}}
     <p>{{ article.date.localized }}</p>
+
     <figure>
+        {{!-- This custom `image` helper accepts any number of positional arguments.
+            Notice that a template tag can be spread over mutliple lines! --}}
         {{image
             article.img.srcset.0
             article.img.srcset[1]
@@ -11,33 +18,46 @@
             article.img.srcset[100w]
             }}
 
-        {{!-- A helper to provide a default value for a value which does not exist --}}
+        {{!-- The `resolve` helper is available to provide a default value for
+            a value which does not exist --}}
         <caption>{{resolve  article.img.meta.caption      'An image of unknown origin' }}</caption>
     </figure>
 
-    {{!-- An ifEqual custom helper. Notice the space after "#" is ok --}}
-    {{# ifEqual article.type 'webpage'}}
+    {{# ifEqual article.type 'webpage'}}{{!-- Use double or single quotes in string literals --}}
     <main class="webpage">
         <h2>This is a web page</h2>
-    {{ else }}{{#ifEqual article.type "article"}}{{!-- Use double or single quotes in string literals --}}
+    {{ else }}{{#ifEqual article.type "article"}}
     <main class="article">
         <h2>This is an article</h2>
     {{ else }}
     <main class="any">
         <h2>This is not a web page or an article</h2>
     {{/ifEqual}}{{/ifEqual}}
+
+        {{!-- Use brackets "[...]" to enclose JavaScript reference paths with
+            illegal characters (like spaces) just like you would in JavaScript --}}
         <p>{{format_date article[Published Date] format = "DATE_MED" }}</p>
+
+        {{!-- This is an empty list, so the #each helper invokes the else block --}}
+        {{#each article.tableOfContents as |item|}}
+        <a href="#{{ item.id }}">{{ item.label }}</a>
+        {{else}}
+        <p>There are no contents items to list</p>
+        {{/each}}
     </main>
 
-    {{!-- We forgot the opening mustache here, which means the whole thing will be printed:
-        "<p>Copyright copyright.year }}</p>" --}}
+    {{#ifEmpty books}}
+        <p>No books to list.</p>
+    {{ else }}
+        <ul>
+        {{#each books as |book|}}
+        <li>{{> book.html }}</li>
+        {{/each}}
+        </ul>
+    {{/if}}
 
-    <p>Copyright copyright.year }}</p>
+    {{!-- We forgot the opening mustache in the <p> tag below, which means the whole
+        thing will be printed like this: "<p>Copyright article.copyright.year }}</p>" --}}
 
-    {{!-- An empty list --}}
-    {{#each article.tableOfContents as |item|}}
-    <a href="#{{ item.id }}">{{ item.label }}</a>
-    {{else}}
-    <p>There are no contents items to list</p>
-    {{/each}}
+    <p>Copyright article.copyright.year }}</p>
 </article>
