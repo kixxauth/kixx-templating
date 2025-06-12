@@ -5,6 +5,8 @@ import tokenize from '../lib/tokenize.js';
 import buildSyntaxTree from '../lib/build-syntax-tree.js';
 import expectedErrorCases from './expected-error-cases.js';
 import { readFixtureFiles } from './shared.js';
+import * as templateEngine from './template-engine.js';
+import * as customHelpers from './custom-helpers.js';
 
 
 const TEST_DIR_URL = new URL('./', import.meta.url);
@@ -16,6 +18,13 @@ async function main() {
     });
 
     await checkTemplateFileOutputs();
+    await renderTemplates();
+}
+
+async function renderTemplates() {
+    for (const helperName of Object.keys(customHelpers)) {
+        templateEngine.registerHelper(helperName, customHelpers[helperName]);
+    }
 }
 
 async function checkTemplateFileOutputs() {
