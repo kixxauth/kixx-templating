@@ -4,6 +4,45 @@ import path from 'node:path';
 import { EOL } from 'node:os';
 
 
+export async function readFixtureFiles(dirpath) {
+    const sourceFileExtensions = [
+        '.html',
+        '.css',
+        '.js',
+    ];
+
+    const entries = await fsp.readdir(dirpath);
+
+    const sourceFileNames = entries.filter((entry) => {
+        return sourceFileExtensions.includes(path.extname(entry));
+    });
+
+    const promises = sourceFileNames.map((filename) => {
+        return loadFile(path.join(dirpath, filename));
+    });
+
+    return Promise.all(promises);
+}
+
+export async function loadFile(filepath) {
+    const dirpath = path.dirname(filepath);
+    const filename = path.basename(filepath);
+    const templateName = templateNameFromFilename(filename);
+    const tokensFilename = tokensFilenameFromTemplateName(templateName);
+    const treeFilename = treeFilenameFromTemplateName(templateName);
+
+    const source = await readUtf8File(filepath);
+    const tokensJSON = await readUtf8File(path.join(dirpath, tokensFilename));
+    const astJSON = await readUtf8File(path.join(dirpath, treeFilename));
+
+    return {
+        filename,
+        source,
+        tokens: JSON.parse(tokensJSON),
+        AST: JSON.parse(astJSON),
+    };
+}
+
 export function readUtf8File(filepath) {
     return fsp.readFile(filepath, { encoding: 'utf8' });
 }
