@@ -1,6 +1,7 @@
 import { AssertionError, assertEqual } from 'kixx-assert';
 import tokenize from '../lib/tokenize.js';
 import buildSyntaxTree from '../lib/build-syntax-tree.js';
+import createRenderFunction from '../lib/create-render-function.js';
 
 
 export default [
@@ -218,10 +219,11 @@ export default [
 ];
 
 
-function createAndRenderTemplate(name, source) {
+function createAndRenderTemplate(name, source, context, helpers = new Map(), partials = new Map()) {
     const tokens = tokenize(null, name, source);
     const tree = buildSyntaxTree(null, tokens);
-    return tree;
+    const render = createRenderFunction(null, helpers, partials, tree);
+    return render(context);
 }
 
 function assertThrows(fn, check) {
