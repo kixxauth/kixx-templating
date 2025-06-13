@@ -43,16 +43,12 @@ export async function loadFile(filepath) {
     };
 }
 
-export function readUtf8File(filepath) {
-    return fsp.readFile(filepath, { encoding: 'utf8' });
-}
-
 export async function saveTokensFile(directory, sourceFilename, tokens) {
     const name = templateNameFromFilename(sourceFilename);
     const tokensFilename = tokensFilenameFromTemplateName(name);
     const filepath = path.join(directory, tokensFilename);
     const json = tokens.map((t) => JSON.stringify(t)).join(`,${ EOL }`);
-    await fsp.writeFile(filepath, `[${ EOL }${ json }${ EOL }]`, { encoding: 'utf8' });
+    await writeUtf8File(filepath, `[${ EOL }${ json }${ EOL }]`);
 }
 
 export async function saveSyntaxTreeFile(directory, sourceFilename, tree) {
@@ -60,7 +56,15 @@ export async function saveSyntaxTreeFile(directory, sourceFilename, tree) {
     const tokensFilename = treeFilenameFromTemplateName(name);
     const filepath = path.join(directory, tokensFilename);
     const json = JSON.stringify(tree, null, 2);
-    await fsp.writeFile(filepath, json, { encoding: 'utf8' });
+    await writeUtf8File(filepath, json);
+}
+
+export function readUtf8File(filepath) {
+    return fsp.readFile(filepath, { encoding: 'utf8' });
+}
+
+export function writeUtf8File(filepath, str) {
+    return fsp.writeFile(filepath, str, { encoding: 'utf8' });
 }
 
 export function templateNameFromFilename(filename) {

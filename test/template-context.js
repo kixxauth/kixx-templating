@@ -44,7 +44,7 @@ export default {
         'Published Date': '2025-06-11T10:15:32.146Z',
         copyright: { name: 'Dunder Mifflin', year: 1949 },
         tableOfContents: [],
-        image: {
+        img: {
             srcset: [
                 '/images/article-1/300w.jpg',
                 '/images/article-1/600w.jpg',

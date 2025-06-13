@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8">
+
+<title>Kixx Templating Test</title>
+
+<meta name="description" content="A test page for trying out Kixx Templating">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Kixx Templating Test">
+
+<style type="text/css">
+    html {
+    --site-width: 1080px;
+    --layout-right-left-margin: 4vw;
+    /* Sets the rm size for the rest of the styles */
+    font-size: 16px;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+
+    /*
+    Set up a full height grid to stick the footer to the bottom of the
+    viewport. This creates a top row for the header, a middle row for
+    main content, and a bottom row for the footer
+     */
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+
+    font-family: Monaco monospace;
+    background-color: #222;
+    color: #ddd;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-weight: 400;
+    line-height: 1.6;
+    /* Mobile font size */
+    font-size: 1.125em;
+    letter-spacing: 0.0125em;
+}
+
+.site-width-container {
+    margin-left: var(--layout-right-left-margin);
+    margin-right: var(--layout-right-left-margin);
+}
+@media screen and (min-width: 1080px) {
+    .site-width-container {
+        max-width: calc(var(--site-width) - var(--layout-right-left-margin) * 2);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+</style>
+
+
+    </head>
+    <body>
+        <header>
+    <p>This is the header</p>
+    <nav class="site-nav">
+        <ul class="site-nav__list">
+            
+            <li class="site-nav__group">
+                <a href="#" >
+                    <span>Fiction</span>
+                </a>
+                <ul>
+                    
+                    <li>
+                        <a href="/books/sci-fi">Kixx Templating : Fiction : Sci-fi</a>
+                    </li>
+                    
+                </ul>
+            </li>
+            
+            <li class="site-nav__group">
+                <a href="#" >
+                    <span>Nonfiction</span>
+                </a>
+                <ul>
+                    
+                    <li>
+                        <a href="/books/biographies">Kixx Templating : Nonfiction : Biographies</a>
+                    </li>
+                    
+                    <li>
+                        <a href="/books/self-help">Kixx Templating : Nonfiction : Self Help</a>
+                    </li>
+                    
+                </ul>
+            </li>
+            
+        </ul>
+    </nav>
+</header>
+
+
+        <!-- START Main Content Container -->
+        <div class="page-body">
+<article data-json='{"foo":"bar"}'>
+
+    <h1>All about books</h1>
+
+    
+    <p></p>
+
+    <figure>
+        
+        <img src="/images/article-1/300w.jpg" srcset="/images/article-1/300w.jpg, /images/article-1/600w.jpg, /images/article-1/1200w.jpg">
+
+        
+        <caption>An image of unknown origin</caption>
+    </figure>
+
+    
+    <main class="article">
+        <h2>This is an article</h2>
+    
+
+        
+        <p>2025-06-11 format=DATE_MED</p>
+
+        
+        
+        <p>There are no contents items to list</p>
+        
+    </main>
+
+    
+        <ul>
+        
+        <li><span class="book__title">The Great Gatsby</span>
+<span class="book__author">F. Scott Fitzgerald</span>
+
+</li>
+        
+        <li><span class="book__title">To Kill a Mockingbird</span>
+<span class="book__author">Harper Lee</span>
+
+</li>
+        
+        </ul>
+    
+
+    
+
+    <p>Copyright article.copyright.year }}</p>
+</article>
+
+</div>
+        <!-- END Main Content Container -->
+        <footer>
+    <p>This is the footer</p>
+</footer>
+
+    </body>
+    <script>(function () {
+    'use strict';
+    console.log('Hello world!');
+}());
+
+</script>
+</html>
+
