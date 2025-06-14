@@ -2,16 +2,12 @@ import process from 'node:process';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { assert, assertEqual, assertArray, assertFalsy, AssertionError } from 'kixx-assert';
-import tokenize from '../lib/tokenize.js';
-import buildSyntaxTree from '../lib/build-syntax-tree.js';
+import { tokenize, buildSyntaxTree, helpers } from '../mod.js';
 import expectedErrorCases from './expected-error-cases.js';
 import { readUtf8File, readFixtureFiles } from './shared.js';
 import templateContext from './template-context.js';
 import * as templateEngine from './template-engine.js';
 import * as customHelpers from './custom-helpers.js';
-import { each_helper } from '../lib/helpers/each.js';
-import { ifequal_helper } from '../lib/helpers/if-equal.js';
-import { ifempty_helper } from '../lib/helpers/if-empty.js';
 
 
 const TEST_DIR_URL = new URL('./', import.meta.url);
@@ -40,9 +36,9 @@ async function renderTemplates() {
     const partialDir = path.join(testDir, 'partials');
     const templateDir = path.join(testDir, 'templates');
 
-    templateEngine.registerHelper('each', each_helper);
-    templateEngine.registerHelper('ifEqual', ifequal_helper);
-    templateEngine.registerHelper('ifEmpty', ifempty_helper);
+    for (const [ helperName, helper ] of helpers) {
+        templateEngine.registerHelper(helperName, helper);
+    }
 
     for (const helperName of Object.keys(customHelpers)) {
         templateEngine.registerHelper(helperName, customHelpers[helperName]);
