@@ -178,6 +178,23 @@ Renders the primary block if the given value is falsy, an Array with length zero
 
 Custom Helpers
 --------------
+Custom inline and block helpers can be defined as functions with a pre-defined call pattern.
+
+### Helper API
+The helper function will be passed:
+
+- `context` - The current context object.
+- `options` - The hash arguments passed into the helper, if any.
+- `...positionals` - The rest of the parameters represent the positional arguments passed into the helper, if any.
+
+Inside the helper, the `this` context will be overwritten to have:
+
+- `this.blockParams` Any block parameters passed into the helper.
+- `this.renderPrimary` Render the primary block of a block helper, passing it a sub-context object. This returns an empty string for non-block helpers.
+- `this.renderInverse` Render the inverse block ('else' block) of a block helper, passing it a sub-context object. This returns an empty string for non-block helpers.
+
+### Example Helpers
+
 An implementation of a simple helper called `format_date` used to format ISO date strings.
 ```html
 <time datetime="{{format_date article.pubdate format="DATE_ISO"}}">
@@ -224,19 +241,6 @@ export default function each_helper(context, options, list) {
     }, '');
 }
 ```
-
-### Helper API
-The helper function will be passed:
-
-- `context` - The current context object.
-- `options` - The hash arguments passed into the helper, if any.
-- `...positionals` - The rest of the parameters represent the positional arguments passed into the helper, if any.
-
-Inside the helper, the `this` context will be overwritten to have:
-
-- `this.blockParams` Any block parameters passed into the helper.
-- `this.renderPrimary` Render the primary block of a block helper, passing it a sub-context object. This returns an empty string for non-block helpers.
-- `this.renderInverse` Render the inverse block ('else' block) of a block helper, passing it a sub-context object. This returns an empty string for non-block helpers.
 
 Integration
 -----------
