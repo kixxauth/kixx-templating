@@ -87,8 +87,11 @@ Brackets can be used to dereference a value the same way they would in JavaScrip
 ```html
 {{!-- Typically we would use the #each block helper to
     iterate over a list, but we can access indexes with brackets too --}}
+
 <img src="{{ images[0].src }}" alt="{{ images[0].alt }}" />
+
 {{!-- Quotes are not used for string keys --}}
+
 <span>{{ applicationStates[playback-starting] }}</span>
 ```
 
@@ -104,12 +107,12 @@ Inline helper:
 Block heleprs start with `#`:
 ```html
 <ul>
-{{#each books as |book|}}
-<li>
-    <span>{{ book.title }}</span>
-    <span>{{ book.author }}</span>
-</li>
-{{/each}}
+    {{#each books as |book|}}
+    <li>
+        <span>{{ book.title }}</span>
+        <span>{{ book.author }}</span>
+    </li>
+    {{/each}}
 </ul>
 ```
 You can pass literals to helpers too.
@@ -117,11 +120,11 @@ You can pass literals to helpers too.
 <p>{{format_date "1970-01-01T00:00:00" }}</p>
 
 {{#each books as |book,index|}}
-<div>
-    <span>{{sum index 1 }}</span>
-    <span>{{ book.title }}</span>
-    <span>{{ book.author }}</span>
-</div>
+<tr>
+    <td>{{sum index 1 }}</td>
+    <td>{{ book.title }}</td>
+    <td>{{ book.author }}</td>
+</tr>
 {{/each}}
 ```
 
@@ -142,6 +145,9 @@ Notice that the primary render block has access to the upper context scope as we
 ### #if helper
 Renders the primary block if the given value is truthy.
 ```html
+{{!-- Here we use an #if helper to conditionally incude an
+    HTML class inside the #each loop --}}
+
 {{#each calendar as |day|}}
 <div class="calendar-day{{#if day.isToday}} is-today{{/if}}">
     <span>{{ day.localeDateTime }}</span>
@@ -161,7 +167,7 @@ Renders the primary block if the given values are equal using `==` comparison.
 ```
 
 ### #ifEmpty helper
-Renders the primary block if the given value is falsy, an Array with length zero, Map or Set with size zero, a primitive truthy value, or any other object with without own keys.
+Renders the primary block if the given value is falsy, an Array with length zero, Map or Set with size zero, or any other object with without own keys.
 ```html
 {{#ifEmpty books}}
 <p>We do not have any books</p>
@@ -172,7 +178,7 @@ Renders the primary block if the given value is falsy, an Array with length zero
 
 Custom Helpers
 --------------
-A simple helper used to format ISO date strings.
+An implementation of a simple helper called `format_date` used to format ISO date strings.
 ```html
 <time datetime="{{format_date article.pubdate format="DATE_ISO"}}">
 {{format_date article.pubdate}}
@@ -219,9 +225,22 @@ export default function each_helper(context, options, list) {
 }
 ```
 
+### Helper API
+The helper function will be passed:
+
+- `context` - The current context object.
+- `options` - The hash arguments passed into the helper, if any.
+- `...positionals` - The rest of the parameters represent the positional arguments passed into the helper, if any.
+
+Inside the helper, the `this` context will be overwritten to have:
+
+- `this.blockParams` Any block parameters passed into the helper.
+- `this.renderPrimary` Render the primary block of a block helper, passing it a sub-context object. This returns an empty string for non-block helpers.
+- `this.renderInverse` Render the inverse block ('else' block) of a block helper, passing it a sub-context object. This returns an empty string for non-block helpers.
+
 Integration
 -----------
-Kixx Templating makes no assumptions about template caching or where your template source files are. So, to integrate into your project you'll need to build your own template engine wrapper.
+Kixx Templating makes no assumptions about template caching or where your template source files are. To integrate into your project you'll need to build your own template engine wrapper.
 
 ```js
 import {
