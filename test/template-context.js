@@ -41,7 +41,9 @@ export default {
     article: {
         type: 'article',
         title: 'All about books',
+        timezone: 'America/New_York',
         'Published Date': '2025-06-11T10:15:32.146Z',
+        updated: '2025-06-11T10:15:32.146Z',
         copyright: { name: 'Dunder Mifflin', year: 1949 },
         tableOfContents: [],
         img: {

@@ -1095,11 +1095,103 @@
   },
   {
     "type": "CONTENT",
-    "str": "        ",
+    "str": "        <p>",
     "tokens": [
       {
         "filename": "home.html",
         "lineNumber": 41,
+        "startPosition": 0,
+        "endPosition": 10,
+        "tokenString": "        <p>",
+        "line": "        <p>{{format_date article.updated zone=article.timezone format=\"DATE_MED\" }}</p>\n"
+      }
+    ]
+  },
+  {
+    "type": "HELPER_EXPRESSION",
+    "exp": [
+      {
+        "type": "PATH",
+        "path": [
+          "format_date"
+        ],
+        "pathString": "format_date"
+      },
+      {
+        "type": "PATH",
+        "path": [
+          "article",
+          "updated"
+        ],
+        "pathString": "article.updated"
+      },
+      {
+        "type": "KEY_VALUE",
+        "key": "zone",
+        "value": {
+          "type": "PATH",
+          "path": [
+            "article",
+            "timezone"
+          ],
+          "pathString": "article.timezone"
+        }
+      },
+      {
+        "type": "KEY_VALUE",
+        "key": "format",
+        "value": {
+          "type": "LITERAL",
+          "value": "DATE_MED"
+        }
+      }
+    ],
+    "tokens": [
+      {
+        "filename": "home.html",
+        "lineNumber": 41,
+        "startPosition": 13,
+        "endPosition": 80,
+        "tokenString": "format_date article.updated zone=article.timezone format=\"DATE_MED\" ",
+        "line": "        <p>{{format_date article.updated zone=article.timezone format=\"DATE_MED\" }}</p>\n"
+      }
+    ]
+  },
+  {
+    "type": "CONTENT",
+    "str": "</p>\n",
+    "tokens": [
+      {
+        "filename": "home.html",
+        "lineNumber": 41,
+        "startPosition": 83,
+        "endPosition": 88,
+        "tokenString": "</p>\n",
+        "line": "        <p>{{format_date article.updated zone=article.timezone format=\"DATE_MED\" }}</p>\n"
+      }
+    ]
+  },
+  {
+    "type": "CONTENT",
+    "str": "\n",
+    "tokens": [
+      {
+        "filename": "home.html",
+        "lineNumber": 42,
+        "startPosition": 0,
+        "endPosition": 1,
+        "tokenString": "\n",
+        "line": "\n"
+      }
+    ]
+  },
+  {
+    "type": "CONTENT",
+    "str": "        ",
+    "tokens": [
+      {
+        "filename": "home.html",
+        "lineNumber": 43,
         "startPosition": 0,
         "endPosition": 7,
         "tokenString": "        ",
@@ -1112,7 +1204,7 @@
     "tokens": [
       {
         "filename": "home.html",
-        "lineNumber": 41,
+        "lineNumber": 43,
         "startPosition": 13,
         "endPosition": 79,
         "tokenString": " This is an empty list, so the #each helper invokes the else block ",
@@ -1126,7 +1218,7 @@
     "tokens": [
       {
         "filename": "home.html",
-        "lineNumber": 41,
+        "lineNumber": 43,
         "startPosition": 84,
         "endPosition": 85,
         "tokenString": "\n",
@@ -1140,7 +1232,7 @@
     "tokens": [
       {
         "filename": "home.html",
-        "lineNumber": 42,
+        "lineNumber": 44,
         "startPosition": 0,
         "endPosition": 7,
         "tokenString": "        ",
@@ -1180,7 +1272,7 @@
         "tokens": [
           {
             "filename": "home.html",
-            "lineNumber": 42,
+            "lineNumber": 44,
             "startPosition": 51,
             "endPosition": 52,
             "tokenString": "\n",
@@ -1194,7 +1286,7 @@
         "tokens": [
           {
             "filename": "home.html",
-            "lineNumber": 43,
+            "lineNumber": 45,
             "startPosition": 0,
             "endPosition": 17,
             "tokenString": "        <a href=\"#",
@@ -1217,7 +1309,7 @@
         "tokens": [
           {
             "filename": "home.html",
-            "lineNumber": 43,
+            "lineNumber": 45,
             "startPosition": 20,
             "endPosition": 28,
             "tokenString": " item.id ",
@@ -1231,7 +1323,7 @@
         "tokens": [
           {
             "filename": "home.html",
-            "lineNumber": 43,
+            "lineNumber": 45,
             "startPosition": 31,
             "endPosition": 32,
             "tokenString": "\">",
@@ -1254,7 +1346,7 @@
         "tokens": [
           {
             "filename": "home.html",
-            "lineNumber": 43,
+            "lineNumber": 45,
             "startPosition": 35,
             "endPosition": 46,
             "tokenString": " item.label ",
@@ -1268,7 +1360,7 @@
         "tokens": [
           {
             "filename": "home.html",
-            "lineNumber": 43,
+            "lineNumber": 45,
             "startPosition": 49,
             "endPosition": 54,
             "tokenString": "</a>\n",
@@ -1282,7 +1374,7 @@
         "tokens": [
           {
             "filename": "home.html",
-            "lineNumber": 44,
+            "lineNumber": 46,
             "startPosition": 0,
             "endPosition": 7,
             "tokenString": "        ",
@@ -1295,7 +1387,7 @@
         "tokens": [
           {
             "filename": "home.html",
-            "lineNumber": 44,
+            "lineNumber": 46,
             "startPosition": 10,
             "endPosition": 13,
             "tokenString": "else",
@@ -1309,7 +1401,7 @@
         "tokens": [
           {
             "filename": "home.html",
-            "lineNumber": 44,
+            "lineNumber": 46,
             "startPosition": 16,
             "endPosition": 17,
             "tokenString": "\n",
@@ -1323,7 +1415,7 @@
         "tokens": [
           {
             "filename": "home.html",
-            "lineNumber": 45,
+            "lineNumber": 47,
             "startPosition": 0,
             "endPosition": 51,
             "tokenString": "        <p>There are no contents items to list</p>\n",
@@ -1337,7 +1429,7 @@
         "tokens": [
           {
             "filename": "home.html",
-            "lineNumber": 46,
+            "lineNumber": 48,
             "startPosition": 0,
             "endPosition": 7,
             "tokenString": "        ",
@@ -1351,7 +1443,7 @@
         "tokens": [
           {
             "filename": "home.html",
-            "lineNumber": 46,
+            "lineNumber": 48,
             "startPosition": 10,
             "endPosition": 14,
             "tokenString": "/each",
@@ -1363,7 +1455,7 @@
     "tokens": [
       {
         "filename": "home.html",
-        "lineNumber": 42,
+        "lineNumber": 44,
         "startPosition": 10,
         "endPosition": 48,
         "tokenString": "#each article.tableOfContents as |item|",
@@ -1377,7 +1469,7 @@
     "tokens": [
       {
         "filename": "home.html",
-        "lineNumber": 46,
+        "lineNumber": 48,
         "startPosition": 17,
         "endPosition": 18,
         "tokenString": "\n",
@@ -1391,7 +1483,7 @@
     "tokens": [
       {
         "filename": "home.html",
-        "lineNumber": 47,
+        "lineNumber": 49,
         "startPosition": 0,
         "endPosition": 12,
         "tokenString": "    </main>\n",
@@ -1405,7 +1497,7 @@
     "tokens": [
       {
         "filename": "home.html",
-        "lineNumber": 48,
+        "lineNumber": 50,
         "startPosition": 0,
         "endPosition": 1,
         "tokenString": "\n",
@@ -1419,7 +1511,7 @@
     "tokens": [
       {
         "filename": "home.html",
-        "lineNumber": 49,
+        "lineNumber": 51,
         "startPosition": 0,
         "endPosition": 3,
         "tokenString": "    ",
@@ -1452,7 +1544,7 @@
         "tokens": [
           {
             "filename": "home.html",
-            "lineNumber": 49,
+            "lineNumber": 51,
             "startPosition": 22,
             "endPosition": 23,
             "tokenString": "\n",
@@ -1466,7 +1558,7 @@
         "tokens": [
           {
             "filename": "home.html",
-            "lineNumber": 50,
+            "lineNumber": 52,
             "startPosition": 0,
             "endPosition": 33,
             "tokenString": "        <p>No books to list.</p>\n",
@@ -1480,7 +1572,7 @@
         "tokens": [
           {
             "filename": "home.html",
-            "lineNumber": 51,
+            "lineNumber": 53,
             "startPosition": 0,
             "endPosition": 3,
             "tokenString": "    ",
@@ -1493,7 +1585,7 @@
         "tokens": [
           {
             "filename": "home.html",
-            "lineNumber": 51,
+            "lineNumber": 53,
             "startPosition": 6,
             "endPosition": 11,
             "tokenString": " else ",
@@ -1507,7 +1599,7 @@
         "tokens": [
           {
             "filename": "home.html",
-            "lineNumber": 51,
+            "lineNumber": 53,
             "startPosition": 14,
             "endPosition": 15,
             "tokenString": "\n",
@@ -1521,7 +1613,7 @@
         "tokens": [
           {
             "filename": "home.html",
-            "lineNumber": 52,
+            "lineNumber": 54,
             "startPosition": 0,
             "endPosition": 13,
             "tokenString": "        <ul>\n",
@@ -1535,7 +1627,7 @@
         "tokens": [
           {
             "filename": "home.html",
-            "lineNumber": 53,
+            "lineNumber": 55,
             "startPosition": 0,
             "endPosition": 7,
             "tokenString": "        ",
@@ -1574,7 +1666,7 @@
             "tokens": [
               {
                 "filename": "home.html",
-                "lineNumber": 53,
+                "lineNumber": 55,
                 "startPosition": 33,
                 "endPosition": 34,
                 "tokenString": "\n",
@@ -1588,7 +1680,7 @@
             "tokens": [
               {
                 "filename": "home.html",
-                "lineNumber": 54,
+                "lineNumber": 56,
                 "startPosition": 0,
                 "endPosition": 11,
                 "tokenString": "        <li>",
@@ -1602,7 +1694,7 @@
             "tokens": [
               {
                 "filename": "home.html",
-                "lineNumber": 54,
+                "lineNumber": 56,
                 "startPosition": 14,
                 "endPosition": 25,
                 "tokenString": "> book.html ",
@@ -1616,7 +1708,7 @@
             "tokens": [
               {
                 "filename": "home.html",
-                "lineNumber": 54,
+                "lineNumber": 56,
                 "startPosition": 28,
                 "endPosition": 34,
                 "tokenString": "</li>\n",
@@ -1630,7 +1722,7 @@
             "tokens": [
               {
                 "filename": "home.html",
-                "lineNumber": 55,
+                "lineNumber": 57,
                 "startPosition": 0,
                 "endPosition": 7,
                 "tokenString": "        ",
@@ -1644,7 +1736,7 @@
             "tokens": [
               {
                 "filename": "home.html",
-                "lineNumber": 55,
+                "lineNumber": 57,
                 "startPosition": 10,
                 "endPosition": 14,
                 "tokenString": "/each",
@@ -1656,7 +1748,7 @@
         "tokens": [
           {
             "filename": "home.html",
-            "lineNumber": 53,
+            "lineNumber": 55,
             "startPosition": 10,
             "endPosition": 30,
             "tokenString": "#each books as |book|",
@@ -1670,7 +1762,7 @@
         "tokens": [
           {
             "filename": "home.html",
-            "lineNumber": 55,
+            "lineNumber": 57,
             "startPosition": 17,
             "endPosition": 18,
             "tokenString": "\n",
@@ -1684,7 +1776,7 @@
         "tokens": [
           {
             "filename": "home.html",
-            "lineNumber": 56,
+            "lineNumber": 58,
             "startPosition": 0,
             "endPosition": 14,
             "tokenString": "        </ul>\n",
@@ -1698,7 +1790,7 @@
         "tokens": [
           {
             "filename": "home.html",
-            "lineNumber": 57,
+            "lineNumber": 59,
             "startPosition": 0,
             "endPosition": 3,
             "tokenString": "    ",
@@ -1712,7 +1804,7 @@
         "tokens": [
           {
             "filename": "home.html",
-            "lineNumber": 57,
+            "lineNumber": 59,
             "startPosition": 6,
             "endPosition": 8,
             "tokenString": "/if",
@@ -1724,7 +1816,7 @@
     "tokens": [
       {
         "filename": "home.html",
-        "lineNumber": 49,
+        "lineNumber": 51,
         "startPosition": 6,
         "endPosition": 19,
         "tokenString": "#ifEmpty books",
@@ -1738,7 +1830,7 @@
     "tokens": [
       {
         "filename": "home.html",
-        "lineNumber": 57,
+        "lineNumber": 59,
         "startPosition": 11,
         "endPosition": 12,
         "tokenString": "\n",
@@ -1752,7 +1844,7 @@
     "tokens": [
       {
         "filename": "home.html",
-        "lineNumber": 58,
+        "lineNumber": 60,
         "startPosition": 0,
         "endPosition": 1,
         "tokenString": "\n",
@@ -1766,7 +1858,7 @@
     "tokens": [
       {
         "filename": "home.html",
-        "lineNumber": 59,
+        "lineNumber": 61,
         "startPosition": 0,
         "endPosition": 3,
         "tokenString": "    ",
@@ -1779,7 +1871,7 @@
     "tokens": [
       {
         "filename": "home.html",
-        "lineNumber": 59,
+        "lineNumber": 61,
         "startPosition": 9,
         "endPosition": 85,
         "tokenString": " We forgot the opening mustache in the <p> tag below, which means the whole\n",
@@ -1792,7 +1884,7 @@
     "tokens": [
       {
         "filename": "home.html",
-        "lineNumber": 60,
+        "lineNumber": 62,
         "startPosition": 0,
         "endPosition": 85,
         "tokenString": "        thing will be printed like this: \"<p>Copyright article.copyright.year }}</p>\" ",
@@ -1806,7 +1898,7 @@
     "tokens": [
       {
         "filename": "home.html",
-        "lineNumber": 60,
+        "lineNumber": 62,
         "startPosition": 90,
         "endPosition": 91,
         "tokenString": "\n",
@@ -1820,7 +1912,7 @@
     "tokens": [
       {
         "filename": "home.html",
-        "lineNumber": 61,
+        "lineNumber": 63,
         "startPosition": 0,
         "endPosition": 1,
         "tokenString": "\n",
@@ -1834,7 +1926,7 @@
     "tokens": [
       {
         "filename": "home.html",
-        "lineNumber": 62,
+        "lineNumber": 64,
         "startPosition": 0,
         "endPosition": 39,
         "tokenString": "    <p>Copyright article.copyright.year ",
@@ -1848,7 +1940,7 @@
     "tokens": [
       {
         "filename": "home.html",
-        "lineNumber": 62,
+        "lineNumber": 64,
         "startPosition": 40,
         "endPosition": 41,
         "tokenString": "}}",
@@ -1862,7 +1954,7 @@
     "tokens": [
       {
         "filename": "home.html",
-        "lineNumber": 62,
+        "lineNumber": 64,
         "startPosition": 42,
         "endPosition": 47,
         "tokenString": "</p>\n",
@@ -1876,7 +1968,7 @@
     "tokens": [
       {
         "filename": "home.html",
-        "lineNumber": 63,
+        "lineNumber": 65,
         "startPosition": 0,
         "endPosition": 11,
         "tokenString": "</article>\n",
@@ -1890,7 +1982,7 @@
     "tokens": [
       {
         "filename": "home.html",
-        "lineNumber": 64,
+        "lineNumber": 66,
         "startPosition": 0,
         "endPosition": 1,
         "tokenString": "\n",

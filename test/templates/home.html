@@ -38,6 +38,8 @@
             illegal characters (like spaces) just like you would in JavaScript --}}
         <p>{{format_date article[Published Date] format = "DATE_MED" }}</p>
 
+        <p>{{format_date article.updated zone=article.timezone format="DATE_MED" }}</p>
+
         {{!-- This is an empty list, so the #each helper invokes the else block --}}
         {{#each article.tableOfContents as |item|}}
         <a href="#{{ item.id }}">{{ item.label }}</a>
