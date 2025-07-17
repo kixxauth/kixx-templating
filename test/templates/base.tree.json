@@ -177,13 +177,20 @@
         "startPosition": 0,
         "endPosition": 30,
         "tokenString": "        <div class=\"page-body\">",
-        "line": "        <div class=\"page-body\">{{ body }}</div>\n"
+        "line": "        <div class=\"page-body\">{{noop body }}</div>\n"
       }
     ]
   },
   {
-    "type": "PATH_EXPRESSION",
+    "type": "HELPER_EXPRESSION",
     "exp": [
+      {
+        "type": "PATH",
+        "path": [
+          "noop"
+        ],
+        "pathString": "noop"
+      },
       {
         "type": "PATH",
         "path": [
@@ -197,9 +204,9 @@
         "filename": "base.html",
         "lineNumber": 9,
         "startPosition": 33,
-        "endPosition": 38,
-        "tokenString": " body ",
-        "line": "        <div class=\"page-body\">{{ body }}</div>\n"
+        "endPosition": 42,
+        "tokenString": "noop body ",
+        "line": "        <div class=\"page-body\">{{noop body }}</div>\n"
       }
     ]
   },
@@ -210,10 +217,10 @@
       {
         "filename": "base.html",
         "lineNumber": 9,
-        "startPosition": 41,
-        "endPosition": 48,
+        "startPosition": 45,
+        "endPosition": 52,
         "tokenString": "</div>\n",
-        "line": "        <div class=\"page-body\">{{ body }}</div>\n"
+        "line": "        <div class=\"page-body\">{{noop body }}</div>\n"
       }
     ]
   },
