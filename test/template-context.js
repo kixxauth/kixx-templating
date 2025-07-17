@@ -7,7 +7,7 @@ export default {
         description: 'A test page for trying out Kixx Templating',
         openGraph: {
             type: 'article',
-            title: 'Kixx Templating Test',
+            title: 'Kixx Templating Test == Awesome',
         },
     },
     navMenuSections: [
@@ -40,11 +40,11 @@ export default {
     },
     article: {
         type: 'article',
-        title: 'All about books',
+        title: 'All about books & "volumes"',
         timezone: 'America/New_York',
         'Published Date': '2025-06-11T10:15:32.146Z',
         updated: '2025-06-11T10:15:32.146Z',
-        copyright: { name: 'Dunder Mifflin', year: 1949 },
+        copyright: { name: '`Dunder Mifflin`', year: 1949 },
         tableOfContents: [],
         img: {
             srcset: [
@@ -56,12 +56,12 @@ export default {
     },
     books: new Set([
         {
-            title: 'The Great Gatsby',
+            title: 'The Great Gatsby <1925>',
             author: 'F. Scott Fitzgerald',
         },
         {
-            title: 'To Kill a Mockingbird',
-            author: 'Harper Lee',
+            title: 'To Kill a Mockingbird <1960>',
+            author: "'Harper Lee'",
         },
     ]),
 };
